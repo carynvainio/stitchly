@@ -1,0 +1,12 @@
+/* Stitchly SASS file */
+/* FONTS */
+/* COLORS */
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400; }
+
+.navbar-fixed-top {
+  background-color: #79CF90;
+  border: none; }
+
+/*# sourceMappingURL=stitchly-sass.css.map */

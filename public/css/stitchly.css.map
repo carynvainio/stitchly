@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,wBAAwB;AAExB,WAAW;AAKX,YAAY;AAKZ,IAAK;EACJ,WAAW,EAVC,oBAAoB;EAWhC,WAAW,EAVG,GAAG",
+"sources": ["stitchly-sass.scss"],
+"names": [],
+"file": "stitchly.css"
+}
