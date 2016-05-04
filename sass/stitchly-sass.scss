@@ -9,8 +9,18 @@ $font-bold: 700;
 $header-bg: #79CF90;
 $subheader-bg: #D6F3DE;
 $button-round: #BA3E79;
+$navbar-link: #fff;
 
+/* CHART */
+$chart-border: #222;
+$chart-cell-size: 50px;
+$chart-cell-selected-bg: #D6F3DE;
+$chart-cell-selected-border: #4A7D57;
 
+/* STITCH TOOLBAR */
+$stitchbar-cell-size: 24px;
+$stitchbar-selected-stitch-bg: #D6F3DE;
+$stitchbar-selected-stitch-border: #4A7D57;
 
 
 body {
@@ -21,4 +31,70 @@ body {
 .navbar-fixed-top {
 	background-color: $header-bg;
 	border: none;
+}
+
+.navbar-inverse .navbar-brand {
+	color: $navbar-link;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: $navbar-link;
+}
+
+/* CHART STYLES */
+
+.chart {
+	border: 1px solid $chart-border;
+	border-collapse: collapse;
+    margin-left: auto; margin-right: auto;
+    display: table;
+}
+
+.chart .chart-row { 
+	display: table-row;
+}
+
+.chart .chart-cell {
+	border: 1px solid $chart-border;
+	width: $chart-cell-size;
+	height: $chart-cell-size;
+    float: left;
+    display: inline;
+    font-weight: $font-bold;
+    text-align: center;
+}
+
+.chart .chart-row > .chart-cell-selected {
+	background-color: $chart-cell-selected-bg;
+	border-color: $chart-cell-selected-border;
+	border-width: 2px;
+	border-style: solid;
+}
+
+/* STITCH TOOLBAR STYLES */
+.stitchbar {
+	border: 1px solid $chart-border;
+	border-collapse: collapse;
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 30px;
+    display: table;
+}
+
+.stitchbar .stitchbar-row {
+	display: table-row;
+}
+
+.stitchbar .stitch-selection {
+	border: 1px solid $chart-border;
+	width: $stitchbar-cell-size;
+	height: $stitchbar-cell-size;
+    float: left;
+    display: inline;
+    font-weight: $font-bold;
+    text-align: center;
+}
+
+.stitchbar .stitchbar-row > .stitch-selected {
+	border: 2px solid $stitchbar-selected-stitch-border;
+	background-color: $stitchbar-selected-stitch-bg;
 }

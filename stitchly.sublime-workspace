@@ -1,0 +1,462 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"curr",
+				"curr_cell_id"
+			],
+			[
+				"selected_",
+				"selected_cell_id"
+			],
+			[
+				"set",
+				"setSelectedChartCell"
+			],
+			[
+				"border-s",
+				"border-style"
+			],
+			[
+				"nav",
+				"navbar-link"
+			],
+			[
+				"font-",
+				"font-bold"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"inline-",
+				"inline-table"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"agent",
+				"agent_status"
+			],
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"insert",
+				"insertCell"
+			],
+			[
+				"device",
+				"device_headers"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"table",
+				"table_agent_headers"
+			],
+			[
+				"cell_agen",
+				"cell_agent_uptime"
+			],
+			[
+				"inner",
+				"innerHTML"
+			],
+			[
+				"get",
+				"getElementById"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 3694,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/stitchly-sass.scss",
+			"settings":
+			{
+				"buffer_size": 1934,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/stitchly.js",
+			"settings":
+			{
+				"buffer_size": 3292,
+				"line_ending": "Unix",
+				"name": "function createGrid(size) {"
+			}
+		},
+		{
+			"file": "public/css/starter-template.css",
+			"settings":
+			{
+				"buffer_size": 96,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bower_components/bootstrap/dist/css/bootstrap-theme.css",
+			"settings":
+			{
+				"buffer_size": 26132,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bower_components/bootstrap/dist/css/bootstrap.css",
+			"settings":
+			{
+				"buffer_size": 146082,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/carynvainio/AppDev/stitchly/public/index.html",
+		"/Users/carynvainio/Downloads/bootstrap-3.3.6/docs/examples/starter-template/index.html",
+		"/Users/carynvainio/Downloads/bootstrap-3.3.6/docs/examples/starter-template/starter-template.css",
+		"/Users/carynvainio/AppDev/stitchly/public/css/stitchly.css",
+		"/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/www/css/stitchly.css",
+		"/Users/carynvainio/AppDev/stitchly/www/index.html",
+		"/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/index.html",
+		"/Users/carynvainio/luminus/website/wp-content/themes/blank/index_new.php",
+		"/Users/carynvainio/luminus/website/wp-config.php",
+		"/Users/carynvainio/luminus/website/wp-content/themes/blank/page.php",
+		"/Users/carynvainio/luminus/website/wp-content/themes/blank/archive.php",
+		"/Users/carynvainio/luminus/website/base.css",
+		"/Users/carynvainio/luminus/website/wp-content/themes/blank/header-luminus.php",
+		"/Users/carynvainio/luminus/website/wp-content/themes/blank/functions.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"/data/p4/battlenations2/raw-content/base/assets/scaleform/_src/scripts"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"navbar-brand",
+			"navbar-header",
+			"navbar-brand",
+			"10.0.5.14",
+			"{",
+			"main-hero",
+			"'news'",
+			"hero",
+			"mainhero",
+			"hero",
+			"600",
+			"70",
+			"700",
+			"mc_checkmark",
+			"mc_collectAnim",
+			"z2.components.TextField",
+			"mc_description"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"700",
+			"600"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/index.html",
+					"settings":
+					{
+						"buffer_size": 3694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3674,
+								3674
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 398.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sass/stitchly-sass.scss",
+					"settings":
+					{
+						"buffer_size": 1934,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								475,
+								475
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 503.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/js/stitchly.js",
+					"settings":
+					{
+						"buffer_size": 3292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								808,
+								808
+							]
+						],
+						"settings":
+						{
+							"auto_name": "function createGrid(size) {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 638.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/css/starter-template.css",
+					"settings":
+					{
+						"buffer_size": 96,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "bower_components/bootstrap/dist/css/bootstrap-theme.css",
+					"settings":
+					{
+						"buffer_size": 26132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14296,
+								14308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5294.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "bower_components/bootstrap/dist/css/bootstrap.css",
+					"settings":
+					{
+						"buffer_size": 146082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89244,
+								89245
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 67049.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true
+}
