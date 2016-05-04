@@ -1,6 +1,8 @@
 /* Stitchly SASS file */
 /* FONTS */
 /* COLORS */
+/* CHART */
+/* STITCH TOOLBAR */
 body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400; }
@@ -8,5 +10,62 @@ body {
 .navbar-fixed-top {
   background-color: #79CF90;
   border: none; }
+
+.navbar-inverse .navbar-brand {
+  color: #fff; }
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff; }
+
+/* CHART STYLES */
+.chart {
+  border: 1px solid #222;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  display: table; }
+
+.chart .chart-row {
+  display: table-row; }
+
+.chart .chart-cell {
+  border: 1px solid #222;
+  width: 50px;
+  height: 50px;
+  float: left;
+  display: inline;
+  font-weight: 700;
+  text-align: center; }
+
+.chart .chart-row > .chart-cell-selected {
+  background-color: #D6F3DE;
+  border-color: #4A7D57;
+  border-width: 2px;
+  border-style: solid; }
+
+/* STITCH TOOLBAR STYLES */
+.stitchbar {
+  border: 1px solid #222;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  display: table; }
+
+.stitchbar .stitchbar-row {
+  display: table-row; }
+
+.stitchbar .stitch-selection {
+  border: 1px solid #222;
+  width: 24px;
+  height: 24px;
+  float: left;
+  display: inline;
+  font-weight: 700;
+  text-align: center; }
+
+.stitchbar .stitchbar-row > .stitch-selected {
+  border: 2px solid #4A7D57;
+  background-color: #D6F3DE; }
 
 /*# sourceMappingURL=stitchly-sass.css.map */
