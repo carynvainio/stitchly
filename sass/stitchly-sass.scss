@@ -103,14 +103,14 @@ body {
 }
 
 .stitchbar .stitch-selection img {
-	top: 0; left: 0;
+	top: 0; left: 0; 
 	display: block;
 	margin-left: auto; margin-right: auto;
 	border: 1px solid red;
 }
 
 .stitchbar .stitchbar-row .stitch-selected {
-	border: 2px solid $stitchbar-selected-stitch-border;
+	border: 5px solid $stitchbar-selected-stitch-border;
 	background-color: $stitchbar-selected-stitch-bg;
 }
 
@@ -126,9 +126,9 @@ body {
 
 /* MAINCOLOR STYLES */
 .maincolor {
-	width: 17%; height: $maincolor-cell-size;
+	width: 50%;
 	margin-left: auto; margin-right: auto;
-	display: block;
+	display: table;
 }
 
 .maincolor .mc_label {
@@ -137,7 +137,28 @@ body {
 }
 
 .maincolor .mc_box {
-	border: 2px solid $maincolor-cell-border;
-	width: $maincolor-cell-size; height: $maincolor-cell-size;
-	float: right;
+	border: 1px solid $maincolor-cell-border;
+	width: $maincolor-cell-size;
+	height: $maincolor-cell-size;
+    float: left;
+    display: inline;
+    font-weight: $font-bold;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 10px; margin-right: 10px; margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.maincolor .mc_colorselect {
+	display: inline;
+	margin-left: 10px;
+	visibility: hidden;
+}
+
+.maincolor .mc_colorselect .color-selection {
+	border: 1px solid $maincolor-cell-border;
+	display: inline;
+	float: left;
+	width: $maincolor-cell-size; height: $maincolor-cell-size; 
 }

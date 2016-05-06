@@ -5,14 +5,14 @@
 var isColor = false;
 var isClicking = false;
 var chart_rows = 20;
-var chart_cols = 15; 
+var chart_cols = 30; 
 var selected_stitch_id = 0;
 var selected_cell_id;
 var keyboard_numbers = [49,50,51,52,53,54,55,56,57,48];  // 0-9
 
 // in a hardcorded array for now while I test
 var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2tog.png", "img-stitch_ssk.png", "img-stitch_s1-k2tog-psso.png"];
-var colors = ["blue", "brown", "red", "orange", "green", "yellow", "white"];
+var colors = ["#ffffff", "#0000ff", "#f4a460", "#ff0000", "#ffa500", "#00ff00", "#ffff00"];
 
 createChart(chart_cols, chart_rows);
 
@@ -48,6 +48,10 @@ $('.chart-cell').mousemove(function(event){
         }
     });
 
+$('.mc_box').click(function() {
+                $('.mc_colorselect').css("visibility", "visible");
+            });
+
 // Create the empty chart
 function createChart(cols, rows) {
     var parent = $('.chart');
@@ -59,6 +63,7 @@ function createChart(cols, rows) {
             var cell = $('<div />', {
             }).addClass('chart-cell').appendTo(row);
             cell.attr('id', 'r' + i + '-c' + j);
+            cell.css('background-color', colors[0]);
             cell.click(function() {
                 markSelectedStitch( $(this).attr('id') );
             });
@@ -77,6 +82,7 @@ function createStitchToolbar(bIsColor) {
 
     if (isColor) {
         arr_to_use = colors;
+        createMCColorBar();
     } else {
         arr_to_use = stitches;
     }
@@ -97,6 +103,20 @@ function createStitchToolbar(bIsColor) {
         var stitchkey = $('<div />', {
             }).addClass('key').appendTo(keyparent);
         stitchkey.text(i+1);
+    }
+}
+
+function createMCColorBar() {
+    var parent = $(".mc_colorselect");
+
+    for (var i = 0; i < colors.length; i++) {
+        var color = $('<div />', {
+            }).addClass('color-selection').appendTo(parent);
+        color.attr('id', 'color-' + i);
+        color.css("background-color", colors[i]);
+        color.click(function() {
+                setMainColor($( this ).attr('id'));
+            });
     }
 }
 
@@ -175,4 +195,26 @@ function getChartCellPosById(c_id) {
     arr = [col, row];
 
     return arr;
+}
+
+function setMainColor(c_id) {
+    var color_id = parseInt(c_id.substring(c_id.indexOf("-")+1));
+
+    var curr_mc = $('.mc_box').css('backgroundColor');
+    $('.mc_box').css("background-color", colors[color_id]); 
+
+    $('.chart-cell').filter(function(){
+        return $(this).css('background-color') == curr_mc;
+        })
+        .css( "background-color", colors[color_id] );
+
+    $('.mc_colorselect').css("visibility", "hidden");
+}
+
+function RGBToHex(rgb) {
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    function hex(x) {
+        return ("0" + parseInt(x).toString(16)).slice(-2);
+    }
+    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }

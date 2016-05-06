@@ -79,7 +79,7 @@ body {
   border: 1px solid red; }
 
 .stitchbar .stitchbar-row .stitch-selected {
-  border: 2px solid #4A7D57;
+  border: 5px solid #4A7D57;
   background-color: #D6F3DE; }
 
 .stitchbar .stitchbar-row .key {
@@ -93,20 +93,40 @@ body {
 
 /* MAINCOLOR STYLES */
 .maincolor {
-  width: 17%;
-  height: 30px;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  display: block; }
+  display: table; }
 
 .maincolor .mc_label {
   float: left;
   line-height: 2em; }
 
 .maincolor .mc_box {
-  border: 2px solid #222;
+  border: 1px solid #222;
   width: 30px;
   height: 30px;
-  float: right; }
+  float: left;
+  display: inline;
+  font-weight: 700;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff; }
+
+.maincolor .mc_colorselect {
+  display: inline;
+  margin-left: 10px;
+  visibility: hidden; }
+
+.maincolor .mc_colorselect .color-selection {
+  border: 1px solid #222;
+  display: inline;
+  float: left;
+  width: 30px;
+  height: 30px; }
 
 /*# sourceMappingURL=stitchly-sass.css.map */
