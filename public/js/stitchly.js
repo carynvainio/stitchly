@@ -13,7 +13,7 @@ var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2to
 
 createChart(5, 10);
 setSelectedChartCell(chart_cols-1,chart_rows-1);
-createStitchToolbar();
+//createStitchToolbar();
 
 // listen for keyboard input
 // right = 39     left = 37     up = 38     down = 40       enter = 13
