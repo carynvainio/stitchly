@@ -35,7 +35,9 @@ body {
   float: left;
   display: inline;
   font-weight: 700;
-  text-align: center; }
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .chart .chart-row > .chart-cell-selected {
   background-color: #D6F3DE;
@@ -45,27 +47,46 @@ body {
 
 /* STITCH TOOLBAR STYLES */
 .stitchbar {
-  border: 1px solid #222;
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  margin-top: 50px;
   display: table; }
 
 .stitchbar .stitchbar-row {
   display: table-row; }
 
-.stitchbar .stitch-selection {
+.stitchbar .stitchbar-row > .stitch-selection {
   border: 1px solid #222;
-  width: 24px;
-  height: 24px;
+  width: 48px;
+  height: 48px;
   float: left;
   display: inline;
   font-weight: 700;
-  text-align: center; }
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat; }
 
-.stitchbar .stitchbar-row > .stitch-selected {
+.stitchbar .stitch-selection img {
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid red; }
+
+.stitchbar .stitchbar-row .stitch-selected {
   border: 2px solid #4A7D57;
   background-color: #D6F3DE; }
+
+.stitchbar .stitchbar-row .key {
+  width: 48px;
+  height: 48px;
+  float: left;
+  display: inline;
+  font-weight: 700;
+  text-align: center;
+  border: none; }
 
 /*# sourceMappingURL=stitchly-sass.css.map */
