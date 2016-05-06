@@ -2,18 +2,19 @@
 // the size of the chart will actually be set with a dialog when the user wants
 // to create a chart; this is just here so I can create one to test with
 // and do some stuff with the values
-var chart_rows = 10;
-var chart_cols = 5; 
+var isColor = false;
+var isClicking = false;
+var chart_rows = 20;
+var chart_cols = 15; 
 var selected_stitch_id = 0;
 var selected_cell_id;
 var keyboard_numbers = [49,50,51,52,53,54,55,56,57,48];  // 0-9
 
 // in a hardcorded array for now while I test
 var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2tog.png", "img-stitch_ssk.png", "img-stitch_s1-k2tog-psso.png"];
+var colors = ["blue", "brown", "red", "orange", "green", "yellow", "white"];
 
-createChart(5, 10);
-setSelectedChartCell(chart_cols-1,chart_rows-1);
-//createStitchToolbar();
+createChart(chart_cols, chart_rows);
 
 // listen for keyboard input
 // right = 39     left = 37     up = 38     down = 40       enter = 13
@@ -29,15 +30,27 @@ $(document).keydown(function(event){
         } else if (event.which == 13) {
             markSelectedStitch(selected_cell_id);
         } else if ($.inArray(event.which, keyboard_numbers) != -1) {
-            selectStitchFromToolbar("stitch-" + $.inArray(event.which, keyboard_numbers));
+            selectStitchFromToolbar("stitch-" + $.inArray(event.which, keyboard_numbers), false);
+        }
+    });
+
+// listen for mousedrag when mouse is down and set the cell value as we drag over
+$(document).mouseup(function() {
+    isClicking = false;
+});
+$(document).mousedown(function() {
+    isClicking = true;
+});
+
+$('.chart-cell').mousemove(function(event){
+        if (isClicking) {
+            markSelectedStitch($(this).attr('id'));
         }
     });
 
 // Create the empty chart
 function createChart(cols, rows) {
-    var parent = $('<div />', {
-        class: 'chart',
-    }).addClass('chart').appendTo('body');
+    var parent = $('.chart');
 
     for (var i = rows-1; i >= 0; i--) {
         var row = $('<div />', {
@@ -51,21 +64,36 @@ function createChart(cols, rows) {
             });
         }
     }
+
+    setSelectedChartCell(cols-1,rows-1);
 }
 
-function createStitchToolbar() {
+function createStitchToolbar(bIsColor) {
     var parent = $('#symbols');
     var keyparent = $('#keys');
 
-    for (var i = 0; i < stitches.length; i++) {
+    isColor = bIsColor;
+    var arr_to_use = [];
+
+    if (isColor) {
+        arr_to_use = colors;
+    } else {
+        arr_to_use = stitches;
+    }
+
+    for (var i = 0; i < arr_to_use.length; i++) {
         var stitch = $('<div />', {
             }).addClass('stitch-selection').appendTo(parent);
         stitch.attr('id', 'stitch-' + i);
-        stitch.css("background-image", "url(../public/img/stitches/" + stitches[i] + ")");  
+        if (bIsColor) {  
+            stitch.css("background-color", colors[i]);
+        } else {
+            stitch.css("background-image", "url(../public/img/stitches/" + stitches[i] + ")");   
+        }
         stitch.click(function() {
-                selectStitchFromToolbar( $( this ).attr('id') );
+                selectStitchFromToolbar( $( this ).attr('id'), bIsColor );
             });
-
+        
         var stitchkey = $('<div />', {
             }).addClass('key').appendTo(keyparent);
         stitchkey.text(i+1);
@@ -73,9 +101,9 @@ function createStitchToolbar() {
 }
 
 // Select a stitch from the toolbar
-function selectStitchFromToolbar(stitch_id) {
+function selectStitchFromToolbar(stitch_id, isColor) {
     var stitchnum = parseInt(stitch_id.substring(stitch_id.indexOf("-")+1));
-    if ( stitchnum < stitches.length) {
+    if ( (!isColor && stitchnum < stitches.length) || (isColor && stitchnum < colors.length)) {
         var selected_stitch_cell = $( '#' + stitch_id );
 
         // set the new selected stitch
@@ -94,9 +122,14 @@ function markSelectedStitch(cell_id) {
     var sel_stitch_cell = $( '#' + cell_id );
 
     // mark the stitch in the cell
-    sel_stitch_cell.css("background-image", "url(../public/img/stitches/" + stitches[selected_stitch_id] + ")"); 
     var arr = getChartCellPosById(cell_id);
     setSelectedChartCell(arr[0], arr[1]);
+
+    if (isColor) {
+        sel_stitch_cell.css("background-color", colors[selected_stitch_id]); 
+    } else {
+        sel_stitch_cell.css("background-image", "url(../public/img/stitches/" + stitches[selected_stitch_id] + ")"); 
+    }
 }
 
 // move to a chart cell when an arrow key is pressed
