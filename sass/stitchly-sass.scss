@@ -13,7 +13,7 @@ $navbar-link: #fff;
 
 /* CHART */
 $chart-border: #222;
-$chart-cell-size: 50px;
+$chart-cell-size: 30px;
 $chart-cell-selected-bg: #D6F3DE;
 $chart-cell-selected-border: #4A7D57;
 
@@ -21,6 +21,10 @@ $chart-cell-selected-border: #4A7D57;
 $stitchbar-cell-size: 48px; 
 $stitchbar-selected-stitch-bg: #D6F3DE;
 $stitchbar-selected-stitch-border: #4A7D57;
+
+/* MAIN COLOR */
+$maincolor-cell-size: 30px;
+$maincolor-cell-border: #222;
 
 
 body {
@@ -47,6 +51,7 @@ body {
 	border: 1px solid $chart-border;
 	border-collapse: collapse;
     margin-left: auto; margin-right: auto;
+    margin-bottom: 50px;
     display: table;
 }
 
@@ -117,4 +122,22 @@ body {
     font-weight: $font-bold;
     text-align: center;
     border: none;
+}
+
+/* MAINCOLOR STYLES */
+.maincolor {
+	width: 17%; height: $maincolor-cell-size;
+	margin-left: auto; margin-right: auto;
+	display: block;
+}
+
+.maincolor .mc_label {
+	float: left;
+	line-height: 2em;
+}
+
+.maincolor .mc_box {
+	border: 2px solid $maincolor-cell-border;
+	width: $maincolor-cell-size; height: $maincolor-cell-size;
+	float: right;
 }

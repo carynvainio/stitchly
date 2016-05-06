@@ -3,6 +3,7 @@
 /* COLORS */
 /* CHART */
 /* STITCH TOOLBAR */
+/* MAIN COLOR */
 body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400; }
@@ -23,6 +24,7 @@ body {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   display: table; }
 
 .chart .chart-row {
@@ -30,8 +32,8 @@ body {
 
 .chart .chart-cell {
   border: 1px solid #222;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   float: left;
   display: inline;
   font-weight: 700;
@@ -88,5 +90,23 @@ body {
   font-weight: 700;
   text-align: center;
   border: none; }
+
+/* MAINCOLOR STYLES */
+.maincolor {
+  width: 17%;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+.maincolor .mc_label {
+  float: left;
+  line-height: 2em; }
+
+.maincolor .mc_box {
+  border: 2px solid #222;
+  width: 30px;
+  height: 30px;
+  float: right; }
 
 /*# sourceMappingURL=stitchly-sass.css.map */
