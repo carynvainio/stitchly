@@ -104,15 +104,7 @@
 	"buffers":
 	[
 		{
-			"file": "public/index.html",
-			"settings":
-			{
-				"buffer_size": 3691,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sass/stitchly-sass.scss",
+			"file": "stitchly-sass.scss",
 			"settings":
 			{
 				"buffer_size": 2411,
@@ -120,7 +112,7 @@
 			}
 		},
 		{
-			"file": "public/js/stitchly.js",
+			"file": "/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
 			"settings":
 			{
 				"buffer_size": 4800,
@@ -129,7 +121,7 @@
 			}
 		},
 		{
-			"file": "public/css/starter-template.css",
+			"file": "/Users/carynvainio/AppDev/stitchly/public/css/starter-template.css",
 			"settings":
 			{
 				"buffer_size": 96,
@@ -137,7 +129,7 @@
 			}
 		},
 		{
-			"file": "bower_components/bootstrap/dist/css/bootstrap-theme.css",
+			"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap-theme.css",
 			"settings":
 			{
 				"buffer_size": 26132,
@@ -145,7 +137,7 @@
 			}
 		},
 		{
-			"file": "bower_components/bootstrap/dist/css/bootstrap.css",
+			"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap.css",
 			"settings":
 			{
 				"buffer_size": 146082,
@@ -177,8 +169,8 @@
 	},
 	"file_history":
 	[
-		"/Users/carynvainio/AppDev/stitchly/sass/stitchly-sass.scss",
 		"/Users/carynvainio/AppDev/stitchly/public/index.html",
+		"/Users/carynvainio/AppDev/stitchly/sass/stitchly-sass.scss",
 		"/Users/carynvainio/Downloads/bootstrap-3.3.6/docs/examples/starter-template/index.html",
 		"/Users/carynvainio/Downloads/bootstrap-3.3.6/docs/examples/starter-template/starter-template.css",
 		"/Users/carynvainio/AppDev/stitchly/public/css/stitchly.css",
@@ -253,35 +245,7 @@
 			[
 				{
 					"buffer": 0,
-					"file": "public/index.html",
-					"settings":
-					{
-						"buffer_size": 3691,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2424,
-								2424
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 398.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "sass/stitchly-sass.scss",
+					"file": "stitchly-sass.scss",
 					"settings":
 					{
 						"buffer_size": 2411,
@@ -300,14 +264,14 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 838.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "public/js/stitchly.js",
+					"buffer": 1,
+					"file": "/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
 					"settings":
 					{
 						"buffer_size": 4800,
@@ -335,8 +299,8 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "public/css/starter-template.css",
+					"buffer": 2,
+					"file": "/Users/carynvainio/AppDev/stitchly/public/css/starter-template.css",
 					"settings":
 					{
 						"buffer_size": 96,
@@ -361,8 +325,8 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "bower_components/bootstrap/dist/css/bootstrap-theme.css",
+					"buffer": 3,
+					"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap-theme.css",
 					"settings":
 					{
 						"buffer_size": 26132,
@@ -389,8 +353,8 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "bower_components/bootstrap/dist/css/bootstrap.css",
+					"buffer": 4,
+					"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap.css",
 					"settings":
 					{
 						"buffer_size": 146082,
