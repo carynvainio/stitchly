@@ -94,7 +94,7 @@ function createStitchToolbar(bIsColor) {
         if (bIsColor) {  
             stitch.css("background-color", colors[i]);
         } else {
-            stitch.css("background-image", "url(../public/img/stitches/" + stitches[i] + ")");   
+            stitch.css("background-image", "url(img/stitches/" + stitches[i] + ")");   
         }
         stitch.click(function() {
                 selectStitchFromToolbar( $( this ).attr('id'), bIsColor );
@@ -148,7 +148,11 @@ function markSelectedStitch(cell_id) {
     if (isColor) {
         sel_stitch_cell.css("background-color", colors[selected_stitch_id]); 
     } else {
-        sel_stitch_cell.css("background-image", "url(../public/img/stitches/" + stitches[selected_stitch_id] + ")"); 
+        if ( selected_stitch_id > 0 ) {
+            sel_stitch_cell.css("background-image", "url(img/stitches/" + stitches[selected_stitch_id] + ")"); 
+        } else {
+            sel_stitch_cell.css("background-image", "");
+        }
     }
 }
 
