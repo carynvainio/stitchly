@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"selected_",
+				"selected_stitch_id"
+			],
+			[
+				"ine",
+				"inline"
+			],
+			[
+				"inline",
+				"inline"
+			],
+			[
+				"border",
+				"border-collapse"
+			],
+			[
 				"bloc",
 				"inline-block"
 			],
@@ -44,10 +60,6 @@
 				"curr_cell_id"
 			],
 			[
-				"selected_",
-				"selected_cell_id"
-			],
-			[
 				"set",
 				"setSelectedChartCell"
 			],
@@ -74,10 +86,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"inline",
-				"inline-block"
 			],
 			[
 				"agent",
@@ -124,18 +132,34 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/carynvainio/AppDev/stitchly/public/chart-color.html",
+			"file": "/Users/carynvainio/AppDev/stitchly/public/index.html",
 			"settings":
 			{
-				"buffer_size": 3989,
+				"buffer_size": 3342,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "stitchly-sass.scss",
+			"file": "/Users/carynvainio/AppDev/stitchly/public/chart-color.html",
 			"settings":
 			{
-				"buffer_size": 2852,
+				"buffer_size": 3938,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/carynvainio/AppDev/stitchly/public/chart-stitch.html",
+			"settings":
+			{
+				"buffer_size": 3770,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/carynvainio/AppDev/stitchly/public/error.html",
+			"settings":
+			{
+				"buffer_size": 3327,
 				"line_ending": "Unix"
 			}
 		},
@@ -143,9 +167,17 @@
 			"file": "/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 5671,
+				"buffer_size": 7069,
 				"line_ending": "Unix",
 				"name": "function createGrid(size) {"
+			}
+		},
+		{
+			"file": "stitchly-sass.scss",
+			"settings":
+			{
+				"buffer_size": 3338,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -160,7 +192,7 @@
 			"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap-theme.css",
 			"settings":
 			{
-				"buffer_size": 26132,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -168,15 +200,7 @@
 			"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap.css",
 			"settings":
 			{
-				"buffer_size": 146082,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/carynvainio/AppDev/stitchly/public/chart-stitch.html",
-			"settings":
-			{
-				"buffer_size": 3866,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -205,6 +229,7 @@
 	},
 	"file_history":
 	[
+		"/Users/carynvainio/AppDev/stitchly/sass/public/untitled.html",
 		"/Users/carynvainio/AppDev/stitchly/public/chart-stitch.html",
 		"/Users/carynvainio/AppDev/stitchly/public/index.html",
 		"/Users/carynvainio/AppDev/stitchly/sass/stitchly-sass.scss",
@@ -278,23 +303,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/carynvainio/AppDev/stitchly/public/chart-color.html",
+					"file": "/Users/carynvainio/AppDev/stitchly/public/index.html",
 					"settings":
 					{
-						"buffer_size": 3989,
+						"buffer_size": 3342,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3112,
-								3112
+								462,
+								500
 							]
 						],
 						"settings":
@@ -304,51 +329,109 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 463.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "stitchly-sass.scss",
+					"file": "/Users/carynvainio/AppDev/stitchly/public/chart-color.html",
 					"settings":
 					{
-						"buffer_size": 2852,
+						"buffer_size": 3938,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2559,
-								2559
+								2123,
+								2123
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1183.0,
+						"translation.y": 280.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
+					"file": "/Users/carynvainio/AppDev/stitchly/public/chart-stitch.html",
 					"settings":
 					{
-						"buffer_size": 5671,
+						"buffer_size": 3770,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2350,
-								2350
+								2124,
+								2124
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 410.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/carynvainio/AppDev/stitchly/public/error.html",
+					"settings":
+					{
+						"buffer_size": 3327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								500,
+								500
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
+					"settings":
+					{
+						"buffer_size": 7069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5157,
+								5157
 							]
 						],
 						"settings":
@@ -359,13 +442,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 175.0,
+						"translation.y": 1614.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
+					"file": "stitchly-sass.scss",
+					"settings":
+					{
+						"buffer_size": 3338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2211,
+								2211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1141.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "/Users/carynvainio/AppDev/stitchly/public/css/starter-template.css",
 					"settings":
 					{
@@ -391,19 +500,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap-theme.css",
 					"settings":
 					{
-						"buffer_size": 26132,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14296,
-								14308
+								0,
+								0
 							]
 						],
 						"settings":
@@ -419,19 +528,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap.css",
 					"settings":
 					{
-						"buffer_size": 146082,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								89244,
-								89245
+								0,
+								0
 							]
 						],
 						"settings":
@@ -442,34 +551,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 67049.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/carynvainio/AppDev/stitchly/public/chart-stitch.html",
-					"settings":
-					{
-						"buffer_size": 3866,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3031,
-								2997
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 463.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
