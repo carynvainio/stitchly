@@ -30,7 +30,7 @@ body {
 .chart .chart-row {
   display: table-row; }
 
-.chart .chart-cell {
+.chart .chart-row .chart-cell {
   border: 1px solid #222;
   width: 30px;
   height: 30px;
@@ -41,11 +41,11 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
 
-.chart .chart-row > .chart-cell-selected {
-  background-color: #D6F3DE;
+.chart .chart-row .chart-cell-selected {
   border-color: #4A7D57;
   border-width: 2px;
-  border-style: solid; }
+  border-style: solid;
+  background-color: #D6F3DE; }
 
 /* STITCH TOOLBAR STYLES */
 .stitchbar {

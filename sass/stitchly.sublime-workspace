@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"is",
+				"isClicking"
+			],
+			[
+				"selec",
+				"selected_stitch_id"
+			],
+			[
+				"prev",
+				"prev_stitch_id"
+			],
+			[
+				"sell",
+				"sel_stitch_cell"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
 				"selected_",
 				"selected_stitch_id"
 			],
@@ -30,10 +50,6 @@
 			[
 				"maincolo",
 				"maincolor-cell-size"
-			],
-			[
-				"selec",
-				"selected_stitch_id"
 			],
 			[
 				"mark",
@@ -96,10 +112,6 @@
 				"createElement"
 			],
 			[
-				"back",
-				"background"
-			],
-			[
 				"insert",
 				"insertCell"
 			],
@@ -135,7 +147,7 @@
 			"file": "/Users/carynvainio/AppDev/stitchly/public/index.html",
 			"settings":
 			{
-				"buffer_size": 3342,
+				"buffer_size": 4042,
 				"line_ending": "Unix"
 			}
 		},
@@ -164,10 +176,18 @@
 			}
 		},
 		{
+			"file": "/Users/carynvainio/AppDev/stitchly/public/navbar.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 7069,
+				"buffer_size": 7836,
 				"line_ending": "Unix",
 				"name": "function createGrid(size) {"
 			}
@@ -176,7 +196,7 @@
 			"file": "stitchly-sass.scss",
 			"settings":
 			{
-				"buffer_size": 3338,
+				"buffer_size": 3347,
 				"line_ending": "Unix"
 			}
 		},
@@ -265,6 +285,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"prev_stitch_id",
+			"selected_cell_id",
 			"selectStitchFromToolbar",
 			"selected_stitch",
 			"navbar-brand",
@@ -303,7 +325,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -311,15 +333,15 @@
 					"file": "/Users/carynvainio/AppDev/stitchly/public/index.html",
 					"settings":
 					{
-						"buffer_size": 3342,
+						"buffer_size": 4042,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								462,
-								500
+								3431,
+								3431
 							]
 						],
 						"settings":
@@ -329,7 +351,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 254.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -402,8 +424,8 @@
 						"selection":
 						[
 							[
-								500,
-								500
+								0,
+								0
 							]
 						],
 						"settings":
@@ -420,18 +442,46 @@
 				},
 				{
 					"buffer": 4,
-					"file": "/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
+					"file": "/Users/carynvainio/AppDev/stitchly/public/navbar.html",
 					"settings":
 					{
-						"buffer_size": 7069,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5157,
-								5157
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
+					"settings":
+					{
+						"buffer_size": 7836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4140,
+								4140
 							]
 						],
 						"settings":
@@ -442,25 +492,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1614.0,
+						"translation.y": 1597.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "stitchly-sass.scss",
 					"settings":
 					{
-						"buffer_size": 3338,
+						"buffer_size": 3347,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2211,
-								2211
+								1337,
+								1337
 							]
 						],
 						"settings":
@@ -468,13 +518,13 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1141.0,
+						"translation.y": 759.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "/Users/carynvainio/AppDev/stitchly/public/css/starter-template.css",
 					"settings":
 					{
@@ -500,7 +550,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap-theme.css",
 					"settings":
 					{
@@ -528,7 +578,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/dist/css/bootstrap.css",
 					"settings":
 					{
