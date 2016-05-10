@@ -59,7 +59,7 @@ body {
 	display: table-row;
 }
 
-.chart .chart-cell {
+.chart .chart-row .chart-cell {
 	border: 1px solid $chart-border;
 	width: $chart-cell-size;
 	height: $chart-cell-size;
@@ -71,11 +71,11 @@ body {
     background-repeat: no-repeat;
 }
 
-.chart .chart-row > .chart-cell-selected {
-	background-color: $chart-cell-selected-bg;
+.chart .chart-row .chart-cell-selected {
 	border-color: $chart-cell-selected-border;
 	border-width: 2px;
 	border-style: solid;
+	background-color: $chart-cell-selected-bg;
 }
 
 /* STITCH TOOLBAR STYLES */

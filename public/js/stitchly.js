@@ -7,8 +7,11 @@ var isClicking = false;
 var chart_rows = 20;
 var chart_cols = 30; 
 var selected_stitch_id = 0;
+var prev_stitch_id = -1;
 var selected_cell_id;
 var keyboard_numbers = [49,50,51,52,53,54,55,56,57,48];  // 0-9
+var default_color = '#ffffff';
+var default_stitch = "";
 
 // in a hardcorded array for now while I test
 var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2tog.png", "img-stitch_ssk.png", "img-stitch_s1-k2tog-psso.png"];
@@ -63,7 +66,7 @@ function createChart(cols, rows) {
             var cell = $('<div />', {
             }).addClass('chart-cell').appendTo(row);
             cell.attr('id', 'r' + i + '-c' + j);
-            cell.css('background-color', colors[0]);
+            //cell.css('background-color', colors[0]);
             cell.click(function() {
                 markSelectedStitch( $(this).attr('id') );
             });
@@ -140,20 +143,40 @@ function selectStitchFromToolbar(stitch_id, isColor) {
 // Mark the selected stitch in the cell we clicked on
 function markSelectedStitch(cell_id) {
     var sel_stitch_cell = $( '#' + cell_id );
+    var color;
+    var stitch;
 
-    // mark the stitch in the cell
+    // if we clicked the same cell and we didn't change the stitch, we're clearing the cell
+    if (cell_id == selected_cell_id && prev_stitch_id == selected_stitch_id && !isClicking) {
+        color = default_color;
+        stitch = default_stitch;
+    } else {
+        color = colors[selected_stitch_id];
+        stitch = "url(img/stitches/" + stitches[selected_stitch_id] + ")";
+    }
+
+    // save the stitch info -- if we click again, we're going to undo
+    if (isColor) {
+        prev_color = sel_stitch_cell.css('background-color');
+    } else {
+        prev_stitch = sel_stitch_cell.css("background-image");
+    }
+
     var arr = getChartCellPosById(cell_id);
     setSelectedChartCell(arr[0], arr[1]);
 
     if (isColor) {
-        sel_stitch_cell.css("background-color", colors[selected_stitch_id]); 
+        sel_stitch_cell.css("background-color", color); 
     } else {
         if ( selected_stitch_id > 0 ) {
-            sel_stitch_cell.css("background-image", "url(img/stitches/" + stitches[selected_stitch_id] + ")"); 
+            sel_stitch_cell.css("background-image", stitch); 
         } else {
             sel_stitch_cell.css("background-image", "");
         }
     }
+
+    // we save this so that we can see if we're trying to undo when we click in the same cell
+    prev_stitch_id = selected_stitch_id;
 }
 
 // move to a chart cell when an arrow key is pressed
