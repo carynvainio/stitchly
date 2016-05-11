@@ -4,6 +4,7 @@
 // and do some stuff with the values
 var isColor = false;
 var isClicking = false;
+var isReadyForUndo = false;
 var chart_rows = 20;
 var chart_cols = 30; 
 var selected_stitch_id = 0;
@@ -147,12 +148,14 @@ function markSelectedStitch(cell_id) {
     var stitch;
 
     // if we clicked the same cell and we didn't change the stitch, we're clearing the cell
-    if (cell_id == selected_cell_id && prev_stitch_id == selected_stitch_id && !isClicking) {
+    if (cell_id == selected_cell_id && prev_stitch_id == selected_stitch_id && !isClicking && isReadyForUndo) {
         color = default_color;
         stitch = default_stitch;
+        isReadyForUndo = false;
     } else {
         color = colors[selected_stitch_id];
         stitch = "url(img/stitches/" + stitches[selected_stitch_id] + ")";
+        isReadyForUndo = true;
     }
 
     // save the stitch info -- if we click again, we're going to undo
