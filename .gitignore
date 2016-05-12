@@ -1,0 +1,6 @@
+# ignore bower stuff
+/bower_components
+
+# ignore sublime project stuff
+*.sublime-project
+*.sublime-workspace

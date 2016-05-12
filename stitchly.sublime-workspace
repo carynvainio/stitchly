@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"stitch-",
-				"stitch-selected"
+				"bIs",
+				"bIsEditingToolbar"
 			],
 			[
-				"bIs",
-				"bIsColorEditing"
+				"stitch-",
+				"stitch-selected"
 			],
 			[
 				"isColo",
@@ -167,7 +167,7 @@
 			"file": "public/chart-color.html",
 			"settings":
 			{
-				"buffer_size": 4493,
+				"buffer_size": 4480,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,7 +175,7 @@
 			"file": "sass/stitchly-sass.scss",
 			"settings":
 			{
-				"buffer_size": 4404,
+				"buffer_size": 4763,
 				"line_ending": "Unix"
 			}
 		},
@@ -183,7 +183,50 @@
 			"file": "public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 8685,
+				"buffer_size": 9198,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 40,
+				"line_ending": "Unix",
+				"name": "# ignore bower stuff"
+			}
+		},
+		{
+			"contents": "Searching 12183 files for \"renderCallback\"\n\n/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/index.html:\n   85          '.cp-alpha-cursor {border-width:8px; margin-left:-8px;}',\n   86  \n   87:     renderCallback: function($elm, toggled) {\n   88          var colors = this.color.colors;\n   89  \n\n/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/index.js:\n   43  			'.cp-alpha-cursor{border-width: 8px; margin-left:-8px;}',\n   44  \n   45: 		renderCallback: function($elm, toggled) {\n   46  			var colors = this.color.colors;\n   47  \n   ..\n  100  			'.cp-alpha {width:155px;}',\n  101  \n  102: 		renderCallback: function($elm, toggled) {\n  103  			var colors = this.color.colors.RND,\n  104  				modes = {\n  ...\n  215  			'.cp-xy-slider:active {cursor:none;}',\n  216  \n  217: 		renderCallback: function($elm, toggled) {\n  218  			// to avoid selection\n  219  			window.event && (window.event.returnValue = false);\n  ...\n  253  	// the default skinned and white\n  254  	plugin.skinned_sa = $.extend({}, plugin.skinned, {\n  255: 		renderCallback: function($elm, toggled) {\n  256  			if (typeof toggled === 'boolean') {\n  257  				$('.cp-alpha', this.$UI).css('display', $elm.hasClass('no-alpha') ? 'none' : '')\n  ...\n  452  				'font-family:monospace; position:absolute; right:-26px; top:-8px}',\n  453  \n  454: 		renderCallback: function($elm, toggled) {\n  455  			var colors = this.color.colors,\n  456  				rgb = colors.RND.rgb;\n  ...\n  503  				'<div class=\"cp-patch\"><div></div></div><div class=\"cp-disp\"></div>');\n  504  \n  505: 			this.$cursorR = $elm.find('.cp-rgb-r-cursor'); // caching for render renderCallback\n  506  			this.$cursorG = $elm.find('.cp-rgb-g-cursor');\n  507  			this.$cursorB = $elm.find('.cp-rgb-b-cursor');\n  ...\n  538  \n  539  \n  540: 		renderCallback: function($elm, toggled) {\n  541  			var colors = this.color.colors,\n  542  				rgb = colors.RND.rgb;\n\n/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/jqColorPicker.js:\n  261          _$trigger.text && _$trigger.val(_$trigger.text);\n  262  \n  263:         _options.renderCallback.call(\n  264              _colorPicker,\n  265              _$trigger,\n  ...\n  278              customBG: '#FFF',\n  279              opacity: true,\n  280:             renderCallback: noop,\n  281              buildCallback: noop,\n  282              body: document.body,\n\n/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/jqColorPicker.js.map:\n    1: {\"version\":3,\"file\":\"jqColorPicker.min.js\",\"sources\":[\"colors.js\",\"jqColorPicker.js\"],\"names\":[\"root\",\"factory\",\"exports\",\"module\",\"define\",\"amd\",\"Colors\",\"this\",\"window\",\"undefined\",\"setColor\",\"colors\",\"color\",\"type\",\"save\",\"alpha\",\"ColorConverter\",\"txt2color\",\"_colors\",\"n\",\"limitValue\",\"_valueRanges\",\"convertColors\",\"saveAsBackground\",\"RGB\",\"rgb\",\"grey\",\"_instance\",\"options\",\"r\",\"g\",\"b\",\"equivalentGrey\",\"_round\",\"rgbaMixBlack\",\"mixColors\",\"rgbaMixWhite\",\"luminance\",\"getLuminance\",\"customBG\",\"rgbaMixCustom\",\"colorObj\",\"modes\",\"SAVE\",\"SMART\",\"convert\",\"ranges\",\"RND\",\"mode\",\"from\",\"exceptions\",\"hsl\",\"typ\",\"HEX\",\"RGB2HEX\",\"webSave\",\"getClosestWebColor\",\"webSmart\",\"saveColor\",\"hueRGB\",\"hue2RGB\",\"hsv\",\"h\",\"background\",\"rgbaMixBGMixCustom\",\"WCAG2Ratio\",\"getWCAG2Ratio\",\"luminanceDelta\",\"_Math\",\"abs\",\"hueDelta\",\"getHueDelta\",\"RGBLuminance\",\"HUELuminance\",\"convertCallback\",\"val\",\"out\",\"tmp\",\"half\",\"rgb1\",\"rgb2\",\"nominal\",\"max\",\"normalized\",\"div\",\"i\",\"length\",\"pow\",\"topColor\",\"bottomColor\",\"topAlpha\",\"bottomAlpha\",\"newColor\",\"alphaTop\",\"alphaBottom\",\"a\",\"lum1\",\"lum2\",\"ratio\",\"value\",\"min\",\"s\",\"v\",\"l\",\"Math\",\"round\",\"valueRanges\",\"initInstance\",\"THIS\",\"_options\",\"focusInstance\",\"option\",\"prototype\",\"newCol\",\"setCustomBackground\",\"col\",\"toString\",\"colorMode\",\"forceAlpha\",\"color2text\",\"toLowerCase\",\"txt\",\"parts\",\"replace\",\"split\",\"values\",\"substr\",\"m\",\"charAt\",\"HEX2rgb\",\"hasAlpha\",\"HSL\",\"shouldBeHex\",\"isHex\",\"isRgb\",\"innerText\",\"toUpperCase\",\"hue\",\"mod\",\"rgb2hsv\",\"chroma\",\"k\",\"hsv2rgb\",\"f\",\"p\",\"q\",\"t\",\"hsv2hsl\",\"rgb2hsl\",\"dependent\",\"hsl2rgb\",\"sv\",\"sextant\",\"fract\",\"vsf\",\"require\",\"jQuery\",\"$\",\"extractValue\",\"elm\",\"getAttribute\",\"css\",\"resolveEventType\",\"event\",\"originalEvent\",\"touches\",\"findElement\",\"$elm\",\"find\",\"doRender\",\"toggle\",\"$this\",\"position\",\"offset\",\"$window\",\"gap\",\"_$trigger\",\"_colorMode\",\"data\",\"_colorPicker\",\"$trigger\",\"_$UI\",\"build\",\"left\",\"_left\",\"_width\",\"scrollLeft\",\"width\",\"top\",\"_top\",\"outerHeight\",\"_height\",\"scrollTop\",\"height\",\"show\",\"animationSpeed\",\"_$alpha\",\"opacity\",\"_$xy_slider\",\"_$z_slider\",\"_color\",\"preRender\",\"off\",\"on\",\"_pointerdown\",\"pointerdown\",\"hide\",\"append\",\"_css\",\"cssAddon\",\"$UI\",\"_html\",\"margin\",\"appendTo\",\"_GPU\",\"GPU\",\"_$xy_cursor\",\"_$z_cursor\",\"_$alpha_cursor\",\"buildCallback\",\"call\",\"prepend\",\"children\",\"eq\",\"offsetWidth\",\"offsetHeight\",\"e\",\"action\",\"className\",\"button\",\"which\",\"preventDefault\",\"returnValue\",\"_offset\",\"xy_slider\",\"z_slider\",\"$document\",\"_pointerup\",\"_pointermove\",\"x\",\"pageX\",\"y\",\"pageY\",\"z\",\"toggled\",\"dark\",\"light\",\"colorText\",\"HUEContrast\",\"alphaContrast\",\"translate3d\",\"triggerValue\",\"hasNoValue\",\"hasAttribute\",\"backgroundColor\",\"transform\",\"borderColor\",\"text\",\"render\",\"_animate\",\"renderCallback\",\"document\",\"requestAnimationFrame\",\"webkitRequestAnimationFrame\",\"cb\",\"ColorPicker\",\"fn\",\"colorPicker\",\"_this\",\"noop\",\"extend\",\"body\",\"scrollResize\",\"add\",\"target\",\"filter\",\"each\",\"attr\",\"preventFocus\",\"background-color\",\"destroy\"],\"mappings\":\"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\"}\n\n/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/jqColorPicker.min.js:\n    1  /*! tinyColorPicker - v1.0.7 2016-05-10 */\n    2  \n    3: !function(a,b){\"object\"==typeof exports?module.exports=b(a):\"function\"==typeof define&&define.amd?define(\"colors\",[],function(){return b(a)}):a.Colors=b(a)}(this,function(a,b){\"use strict\";function c(a,c,d,f,g){if(\"string\"==typeof c){var c=v.txt2color(c);d=c.type,p[d]=c[d],g=g!==b?g:c.alpha}else if(c)for(var h in c)a[d][h]=k(c[h]/l[d][h][1],0,1);return g!==b&&(a.alpha=k(+g,0,1)),e(d,f?a:b)}function d(a,b,c){var d=o.options.grey,e={};return e.RGB={r:a.r,g:a.g,b:a.b},e.rgb={r:b.r,g:b.g,b:b.b},e.alpha=c,e.equivalentGrey=n(d.r*a.r+d.g*a.g+d.b*a.b),e.rgbaMixBlack=i(b,{r:0,g:0,b:0},c,1),e.rgbaMixWhite=i(b,{r:1,g:1,b:1},c,1),e.rgbaMixBlack.luminance=h(e.rgbaMixBlack,!0),e.rgbaMixWhite.luminance=h(e.rgbaMixWhite,!0),o.options.customBG&&(e.rgbaMixCustom=i(b,o.options.customBG,c,1),e.rgbaMixCustom.luminance=h(e.rgbaMixCustom,!0),o.options.customBG.luminance=h(o.options.customBG,!0)),e}function e(a,b){var c,e,k,q=b||p,r=v,s=o.options,t=l,u=q.RND,w=\"\",x=\"\",y={hsl:\"hsv\",rgb:a},z=u.rgb;if(\"alpha\"!==a){for(var A in t)if(!t[A][A]){a!==A&&(x=y[A]||\"rgb\",q[A]=r[x+\"2\"+A](q[x])),u[A]||(u[A]={}),c=q[A];for(w in c)u[A][w]=n(c[w]*t[A][w][1])}z=u.rgb,q.HEX=r.RGB2HEX(z),q.equivalentGrey=s.grey.r*q.rgb.r+s.grey.g*q.rgb.g+s.grey.b*q.rgb.b,q.webSave=e=f(z,51),q.webSmart=k=f(z,17),q.saveColor=z.r===e.r&&z.g===e.g&&z.b===e.b?\"web save\":z.r===k.r&&z.g===k.g&&z.b===k.b?\"web smart\":\"\",q.hueRGB=v.hue2RGB(q.hsv.h),b&&(q.background=d(z,q.rgb,q.alpha))}var B,C,D,E=q.rgb,F=q.alpha,G=\"luminance\",H=q.background;return B=i(E,{r:0,g:0,b:0},F,1),B[G]=h(B,!0),q.rgbaMixBlack=B,C=i(E,{r:1,g:1,b:1},F,1),C[G]=h(C,!0),q.rgbaMixWhite=C,s.customBG&&(D=i(E,H.rgbaMixCustom,F,1),D[G]=h(D,!0),D.WCAG2Ratio=j(D[G],H.rgbaMixCustom[G]),q.rgbaMixBGMixCustom=D,D.luminanceDelta=m.abs(D[G]-H.rgbaMixCustom[G]),D.hueDelta=g(H.rgbaMixCustom,D,!0)),q.RGBLuminance=h(z),q.HUELuminance=h(q.hueRGB),s.convertCallback&&s.convertCallback(q,a),q}function f(a,b){var c={},d=0,e=b/2;for(var f in a)d=a[f]%b,c[f]=a[f]+(d>e?b-d:-d);return c}function g(a,b,c){return(m.max(a.r-b.r,b.r-a.r)+m.max(a.g-b.g,b.g-a.g)+m.max(a.b-b.b,b.b-a.b))*(c?255:1)/765}function h(a,b){for(var c=b?1:255,d=[a.r/c,a.g/c,a.b/c],e=o.options.luminance,f=d.length;f--;)d[f]=d[f]<=.03928?d[f]/12.92:m.pow((d[f]+.055)/1.055,2.4);return e.r*d[0]+e.g*d[1]+e.b*d[2]}function i(a,c,d,e){var f={},g=d!==b?d:1,h=e!==b?e:1,i=g+h*(1-g);for(var j in a)f[j]=(a[j]*g+c[j]*h*(1-g))/i;return f.a=i,f}function j(a,b){var c=1;return c=a>=b?(a+.05)/(b+.05):(b+.05)/(a+.05),n(100*c)/100}function k(a,b,c){return a>c?c:b>a?b:a}var l={rgb:{r:[0,255],g:[0,255],b:[0,255]},hsv:{h:[0,360],s:[0,100],v:[0,100]},hsl:{h:[0,360],s:[0,100],l:[0,100]},alpha:{alpha:[0,1]},HEX:{HEX:[0,16777215]}},m=a.Math,n=m.round,o={},p={},q={r:.298954,g:.586434,b:.114612},r={r:.2126,g:.7152,b:.0722},s=function(a){this.colors={RND:{}},this.options={color:\"rgba(204, 82, 37, 0.8)\",grey:q,luminance:r,valueRanges:l},t(this,a||{})},t=function(a,d){var e,f=a.options;u(a);for(var g in d)d[g]!==b&&(f[g]=d[g]);e=f.customBG,f.customBG=\"string\"==typeof e?v.txt2color(e).rgb:e,p=c(a.colors,f.color,b,!0)},u=function(a){o!==a&&(o=a,p=a.colors)};s.prototype.setColor=function(a,d,f){return u(this),a?c(this.colors,a,d,b,f):(f!==b&&(this.colors.alpha=k(f,0,1)),e(d))},s.prototype.setCustomBackground=function(a){return u(this),this.options.customBG=\"string\"==typeof a?v.txt2color(a).rgb:a,c(this.colors,b,\"rgb\")},s.prototype.saveAsBackground=function(){return u(this),c(this.colors,b,\"rgb\",!0)},s.prototype.toString=function(a,b){return v.color2text((a||\"rgb\").toLowerCase(),this.colors,b)};var v={txt2color:function(a){var b={},c=a.replace(/(?:#|\\)|%)/g,\"\").split(\"(\"),d=(c[1]||\"\").split(/,\\s*/),e=c[1]?c[0].substr(0,3):\"rgb\",f=\"\";if(b.type=e,b[e]={},c[1])for(var g=3;g--;)f=e[g]||e.charAt(g),b[e][f]=+d[g]/l[e][f][1];else b.rgb=v.HEX2rgb(c[0]);return b.alpha=d[3]?+d[3]:1,b},color2text:function(a,b,c){var d=c!==!1&&n(100*b.alpha)/100,e=\"number\"==typeof d&&c!==!1&&(c||1!==d),f=b.RND.rgb,g=b.RND.hsl,h=\"hex\"===a&&e,i=\"hex\"===a&&!h,j=\"rgb\"===a||h,k=j?f.r+\", \"+f.g+\", \"+f.b:i?\"#\"+b.HEX:g.h+\", \"+g.s+\"%, \"+g.l+\"%\";return i?k:(h?\"rgb\":a)+(e?\"a\":\"\")+\"(\"+k+(e?\", \"+d:\"\")+\")\"},RGB2HEX:function(a){return((a.r<16?\"0\":\"\")+a.r.toString(16)+(a.g<16?\"0\":\"\")+a.g.toString(16)+(a.b<16?\"0\":\"\")+a.b.toString(16)).toUpperCase()},HEX2rgb:function(a){return a=a.split(\"\"),{r:+(\"0x\"+a[0]+a[a[3]?1:0])/255,g:+(\"0x\"+a[a[3]?2:1]+(a[3]||a[1]))/255,b:+(\"0x\"+(a[4]||a[2])+(a[5]||a[2]))/255}},hue2RGB:function(a){var b=6*a,c=~~b%6,d=6===b?0:b-c;return{r:n(255*[1,1-d,0,0,d,1][c]),g:n(255*[d,1,1,1-d,0,0][c]),b:n(255*[0,0,d,1,1,1-d][c])}},rgb2hsv:function(a){var b,c,d,e=a.r,f=a.g,g=a.b,h=0;return g>f&&(f=g+(g=f,0),h=-1),c=g,f>e&&(e=f+(f=e,0),h=-2/6-h,c=m.min(f,g)),b=e-c,d=e?b/e:0,{h:1e-15>d?p&&p.hsl&&p.hsl.h||0:b?m.abs(h+(f-g)/(6*b)):0,s:e?b/e:p&&p.hsv&&p.hsv.s||0,v:e}},hsv2rgb:function(a){var b=6*a.h,c=a.s,d=a.v,e=~~b,f=b-e,g=d*(1-c),h=d*(1-f*c),i=d*(1-(1-f)*c),j=e%6;return{r:[d,h,g,g,i,d][j],g:[i,d,d,h,g,g][j],b:[g,g,i,d,d,h][j]}},hsv2hsl:function(a){var b=(2-a.s)*a.v,c=a.s*a.v;return c=a.s?1>b?b?c/b:0:c/(2-b):0,{h:a.h,s:a.v||c?c:p&&p.hsl&&p.hsl.s||0,l:b/2}},rgb2hsl:function(a,b){var c=v.rgb2hsv(a);return v.hsv2hsl(b?c:p.hsv=c)},hsl2rgb:function(a){var b=6*a.h,c=a.s,d=a.l,e=.5>d?d*(1+c):d+c-c*d,f=d+d-e,g=e?(e-f)/e:0,h=~~b,i=b-h,j=e*g*i,k=f+j,l=e-j,m=h%6;return{r:[e,l,f,f,k,e][m],g:[k,e,e,l,f,f][m],b:[f,f,k,e,e,l][m]}}};return s}),function(a,b){\"object\"==typeof exports?module.exports=b(a,require(\"jquery\"),require(\"colors\")):\"function\"==typeof define&&define.amd?define([\"jquery\",\"colors\"],function(c,d){return b(a,c,d)}):b(a,a.jQuery,a.Colors)}(this,function(a,b,c,d){\"use strict\";function e(a){return a.value||a.getAttribute(\"value\")||b(a).css(\"background-color\")||\"#fff\"}function f(a){return a=a.originalEvent&&a.originalEvent.touches?a.originalEvent.touches[0]:a,a.originalEvent?a.originalEvent:a}function g(a){return b(a.find(r.doRender)[0]||a[0])}function h(c){var d=b(this),f=d.offset(),h=b(a),k=r.gap;c?(s=g(d),s._colorMode=s.data(\"colorMode\"),p.$trigger=d,(t||i()).css({left:(t[0]._left=f.left)-((t[0]._left+=t[0]._width-(h.scrollLeft()+h.width()))+k>0?t[0]._left+k:0),top:(t[0]._top=f.top+d.outerHeight())-((t[0]._top+=t[0]._height-(h.scrollTop()+h.height()))+k>0?t[0]._top+k:0)}).show(r.animationSpeed,function(){c!==!0&&(y.toggle(!!r.opacity)._width=y.width(),v._width=v.width(),v._height=v.height(),u._height=u.height(),q.setColor(e(s[0])),n(!0))}).off(\".tcp\").on(D,\".cp-xy-slider,.cp-z-slider,.cp-alpha\",j)):p.$trigger&&b(t).hide(r.animationSpeed,function(){n(!1),p.$trigger=null}).off(\".tcp\")}function i(){return b(\"head\").append('<style type=\"text/css\" id=\"tinyColorPickerStyles\">'+(r.css||I)+(r.cssAddon||\"\")+\"</style>\"),p.$UI=t=b(H).css({margin:r.margin}).appendTo(\"body\").show(0,function(){var a=b(this);F=r.GPU&&a.css(\"perspective\")!==d,u=b(\".cp-z-slider\",this),v=b(\".cp-xy-slider\",this),w=b(\".cp-xy-cursor\",this),x=b(\".cp-z-cursor\",this),y=b(\".cp-alpha\",this),z=b(\".cp-alpha-cursor\",this),r.buildCallback.call(p,a),a.prepend(\"<div>\").children().eq(0).css(\"width\",a.children().eq(0).width()),this._width=this.offsetWidth,this._height=this.offsetHeight}).hide()}function j(a){var c=this.className.replace(/cp-(.*?)(?:\\s*|$)/,\"$1\").replace(\"-\",\"_\");(a.button||a.which)>1||(a.preventDefault&&a.preventDefault(),a.returnValue=!1,s._offset=b(this).offset(),(c=\"xy_slider\"===c?k:\"z_slider\"===c?l:m)(a),n(),A.on(E,function(){A.off(\".tcp\")}).on(C,function(a){c(a),n()}))}function k(a){var b=f(a),c=b.pageX-s._offset.left,d=b.pageY-s._offset.top;q.setColor({s:c/v._width*100,v:100-d/v._height*100},\"hsv\")}function l(a){var b=f(a).pageY-s._offset.top;q.setColor({h:360-b/u._height*360},\"hsv\")}function m(a){var b=f(a).pageX-s._offset.left,c=b/y._width;q.setColor({},\"rgb\",c)}function n(a){var b=q.colors,c=b.hueRGB,e=(b.RND.rgb,b.RND.hsl,\"#222\"),f=\"#ddd\",g=q.toString(s._colorMode,r.forceAlpha),h=b.HUELuminance>.22?e:f,i=b.rgbaMixBlack.luminance>.22?e:f,j=(1-b.hsv.h)*u._height,k=b.hsv.s*v._width,l=(1-b.hsv.v)*v._height,m=b.alpha*y._width,n=F?\"translate3d\":\"\",p=s[0].value,t=s[0].hasAttribute(\"value\")&&\"\"===p&&a!==d;v._css={backgroundColor:\"rgb(\"+c.r+\",\"+c.g+\",\"+c.b+\")\"},w._css={transform:n+\"(\"+k+\"px, \"+l+\"px, 0)\",left:F?\"\":k,top:F?\"\":l,borderColor:b.RGBLuminance>.22?e:f},x._css={transform:n+\"(0, \"+j+\"px, 0)\",top:F?\"\":j,borderColor:\"transparent \"+h},y._css={backgroundColor:\"#\"+b.HEX},z._css={transform:n+\"(\"+m+\"px, 0, 0)\",left:F?\"\":m,borderColor:i+\" transparent\"},s._css={backgroundColor:t?\"\":g,color:t?\"\":b.rgbaMixBGMixCustom.luminance>.22?e:f},s.text=t?\"\":p!==g?g:\"\",a!==d?o(a):G(o)}function o(a){v.css(v._css),w.css(w._css),x.css(x._css),y.css(y._css),z.css(z._css),r.doRender&&s.css(s._css),s.text&&s.val(s.text),r.renderCallback.call(p,s,\"boolean\"==typeof a?a:d)}var p,q,r,s,t,u,v,w,x,y,z,A=b(document),B=b(),C=\"touchmove.tcp mousemove.tcp pointermove.tcp\",D=\"touchstart.tcp mousedown.tcp pointerdown.tcp\",E=\"touchend.tcp mouseup.tcp pointerup.tcp\",F=!1,G=(Math.round,a.requestAnimationFrame||a.webkitRequestAnimationFrame||function(a){a()}),H='<div class=\"cp-color-picker\"><div class=\"cp-z-slider\"><div class=\"cp-z-cursor\"></div></div><div class=\"cp-xy-slider\"><div class=\"cp-white\"></div><div class=\"cp-xy-cursor\"></div></div><div class=\"cp-alpha\"><div class=\"cp-alpha-cursor\"></div></div></div>',I=\".cp-color-picker{position:absolute;overflow:hidden;padding:6px 6px 0;background-color:#444;color:#bbb;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;cursor:default;border-radius:5px}.cp-color-picker>div{position:relative;overflow:hidden}.cp-xy-slider{float:left;height:128px;width:128px;margin-bottom:6px;background:linear-gradient(to right,#FFF,rgba(255,255,255,0))}.cp-white{height:100%;width:100%;background:linear-gradient(rgba(0,0,0,0),#000)}.cp-xy-cursor{position:absolute;top:0;width:10px;height:10px;margin:-5px;border:1px solid #fff;border-radius:100%;box-sizing:border-box}.cp-z-slider{float:right;margin-left:6px;height:128px;width:20px;background:linear-gradient(red 0,#f0f 17%,#00f 33%,#0ff 50%,#0f0 67%,#ff0 83%,red 100%)}.cp-z-cursor{position:absolute;margin-top:-4px;width:100%;border:4px solid #fff;border-color:transparent #fff;box-sizing:border-box}.cp-alpha{clear:both;width:100%;height:16px;margin:6px 0;background:linear-gradient(to right,#444,rgba(0,0,0,0))}.cp-alpha-cursor{position:absolute;margin-left:-4px;height:100%;border:4px solid #fff;border-color:#fff transparent;box-sizing:border-box}\",J=function(a){q=this.color=new c(a),r=q.options,p=this};J.prototype={render:n,toggle:h},b.fn.colorPicker=function(c){var d=this,f=function(){};return c=b.extend({animationSpeed:150,GPU:!0,doRender:!0,customBG:\"#FFF\",opacity:!0,renderCallback:f,buildCallback:f,body:document.body,scrollResize:!0,gap:4},c),!p&&c.scrollResize&&b(a).on(\"resize.tcp scroll.tcp\",function(){p.$trigger&&p.toggle.call(p.$trigger[0],!0)}),B=B.add(this),this.colorPicker=p||new J(c),this.options=c,b(c.body).off(\".tcp\").on(D,function(a){!B.add(t).find(a.target).add(B.filter(a.target))[0]&&h()}),this.on(\"focusin.tcp click.tcp\",function(a){p.color.options=b.extend(p.color.options,r=d.options),h.call(this,a)}).on(\"change.tcp\",function(){q.setColor(this.value||\"#FFF\"),d.colorPicker.render(!0)}).each(function(){var a=e(this),d=a.split(\"(\"),f=g(b(this));f.data(\"colorMode\",d[1]?d[0].substr(0,3):\"HEX\").attr(\"readonly\",r.preventFocus),c.doRender&&f.css({\"background-color\":a,color:function(){return q.setColor(a).rgbaMixBGMixCustom.luminance>.22?\"#222\":\"#DDD\"}})})},b.fn.colorPicker.destroy=function(){b(\"*\").off(\".tcp\"),p.toggle(!1),B=b()}});\n    4  //# sourceMappingURL=jqColorPicker.js.map\n\n/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/README.md:\n   47      doRender: true | 'selector', // manipulate color and bgColor of input field (on certain elements if selector)\n   48      opacity: true, // enable / disable alpha slider\n   49:     renderCallback: function($elm, toggled) {}, // this === instance; $elm: the input field;toggle === true -> just appeared; false -> opposite; else -> is rendering on pointer move\n   50      // toggled true/false can for example be used to check if the $elm has a certain className and then hide alpha,...\n   51      buildCallback: function($elm) {}, // this === instance; $elm: the UI\n   ..\n   62  #### Some tips\n   63  \n   64: The renderCallback can be used as openCallback and closeCallback:\n   65  \n   66  ```javascript\n   67: renderCallback: function($elm, toggled) {\n   68      if (toggled === true) { // simple, lightweight check\n   69          // ... like an open callback\n\n/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/demo/index.js:\n   38  \n   39  			this.$sliders = $elm.find('.cp-rgb-r, .cp-rgb-g, .cp-rgb-b');\n   40: 			this.cursorRStyle = this.$sliders.find('.cp-rgb-r-cursor')[0].style; // caching for faster render renderCallback\n   41  			this.cursorGStyle = this.$sliders.find('.cp-rgb-g-cursor')[0].style;\n   42  			this.cursorBStyle = this.$sliders.find('.cp-rgb-b-cursor')[0].style;\n   ..\n   64  			$('#colorPickerMod').appendTo('head');\n   65  		},\n   66: 		renderCallback: function($elm, toggled) {\n   67  			var colors = this.color.colors; // the whole color object\n   68  			var rgb = colors.RND.rgb; // the RGB color in 0-255\n\n/Users/carynvainio/AppDev/stitchly/public/js/jqColorPicker.min.js:\n    1  /*! tinyColorPicker - v1.0.7 2016-05-10 */\n    2  \n    3: !function(a,b){\"object\"==typeof exports?module.exports=b(a):\"function\"==typeof define&&define.amd?define(\"colors\",[],function(){return b(a)}):a.Colors=b(a)}(this,function(a,b){\"use strict\";function c(a,c,d,f,g){if(\"string\"==typeof c){var c=v.txt2color(c);d=c.type,p[d]=c[d],g=g!==b?g:c.alpha}else if(c)for(var h in c)a[d][h]=k(c[h]/l[d][h][1],0,1);return g!==b&&(a.alpha=k(+g,0,1)),e(d,f?a:b)}function d(a,b,c){var d=o.options.grey,e={};return e.RGB={r:a.r,g:a.g,b:a.b},e.rgb={r:b.r,g:b.g,b:b.b},e.alpha=c,e.equivalentGrey=n(d.r*a.r+d.g*a.g+d.b*a.b),e.rgbaMixBlack=i(b,{r:0,g:0,b:0},c,1),e.rgbaMixWhite=i(b,{r:1,g:1,b:1},c,1),e.rgbaMixBlack.luminance=h(e.rgbaMixBlack,!0),e.rgbaMixWhite.luminance=h(e.rgbaMixWhite,!0),o.options.customBG&&(e.rgbaMixCustom=i(b,o.options.customBG,c,1),e.rgbaMixCustom.luminance=h(e.rgbaMixCustom,!0),o.options.customBG.luminance=h(o.options.customBG,!0)),e}function e(a,b){var c,e,k,q=b||p,r=v,s=o.options,t=l,u=q.RND,w=\"\",x=\"\",y={hsl:\"hsv\",rgb:a},z=u.rgb;if(\"alpha\"!==a){for(var A in t)if(!t[A][A]){a!==A&&(x=y[A]||\"rgb\",q[A]=r[x+\"2\"+A](q[x])),u[A]||(u[A]={}),c=q[A];for(w in c)u[A][w]=n(c[w]*t[A][w][1])}z=u.rgb,q.HEX=r.RGB2HEX(z),q.equivalentGrey=s.grey.r*q.rgb.r+s.grey.g*q.rgb.g+s.grey.b*q.rgb.b,q.webSave=e=f(z,51),q.webSmart=k=f(z,17),q.saveColor=z.r===e.r&&z.g===e.g&&z.b===e.b?\"web save\":z.r===k.r&&z.g===k.g&&z.b===k.b?\"web smart\":\"\",q.hueRGB=v.hue2RGB(q.hsv.h),b&&(q.background=d(z,q.rgb,q.alpha))}var B,C,D,E=q.rgb,F=q.alpha,G=\"luminance\",H=q.background;return B=i(E,{r:0,g:0,b:0},F,1),B[G]=h(B,!0),q.rgbaMixBlack=B,C=i(E,{r:1,g:1,b:1},F,1),C[G]=h(C,!0),q.rgbaMixWhite=C,s.customBG&&(D=i(E,H.rgbaMixCustom,F,1),D[G]=h(D,!0),D.WCAG2Ratio=j(D[G],H.rgbaMixCustom[G]),q.rgbaMixBGMixCustom=D,D.luminanceDelta=m.abs(D[G]-H.rgbaMixCustom[G]),D.hueDelta=g(H.rgbaMixCustom,D,!0)),q.RGBLuminance=h(z),q.HUELuminance=h(q.hueRGB),s.convertCallback&&s.convertCallback(q,a),q}function f(a,b){var c={},d=0,e=b/2;for(var f in a)d=a[f]%b,c[f]=a[f]+(d>e?b-d:-d);return c}function g(a,b,c){return(m.max(a.r-b.r,b.r-a.r)+m.max(a.g-b.g,b.g-a.g)+m.max(a.b-b.b,b.b-a.b))*(c?255:1)/765}function h(a,b){for(var c=b?1:255,d=[a.r/c,a.g/c,a.b/c],e=o.options.luminance,f=d.length;f--;)d[f]=d[f]<=.03928?d[f]/12.92:m.pow((d[f]+.055)/1.055,2.4);return e.r*d[0]+e.g*d[1]+e.b*d[2]}function i(a,c,d,e){var f={},g=d!==b?d:1,h=e!==b?e:1,i=g+h*(1-g);for(var j in a)f[j]=(a[j]*g+c[j]*h*(1-g))/i;return f.a=i,f}function j(a,b){var c=1;return c=a>=b?(a+.05)/(b+.05):(b+.05)/(a+.05),n(100*c)/100}function k(a,b,c){return a>c?c:b>a?b:a}var l={rgb:{r:[0,255],g:[0,255],b:[0,255]},hsv:{h:[0,360],s:[0,100],v:[0,100]},hsl:{h:[0,360],s:[0,100],l:[0,100]},alpha:{alpha:[0,1]},HEX:{HEX:[0,16777215]}},m=a.Math,n=m.round,o={},p={},q={r:.298954,g:.586434,b:.114612},r={r:.2126,g:.7152,b:.0722},s=function(a){this.colors={RND:{}},this.options={color:\"rgba(204, 82, 37, 0.8)\",grey:q,luminance:r,valueRanges:l},t(this,a||{})},t=function(a,d){var e,f=a.options;u(a);for(var g in d)d[g]!==b&&(f[g]=d[g]);e=f.customBG,f.customBG=\"string\"==typeof e?v.txt2color(e).rgb:e,p=c(a.colors,f.color,b,!0)},u=function(a){o!==a&&(o=a,p=a.colors)};s.prototype.setColor=function(a,d,f){return u(this),a?c(this.colors,a,d,b,f):(f!==b&&(this.colors.alpha=k(f,0,1)),e(d))},s.prototype.setCustomBackground=function(a){return u(this),this.options.customBG=\"string\"==typeof a?v.txt2color(a).rgb:a,c(this.colors,b,\"rgb\")},s.prototype.saveAsBackground=function(){return u(this),c(this.colors,b,\"rgb\",!0)},s.prototype.toString=function(a,b){return v.color2text((a||\"rgb\").toLowerCase(),this.colors,b)};var v={txt2color:function(a){var b={},c=a.replace(/(?:#|\\)|%)/g,\"\").split(\"(\"),d=(c[1]||\"\").split(/,\\s*/),e=c[1]?c[0].substr(0,3):\"rgb\",f=\"\";if(b.type=e,b[e]={},c[1])for(var g=3;g--;)f=e[g]||e.charAt(g),b[e][f]=+d[g]/l[e][f][1];else b.rgb=v.HEX2rgb(c[0]);return b.alpha=d[3]?+d[3]:1,b},color2text:function(a,b,c){var d=c!==!1&&n(100*b.alpha)/100,e=\"number\"==typeof d&&c!==!1&&(c||1!==d),f=b.RND.rgb,g=b.RND.hsl,h=\"hex\"===a&&e,i=\"hex\"===a&&!h,j=\"rgb\"===a||h,k=j?f.r+\", \"+f.g+\", \"+f.b:i?\"#\"+b.HEX:g.h+\", \"+g.s+\"%, \"+g.l+\"%\";return i?k:(h?\"rgb\":a)+(e?\"a\":\"\")+\"(\"+k+(e?\", \"+d:\"\")+\")\"},RGB2HEX:function(a){return((a.r<16?\"0\":\"\")+a.r.toString(16)+(a.g<16?\"0\":\"\")+a.g.toString(16)+(a.b<16?\"0\":\"\")+a.b.toString(16)).toUpperCase()},HEX2rgb:function(a){return a=a.split(\"\"),{r:+(\"0x\"+a[0]+a[a[3]?1:0])/255,g:+(\"0x\"+a[a[3]?2:1]+(a[3]||a[1]))/255,b:+(\"0x\"+(a[4]||a[2])+(a[5]||a[2]))/255}},hue2RGB:function(a){var b=6*a,c=~~b%6,d=6===b?0:b-c;return{r:n(255*[1,1-d,0,0,d,1][c]),g:n(255*[d,1,1,1-d,0,0][c]),b:n(255*[0,0,d,1,1,1-d][c])}},rgb2hsv:function(a){var b,c,d,e=a.r,f=a.g,g=a.b,h=0;return g>f&&(f=g+(g=f,0),h=-1),c=g,f>e&&(e=f+(f=e,0),h=-2/6-h,c=m.min(f,g)),b=e-c,d=e?b/e:0,{h:1e-15>d?p&&p.hsl&&p.hsl.h||0:b?m.abs(h+(f-g)/(6*b)):0,s:e?b/e:p&&p.hsv&&p.hsv.s||0,v:e}},hsv2rgb:function(a){var b=6*a.h,c=a.s,d=a.v,e=~~b,f=b-e,g=d*(1-c),h=d*(1-f*c),i=d*(1-(1-f)*c),j=e%6;return{r:[d,h,g,g,i,d][j],g:[i,d,d,h,g,g][j],b:[g,g,i,d,d,h][j]}},hsv2hsl:function(a){var b=(2-a.s)*a.v,c=a.s*a.v;return c=a.s?1>b?b?c/b:0:c/(2-b):0,{h:a.h,s:a.v||c?c:p&&p.hsl&&p.hsl.s||0,l:b/2}},rgb2hsl:function(a,b){var c=v.rgb2hsv(a);return v.hsv2hsl(b?c:p.hsv=c)},hsl2rgb:function(a){var b=6*a.h,c=a.s,d=a.l,e=.5>d?d*(1+c):d+c-c*d,f=d+d-e,g=e?(e-f)/e:0,h=~~b,i=b-h,j=e*g*i,k=f+j,l=e-j,m=h%6;return{r:[e,l,f,f,k,e][m],g:[k,e,e,l,f,f][m],b:[f,f,k,e,e,l][m]}}};return s}),function(a,b){\"object\"==typeof exports?module.exports=b(a,require(\"jquery\"),require(\"colors\")):\"function\"==typeof define&&define.amd?define([\"jquery\",\"colors\"],function(c,d){return b(a,c,d)}):b(a,a.jQuery,a.Colors)}(this,function(a,b,c,d){\"use strict\";function e(a){return a.value||a.getAttribute(\"value\")||b(a).css(\"background-color\")||\"#fff\"}function f(a){return a=a.originalEvent&&a.originalEvent.touches?a.originalEvent.touches[0]:a,a.originalEvent?a.originalEvent:a}function g(a){return b(a.find(r.doRender)[0]||a[0])}function h(c){var d=b(this),f=d.offset(),h=b(a),k=r.gap;c?(s=g(d),s._colorMode=s.data(\"colorMode\"),p.$trigger=d,(t||i()).css({left:(t[0]._left=f.left)-((t[0]._left+=t[0]._width-(h.scrollLeft()+h.width()))+k>0?t[0]._left+k:0),top:(t[0]._top=f.top+d.outerHeight())-((t[0]._top+=t[0]._height-(h.scrollTop()+h.height()))+k>0?t[0]._top+k:0)}).show(r.animationSpeed,function(){c!==!0&&(y.toggle(!!r.opacity)._width=y.width(),v._width=v.width(),v._height=v.height(),u._height=u.height(),q.setColor(e(s[0])),n(!0))}).off(\".tcp\").on(D,\".cp-xy-slider,.cp-z-slider,.cp-alpha\",j)):p.$trigger&&b(t).hide(r.animationSpeed,function(){n(!1),p.$trigger=null}).off(\".tcp\")}function i(){return b(\"head\").append('<style type=\"text/css\" id=\"tinyColorPickerStyles\">'+(r.css||I)+(r.cssAddon||\"\")+\"</style>\"),p.$UI=t=b(H).css({margin:r.margin}).appendTo(\"body\").show(0,function(){var a=b(this);F=r.GPU&&a.css(\"perspective\")!==d,u=b(\".cp-z-slider\",this),v=b(\".cp-xy-slider\",this),w=b(\".cp-xy-cursor\",this),x=b(\".cp-z-cursor\",this),y=b(\".cp-alpha\",this),z=b(\".cp-alpha-cursor\",this),r.buildCallback.call(p,a),a.prepend(\"<div>\").children().eq(0).css(\"width\",a.children().eq(0).width()),this._width=this.offsetWidth,this._height=this.offsetHeight}).hide()}function j(a){var c=this.className.replace(/cp-(.*?)(?:\\s*|$)/,\"$1\").replace(\"-\",\"_\");(a.button||a.which)>1||(a.preventDefault&&a.preventDefault(),a.returnValue=!1,s._offset=b(this).offset(),(c=\"xy_slider\"===c?k:\"z_slider\"===c?l:m)(a),n(),A.on(E,function(){A.off(\".tcp\")}).on(C,function(a){c(a),n()}))}function k(a){var b=f(a),c=b.pageX-s._offset.left,d=b.pageY-s._offset.top;q.setColor({s:c/v._width*100,v:100-d/v._height*100},\"hsv\")}function l(a){var b=f(a).pageY-s._offset.top;q.setColor({h:360-b/u._height*360},\"hsv\")}function m(a){var b=f(a).pageX-s._offset.left,c=b/y._width;q.setColor({},\"rgb\",c)}function n(a){var b=q.colors,c=b.hueRGB,e=(b.RND.rgb,b.RND.hsl,\"#222\"),f=\"#ddd\",g=q.toString(s._colorMode,r.forceAlpha),h=b.HUELuminance>.22?e:f,i=b.rgbaMixBlack.luminance>.22?e:f,j=(1-b.hsv.h)*u._height,k=b.hsv.s*v._width,l=(1-b.hsv.v)*v._height,m=b.alpha*y._width,n=F?\"translate3d\":\"\",p=s[0].value,t=s[0].hasAttribute(\"value\")&&\"\"===p&&a!==d;v._css={backgroundColor:\"rgb(\"+c.r+\",\"+c.g+\",\"+c.b+\")\"},w._css={transform:n+\"(\"+k+\"px, \"+l+\"px, 0)\",left:F?\"\":k,top:F?\"\":l,borderColor:b.RGBLuminance>.22?e:f},x._css={transform:n+\"(0, \"+j+\"px, 0)\",top:F?\"\":j,borderColor:\"transparent \"+h},y._css={backgroundColor:\"#\"+b.HEX},z._css={transform:n+\"(\"+m+\"px, 0, 0)\",left:F?\"\":m,borderColor:i+\" transparent\"},s._css={backgroundColor:t?\"\":g,color:t?\"\":b.rgbaMixBGMixCustom.luminance>.22?e:f},s.text=t?\"\":p!==g?g:\"\",a!==d?o(a):G(o)}function o(a){v.css(v._css),w.css(w._css),x.css(x._css),y.css(y._css),z.css(z._css),r.doRender&&s.css(s._css),s.text&&s.val(s.text),r.renderCallback.call(p,s,\"boolean\"==typeof a?a:d)}var p,q,r,s,t,u,v,w,x,y,z,A=b(document),B=b(),C=\"touchmove.tcp mousemove.tcp pointermove.tcp\",D=\"touchstart.tcp mousedown.tcp pointerdown.tcp\",E=\"touchend.tcp mouseup.tcp pointerup.tcp\",F=!1,G=(Math.round,a.requestAnimationFrame||a.webkitRequestAnimationFrame||function(a){a()}),H='<div class=\"cp-color-picker\"><div class=\"cp-z-slider\"><div class=\"cp-z-cursor\"></div></div><div class=\"cp-xy-slider\"><div class=\"cp-white\"></div><div class=\"cp-xy-cursor\"></div></div><div class=\"cp-alpha\"><div class=\"cp-alpha-cursor\"></div></div></div>',I=\".cp-color-picker{position:absolute;overflow:hidden;padding:6px 6px 0;background-color:#444;color:#bbb;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;cursor:default;border-radius:5px}.cp-color-picker>div{position:relative;overflow:hidden}.cp-xy-slider{float:left;height:128px;width:128px;margin-bottom:6px;background:linear-gradient(to right,#FFF,rgba(255,255,255,0))}.cp-white{height:100%;width:100%;background:linear-gradient(rgba(0,0,0,0),#000)}.cp-xy-cursor{position:absolute;top:0;width:10px;height:10px;margin:-5px;border:1px solid #fff;border-radius:100%;box-sizing:border-box}.cp-z-slider{float:right;margin-left:6px;height:128px;width:20px;background:linear-gradient(red 0,#f0f 17%,#00f 33%,#0ff 50%,#0f0 67%,#ff0 83%,red 100%)}.cp-z-cursor{position:absolute;margin-top:-4px;width:100%;border:4px solid #fff;border-color:transparent #fff;box-sizing:border-box}.cp-alpha{clear:both;width:100%;height:16px;margin:6px 0;background:linear-gradient(to right,#444,rgba(0,0,0,0))}.cp-alpha-cursor{position:absolute;margin-left:-4px;height:100%;border:4px solid #fff;border-color:#fff transparent;box-sizing:border-box}\",J=function(a){q=this.color=new c(a),r=q.options,p=this};J.prototype={render:n,toggle:h},b.fn.colorPicker=function(c){var d=this,f=function(){};return c=b.extend({animationSpeed:150,GPU:!0,doRender:!0,customBG:\"#FFF\",opacity:!0,renderCallback:f,buildCallback:f,body:document.body,scrollResize:!0,gap:4},c),!p&&c.scrollResize&&b(a).on(\"resize.tcp scroll.tcp\",function(){p.$trigger&&p.toggle.call(p.$trigger[0],!0)}),B=B.add(this),this.colorPicker=p||new J(c),this.options=c,b(c.body).off(\".tcp\").on(D,function(a){!B.add(t).find(a.target).add(B.filter(a.target))[0]&&h()}),this.on(\"focusin.tcp click.tcp\",function(a){p.color.options=b.extend(p.color.options,r=d.options),h.call(this,a)}).on(\"change.tcp\",function(){q.setColor(this.value||\"#FFF\"),d.colorPicker.render(!0)}).each(function(){var a=e(this),d=a.split(\"(\"),f=g(b(this));f.data(\"colorMode\",d[1]?d[0].substr(0,3):\"HEX\").attr(\"readonly\",r.preventFocus),c.doRender&&f.css({\"background-color\":a,color:function(){return q.setColor(a).rgbaMixBGMixCustom.luminance>.22?\"#222\":\"#DDD\"}})})},b.fn.colorPicker.destroy=function(){b(\"*\").off(\".tcp\"),p.toggle(!1),B=b()}});\n    4  //# sourceMappingURL=jqColorPicker.js.map\n\n20 matches across 8 files\n",
+			"settings":
+			{
+				"buffer_size": 45731,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "bower_components/tinyColorPicker/index.html",
+			"settings":
+			{
+				"buffer_size": 6561,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bower_components/tinyColorPicker/index.js",
+			"settings":
+			{
+				"buffer_size": 20169,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/chart-stitch.html",
+			"settings":
+			{
+				"buffer_size": 4076,
 				"line_ending": "Unix"
 			}
 		}
@@ -240,7 +283,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"",
@@ -252,6 +295,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console",
+			"selectStitch",
+			"selectNewStitch",
+			"bIsEditingToolbar",
+			"isColor",
+			"selectNewStitch",
+			"prev_stitch_id",
+			"prev_stitch_num",
+			"selected_stitch_id",
+			"selectNewStitch",
+			"renderCallback",
 			"prev_stitch_id",
 			"selected_cell_id",
 			"selectStitchFromToolbar",
@@ -280,6 +334,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"isEditingToolbar",
 			"700",
 			"600"
 		],
@@ -292,7 +347,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -300,15 +355,15 @@
 					"file": "public/chart-color.html",
 					"settings":
 					{
-						"buffer_size": 4493,
+						"buffer_size": 4480,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3543,
-								3543
+								3173,
+								3173
 							]
 						],
 						"settings":
@@ -318,7 +373,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 758.0,
+						"translation.y": 808.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -328,15 +383,15 @@
 					"file": "sass/stitchly-sass.scss",
 					"settings":
 					{
-						"buffer_size": 4404,
+						"buffer_size": 4763,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3124,
-								3124
+								2755,
+								2755
 							]
 						],
 						"settings":
@@ -344,7 +399,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1582.0,
+						"translation.y": 1681.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -354,15 +409,15 @@
 					"file": "public/js/stitchly.js",
 					"settings":
 					{
-						"buffer_size": 8685,
+						"buffer_size": 9198,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5842,
-								5842
+								2026,
+								2026
 							]
 						],
 						"settings":
@@ -372,7 +427,234 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2537.0,
+						"translation.y": 689.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 40,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# ignore bower stuff",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"settings":
+					{
+						"buffer_size": 45731,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										216,
+										230
+									],
+									[
+										477,
+										491
+									],
+									[
+										630,
+										644
+									],
+									[
+										811,
+										825
+									],
+									[
+										1062,
+										1076
+									],
+									[
+										1344,
+										1358
+									],
+									[
+										1636,
+										1650
+									],
+									[
+										1796,
+										1810
+									],
+									[
+										2096,
+										2110
+									],
+									[
+										2276,
+										2290
+									],
+									[
+										5153,
+										5167
+									],
+									[
+										29427,
+										29441
+									],
+									[
+										31386,
+										31400
+									],
+									[
+										32596,
+										32610
+									],
+									[
+										33027,
+										33041
+									],
+									[
+										33125,
+										33139
+									],
+									[
+										33547,
+										33561
+									],
+									[
+										33796,
+										33810
+									],
+									[
+										42806,
+										42820
+									],
+									[
+										44765,
+										44779
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "bower_components/tinyColorPicker/index.html",
+					"settings":
+					{
+						"buffer_size": 6561,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6006,
+								6006
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 713.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "bower_components/tinyColorPicker/index.js",
+					"settings":
+					{
+						"buffer_size": 20169,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1434,
+								1434
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 16.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/chart-stitch.html",
+					"settings":
+					{
+						"buffer_size": 4076,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3175,
+								3175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 478.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
