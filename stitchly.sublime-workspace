@@ -4,6 +4,78 @@
 		"selected_items":
 		[
 			[
+				"stitch-",
+				"stitch-selected"
+			],
+			[
+				"bIs",
+				"bIsColorEditing"
+			],
+			[
+				"isColo",
+				"bIsColorEditing"
+			],
+			[
+				"stitchb",
+				"stitchbar-cell-size"
+			],
+			[
+				"sti",
+				"stitchbar-row"
+			],
+			[
+				"is",
+				"isClicking"
+			],
+			[
+				"selec",
+				"selected_stitch_id"
+			],
+			[
+				"prev",
+				"prev_stitch_id"
+			],
+			[
+				"sell",
+				"sel_stitch_cell"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"selected_",
+				"selected_stitch_id"
+			],
+			[
+				"ine",
+				"inline"
+			],
+			[
+				"inline",
+				"inline"
+			],
+			[
+				"border",
+				"border-collapse"
+			],
+			[
+				"bloc",
+				"inline-block"
+			],
+			[
+				"maincolor-ce",
+				"maincolor-cell-size"
+			],
+			[
+				"maincolo",
+				"maincolor-cell-size"
+			],
+			[
+				"mark",
+				"markSelectedStitch"
+			],
+			[
 				"selected",
 				"selected_stitch_id"
 			],
@@ -22,10 +94,6 @@
 			[
 				"curr",
 				"curr_cell_id"
-			],
-			[
-				"selected_",
-				"selected_cell_id"
 			],
 			[
 				"set",
@@ -56,20 +124,12 @@
 				"font-size"
 			],
 			[
-				"inline",
-				"inline-block"
-			],
-			[
 				"agent",
 				"agent_status"
 			],
 			[
 				"create",
 				"createElement"
-			],
-			[
-				"back",
-				"background"
 			],
 			[
 				"insert",
@@ -104,10 +164,10 @@
 	"buffers":
 	[
 		{
-			"file": "public/index.html",
+			"file": "public/chart-color.html",
 			"settings":
 			{
-				"buffer_size": 3691,
+				"buffer_size": 4493,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,7 +175,7 @@
 			"file": "sass/stitchly-sass.scss",
 			"settings":
 			{
-				"buffer_size": 2411,
+				"buffer_size": 4404,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,32 +183,7 @@
 			"file": "public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 4800,
-				"line_ending": "Unix",
-				"name": "function createGrid(size) {"
-			}
-		},
-		{
-			"file": "public/css/starter-template.css",
-			"settings":
-			{
-				"buffer_size": 96,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "bower_components/bootstrap/dist/css/bootstrap-theme.css",
-			"settings":
-			{
-				"buffer_size": 26132,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "bower_components/bootstrap/dist/css/bootstrap.css",
-			"settings":
-			{
-				"buffer_size": 146082,
+				"buffer_size": 8685,
 				"line_ending": "Unix"
 			}
 		}
@@ -177,8 +212,14 @@
 	},
 	"file_history":
 	[
-		"/Users/carynvainio/AppDev/stitchly/sass/stitchly-sass.scss",
+		"/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/js/carousel.js",
+		"/Users/carynvainio/AppDev/stitchly/bower_components/bootstrap/js/dropdown.js",
+		"/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/colors.js",
+		"/Users/carynvainio/AppDev/stitchly/bower_components/tinyColorPicker/jqColorPicker.js",
+		"/Users/carynvainio/AppDev/stitchly/public/chart-stitch.html",
+		"/Users/carynvainio/AppDev/stitchly/sass/public/untitled.html",
 		"/Users/carynvainio/AppDev/stitchly/public/index.html",
+		"/Users/carynvainio/AppDev/stitchly/sass/stitchly-sass.scss",
 		"/Users/carynvainio/Downloads/bootstrap-3.3.6/docs/examples/starter-template/index.html",
 		"/Users/carynvainio/Downloads/bootstrap-3.3.6/docs/examples/starter-template/starter-template.css",
 		"/Users/carynvainio/AppDev/stitchly/public/css/stitchly.css",
@@ -211,6 +252,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"prev_stitch_id",
+			"selected_cell_id",
+			"selectStitchFromToolbar",
 			"selected_stitch",
 			"navbar-brand",
 			"navbar-header",
@@ -248,23 +292,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/index.html",
+					"file": "public/chart-color.html",
 					"settings":
 					{
-						"buffer_size": 3691,
+						"buffer_size": 4493,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2424,
-								2424
+								3543,
+								3543
 							]
 						],
 						"settings":
@@ -274,7 +318,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 398.0,
+						"translation.y": 758.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -284,15 +328,15 @@
 					"file": "sass/stitchly-sass.scss",
 					"settings":
 					{
-						"buffer_size": 2411,
+						"buffer_size": 4404,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1772,
-								1772
+								3124,
+								3124
 							]
 						],
 						"settings":
@@ -300,7 +344,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 838.0,
+						"translation.y": 1582.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -310,108 +354,25 @@
 					"file": "public/js/stitchly.js",
 					"settings":
 					{
-						"buffer_size": 4800,
+						"buffer_size": 8685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2789,
-								2789
+								5842,
+								5842
 							]
 						],
 						"settings":
 						{
-							"auto_name": "function createGrid(size) {",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 891.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/css/starter-template.css",
-					"settings":
-					{
-						"buffer_size": 96,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "bower_components/bootstrap/dist/css/bootstrap-theme.css",
-					"settings":
-					{
-						"buffer_size": 26132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14296,
-								14308
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5294.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "bower_components/bootstrap/dist/css/bootstrap.css",
-					"settings":
-					{
-						"buffer_size": 146082,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89244,
-								89245
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 67049.0,
+						"translation.y": 2537.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

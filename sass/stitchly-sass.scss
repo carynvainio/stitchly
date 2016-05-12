@@ -20,7 +20,7 @@ $chart-cell-selected-border: #4A7D57;
 /* STITCH TOOLBAR */
 $stitchbar-cell-size: 48px; 
 $stitchbar-selected-stitch-bg: #D6F3DE;
-$stitchbar-selected-stitch-border: #4A7D57;
+$stitchbar-selected-stitch-border: #222;
 
 /* MAIN COLOR */
 $maincolor-cell-size: 30px;
@@ -45,6 +45,45 @@ body {
 	color: $navbar-link;
 }
 
+/* MATERIAL FONT STYLES */
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.icon {
+	width: 60;
+	height: $stitchbar-cell-size;
+	text-align: center;
+	display: inline;
+	float: left;
+}
+
+.icon.edit {
+	margin-bottom: 10px; margin-top: 32px;
+	margin-right: 20px;
+	vertical-align: middle;
+	line-height: 2.8em;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
 /* CHART STYLES */
 
 .chart-container {
@@ -56,6 +95,7 @@ body {
 	border: 1px solid $chart-border;
 	border-collapse: collapse;
     display: table;
+    margin-left: auto; margin-right: auto;
 }
 
 .chart .chart-row { 
@@ -82,11 +122,26 @@ body {
 }
 
 /* STITCH TOOLBAR STYLES */
+.container_stitches {
+	margin-right: auto; margin-left: auto;
+	margin-bottom: 25px; margin-top: 50px;
+	overflow: hidden;
+	width: 60%;
+}
+
+.container_stitches .edit_options {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 3.0em;
+	width: 100px;
+	float: left;
+}
+
 .stitchbar {
-	border-collapse: collapse;
-    margin-left: auto; margin-right: auto;
-    margin-bottom: 10px; margin-top: 50px;
+	/* border-collapse: collapse; */
     display: table;
+    float: left;
+    margin-left: 80px;
 }
 
 .stitchbar .stitchbar-row {
@@ -103,6 +158,7 @@ body {
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .stitchbar .stitch-selection img {
@@ -164,4 +220,9 @@ body {
 	display: inline;
 	float: left;
 	width: $maincolor-cell-size; height: $maincolor-cell-size; 
+}
+
+.color {
+	border: red solid 1px;
+	width: $maincolor-cell-size; height: $maincolor-cell-size;
 }
