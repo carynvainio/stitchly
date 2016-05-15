@@ -27,6 +27,13 @@ body {
   margin-top: 50px;
   width: 60%; }
 
+.help {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 60%; }
+
 /* MATERIAL FONT STYLES */
 /* Rules for sizing the icon. */
 .material-icons.md-18 {
