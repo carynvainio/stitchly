@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="img/favicon.ico">
 
-    <title>Stitchly: Test Stitch Chart</title>
+    <title>Stitchly: Create Charts for Knitting and Needlework</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,10 +23,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
-
-    <!-- Material icon font -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -50,58 +46,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Stitchly</a>
+          <a class="navbar-brand" href="index.php">Stitchly</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="chart-stitch.html">Test Stitch Chart</a></li>
-            <li><a href="chart-color.html">Test Color Chart</a></li>
+            <li><a href="chart-stitch.php">Test Stitch Chart</a></li>
+            <li><a href="chart-color.php">Test Color Chart</a></li>
             <li><a href="#about">Help</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Test Stitch Chart</h1>
-        <p class="lead">A chart to play with to see if the interactions feel good.</p>
-
-        <!-- STITCH TOOLBAR -->
-        <div class="container_stitches">
-          <div class="stitchbar">
-            <div class="stitchbar-row" id="symbols"></div>
-            <div class="stitchbar-row" id="keys"></div>
-          </div>
-          <div class="edit_options" style="visibility: hidden">Edit symbols</div>
-        </div>
-
-        <div class="chart-container">
-          <div class="chart">
-          </div>
-        </div>
-
-      </div>
-
-    </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- Stitchly script -->
-    <script src="js/stitchly.js"></script>
-    <script type="text/javascript">
-    createStitchToolbar(false);
-    </script>
-
-  </body>
-</html>
