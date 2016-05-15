@@ -10,13 +10,11 @@ include_once('header.php');
 
         <!-- STITCH TOOLBAR -->
         <div class="container_stitches">
-          <div class="stitchbar-container">
             <div class="stitchbar">
               <div class="stitchbar-row" id="symbols"></div>
               <div class="stitchbar-row" id="keys"></div>
             </div>
             <div class="edit_options"><a>Edit Colors</a></div>
-          </div>
         </div>
 
         <div class="chart-container">

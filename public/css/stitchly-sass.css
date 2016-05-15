@@ -71,7 +71,9 @@ body {
 .chart-container {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  float: left;
+  width: 100%; }
 
 .chart {
   border: 1px solid #222;
@@ -106,8 +108,8 @@ body {
   margin-left: auto;
   margin-bottom: 25px;
   margin-top: 50px;
-  overflow: hidden;
-  width: 60%; }
+  overflow: auto;
+  white-space: nowrap; }
 
 .container_stitches .edit_options {
   text-align: center;
@@ -116,16 +118,14 @@ body {
   width: 100px;
   float: left; }
 
-.stitchbar-container {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px; }
-
 .stitchbar {
   /* border-collapse: collapse; */
   display: table;
+  margin-left: auto;
+  margin-right: auto;
   float: left;
-  margin-left: 80px; }
+  display: inline-block;
+  white-space: nowrap; }
 
 .stitchbar .stitchbar-row {
   display: table-row; }

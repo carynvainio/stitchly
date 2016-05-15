@@ -77,8 +77,8 @@ function createChart(cols, rows) {
         }
     }
 
-    var c_width = chart_cols * ( parseInt(cell.css("width")) + 2 );
-    $('.chart-container').css("width", c_width);
+    var c_width = chart_cols * ( parseInt(cell.css("width")) + 1 );
+    $('.chart-container').css("min-width", c_width);
 
     setSelectedChartCell(cols-1,rows-1);
 }
