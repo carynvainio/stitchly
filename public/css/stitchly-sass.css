@@ -13,10 +13,19 @@ body {
   border: none; }
 
 .navbar-inverse .navbar-brand {
-  color: #fff; }
+  color: #fff;
+  font-family: "Lobster", cursive;
+  font-size: 2.0em; }
 
 .navbar-inverse .navbar-nav > li > a {
   color: #fff; }
+
+.container_version-notes {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 60%; }
 
 /* MATERIAL FONT STYLES */
 /* Rules for sizing the icon. */
@@ -68,7 +77,7 @@ body {
   user-select: none; }
 
 /* CHART STYLES */
-.chart-container {
+.container-chart {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -103,7 +112,7 @@ body {
   background-color: #D6F3DE; }
 
 /* STITCH TOOLBAR STYLES */
-.container_stitches {
+.container-stitches {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 25px;
@@ -111,19 +120,18 @@ body {
   overflow: auto;
   white-space: nowrap; }
 
-.container_stitches .edit_options {
+.container-stitches .edit-options {
   text-align: center;
   vertical-align: middle;
   line-height: 3.0em;
   width: 100px;
-  float: left; }
+  margin-left: auto;
+  margin-right: auto; }
 
 .stitchbar {
-  /* border-collapse: collapse; */
   display: table;
   margin-left: auto;
   margin-right: auto;
-  float: left;
   display: inline-block;
   white-space: nowrap; }
 

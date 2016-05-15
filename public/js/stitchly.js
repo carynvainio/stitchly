@@ -56,7 +56,7 @@ $('.mc_box').click(function() {
         $('.mc_colorselect').css("visibility", "visible");
     });
 
-$('.edit_options a').click(function() {
+$('.edit-options a').click(function() {
         toggleStitchBarEdit();
     });
 
@@ -122,7 +122,7 @@ function toggleStitchBarEdit() {
     if (isEditingToolbar) {
         isEditingToolbar = false;
         $('#keys').css("visibility", "visible");
-        $('.edit_options a').text("Edit colors");
+        $('.edit-options a').text("Edit colors");
         $('.chart').css("opacity", "1.0");
         $('.stitch-selection').click(function() {
                 selectStitchFromToolbar(this);
@@ -130,7 +130,7 @@ function toggleStitchBarEdit() {
     } else {
         isEditingToolbar = true;
         $('#keys').css("visibility", "hidden");
-        $('.edit_options a').text("Done");
+        $('.edit-options a').text("Done");
         $('.chart').css("opacity", "0.25");
         $('.stitch-selection').colorPicker({
             renderCallback: function($elm, toggled) {

@@ -2,6 +2,7 @@
 
 /* FONTS */
 $font-stack: 'Ubuntu', sans-serif;
+$font-logo: 'Lobster', cursive;
 $font-regular: 400;
 $font-bold: 700;
 
@@ -39,10 +40,19 @@ body {
 
 .navbar-inverse .navbar-brand {
 	color: $navbar-link;
+	font-family: $font-logo;
+	font-size: 2.0em;
 }
 
 .navbar-inverse .navbar-nav > li > a {
 	color: $navbar-link;
+}
+
+.container_version-notes {
+	text-align: left;
+	margin-left: auto; margin-right: auto;
+	margin-top: 50px;
+	width: 60%;
 }
 
 /* MATERIAL FONT STYLES */
@@ -86,7 +96,7 @@ body {
 
 /* CHART STYLES */
 
-.chart-container {
+.container-chart {
 	margin-left: auto; margin-right: auto;
     margin-bottom: 50px;
     float: left;
@@ -124,26 +134,24 @@ body {
 }
 
 /* STITCH TOOLBAR STYLES */
-.container_stitches {
+.container-stitches {
 	margin-right: auto; margin-left: auto;
 	margin-bottom: 25px; margin-top: 50px;
 	overflow: auto;
 	white-space: nowrap;
 }
 
-.container_stitches .edit_options {
+.container-stitches .edit-options {
 	text-align: center;
 	vertical-align: middle;
 	line-height: 3.0em;
 	width: 100px;
-	float: left;
+	margin-left: auto; margin-right: auto;
 }
 
 .stitchbar {
-	/* border-collapse: collapse; */
     display: table;
     margin-left: auto; margin-right: auto;
-    float: left;
     display: inline-block;
     white-space: nowrap;
 }

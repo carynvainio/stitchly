@@ -163,38 +163,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "public/chart-color.html",
-			"settings":
-			{
-				"buffer_size": 4480,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/chart-stitch.html",
-			"settings":
-			{
-				"buffer_size": 4103,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sass/stitchly-sass.scss",
-			"settings":
-			{
-				"buffer_size": 4763,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/js/stitchly.js",
-			"settings":
-			{
-				"buffer_size": 9204,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -316,119 +284,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "public/chart-color.html",
-					"settings":
-					{
-						"buffer_size": 4480,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4304,
-								4304
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/chart-stitch.html",
-					"settings":
-					{
-						"buffer_size": 4103,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3202,
-								3202
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 502.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sass/stitchly-sass.scss",
-					"settings":
-					{
-						"buffer_size": 4763,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2755,
-								2755
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1681.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/js/stitchly.js",
-					"settings":
-					{
-						"buffer_size": 9204,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2673,
-								2676
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 719.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
