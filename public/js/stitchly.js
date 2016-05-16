@@ -13,6 +13,7 @@ var isEditingToolbar = false;
 var selected_stitch_num = 0;
 var prev_stitch_num = -1;
 var selected_cell_id;
+var curr_mc = 'rgb(255, 255, 255)';
 var keyboard_numbers = [49,50,51,52,53,54,55,56,57,48];  // 0-9
 var default_color = '#ffffff';
 var default_stitch = "";
@@ -52,8 +53,12 @@ $('.chart-cell').mousemove(function(event){
     });
 
 
-$('.mc_box').click(function() {
-        $('.mc_colorselect').css("visibility", "visible");
+$('.mc_box').colorPicker({
+        renderCallback: function($elm, toggled) {
+            if (toggled === false) {
+                setMainColor();
+            }
+        }
     });
 
 $('.edit-options a').click(function() {
@@ -71,6 +76,7 @@ function createChart(cols, rows) {
             var cell = $('<div />', {
             }).addClass('chart-cell').appendTo(row);
             cell.attr('id', 'r' + i + '-c' + j);
+            cell.css("background-color", default_color);
             cell.click(function() {
                 markSelectedStitch( $(this).attr('id') );
             });
@@ -156,18 +162,14 @@ function createMCColorBar() {
     }
 }
 
-function setMainColor(c_id) {
-    var color_id = parseInt(c_id.substring(c_id.indexOf("-")+1));
-
-    var curr_mc = $('.mc_box').css('backgroundColor');
-    $('.mc_box').css("background-color", colors[color_id]); 
-
+function setMainColor() {
+    var new_mc = $('.mc_box').css('background-color');
     $('.chart-cell').filter(function(){
         return $(this).css('background-color') == curr_mc;
         })
-        .css( "background-color", colors[color_id] );
+        .css( "background-color", new_mc );
 
-    $('.mc_colorselect').css("visibility", "hidden");
+    curr_mc = new_mc;
 }
 
 

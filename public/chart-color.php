@@ -31,8 +31,8 @@ include_once('header.php');
         </div>
 
         <div class="maincolor">
-          <div class="mc_label">Main Color:</div><div class="mc_box"></div>
-          <div class="mc_colorselect"></div>
+          <div class="mc_label">Main Color</div>
+          <div class="mc_box"></div>
         </div>
 
       </div>
