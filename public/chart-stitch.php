@@ -7,6 +7,7 @@ include('header.php');
       <div class="starter-template">
         <h1>Test Stitch Chart</h1>
         <p class="lead">A chart to play with to see if the interactions feel good.</p>
+        <p>Feedback? Send it to <a href="mailto:caryn.vainio@gmail.com">Caryn Vainio!</a></p>
         <div class="help">
           <ul>
             <li><b>Select stitches:</b> click on the stitch in the stitch bar, or use the corresponding number key.</li>
