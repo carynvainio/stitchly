@@ -16,6 +16,7 @@
 
         <!-- Stitchly stylesheets -->
     <link href="css/stitchly-sass.css" rel="stylesheet">
+    <link id="colorPickerMod" rel="stylesheet" type="text/css" href="css/CPmod.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 

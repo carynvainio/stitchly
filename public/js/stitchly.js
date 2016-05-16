@@ -58,7 +58,10 @@ $('.mc_box').colorPicker({
             if (toggled === false) {
                 setMainColor();
             }
-        }
+        },
+        buildCallback: function($elm) {
+                $('#colorPickerMod').appendTo('head');
+            }
     });
 
 $('.edit-options a').click(function() {
@@ -141,6 +144,9 @@ function toggleStitchBarEdit() {
         $('.stitch-selection').colorPicker({
             renderCallback: function($elm, toggled) {
                 selectNewStitch($elm);
+            },
+            buildCallback: function($elm) {
+                $('#colorPickerMod').appendTo('head');
             }
         });
     }
