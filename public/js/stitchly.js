@@ -4,7 +4,8 @@
 var chart_rows = 20;
 var chart_cols = 30; 
 var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2tog.png", "img-stitch_ssk.png", "img-stitch_s1-k2tog-psso.png"];
-var colors = ["#ffffff", "#ff0000", "#FFAE00", "#FFFB00", "#00ff00", "#0000ff", "#172A91", "#AF38FF"];
+var default_colors = ["#ffffff", "#ff0000", "#FFAE00", "#FFFB00", "#00ff00", "#0000ff", "#172A91", "#AF38FF"];
+var current_colors = [];
 
 var isColor = false;
 var isClicking = false;
@@ -54,6 +55,7 @@ $('.chart-cell').mousemove(function(event){
 
 
 $('.mc_box').colorPicker({
+        opacity: false,
         renderCallback: function($elm, toggled) {
             if (toggled === false) {
                 setMainColor();
@@ -64,8 +66,13 @@ $('.mc_box').colorPicker({
             }
     });
 
-$('.edit-options a').click(function() {
+$('.edit-colors').click(function() {
+        saveCurrentColors();
         toggleStitchBarEdit();
+    });
+
+$('.edit-cancel').click(function() {
+        cancelEditColors();
     });
 
 
@@ -100,7 +107,7 @@ function createStitchToolbar(bIsColor) {
     var arr_to_use = [];
 
     if (bIsColor) {
-        arr_to_use = colors;
+        arr_to_use = default_colors;
         createMCColorBar();
     } else {
         arr_to_use = stitches;
@@ -111,7 +118,7 @@ function createStitchToolbar(bIsColor) {
             }).addClass('stitch-selection').appendTo(parent);
         stitch.attr('id', 'stitch-' + i);
         if (bIsColor) {  
-            stitch.css("background-color", colors[i]);
+            stitch.css("background-color", default_colors[i]);
         } else {
             stitch.css("background-image", "url(img/stitches/" + stitches[i] + ")");   
         }
@@ -124,6 +131,8 @@ function createStitchToolbar(bIsColor) {
             }).addClass('key').appendTo(keyparent);
         stitchkey.text(i+1);
     }
+
+    //saveCurrentColors();
 }
 
 function toggleStitchBarEdit() {
@@ -131,7 +140,8 @@ function toggleStitchBarEdit() {
     if (isEditingToolbar) {
         isEditingToolbar = false;
         $('#keys').css("visibility", "visible");
-        $('.edit-options a').text("Edit colors");
+        $('.edit-options a').text("Edit Colors");
+        $('.cancel-options').css("visibility", "hidden");
         $('.chart').css("opacity", "1.0");
         $('.stitch-selection').click(function() {
                 selectStitchFromToolbar(this);
@@ -140,8 +150,10 @@ function toggleStitchBarEdit() {
         isEditingToolbar = true;
         $('#keys').css("visibility", "hidden");
         $('.edit-options a').text("Done");
+        $('.cancel-options').css("visibility", "visible");
         $('.chart').css("opacity", "0.25");
         $('.stitch-selection').colorPicker({
+            opacity: false,
             renderCallback: function($elm, toggled) {
                 selectNewStitch($elm);
             },
@@ -149,19 +161,26 @@ function toggleStitchBarEdit() {
                 $('#colorPickerMod').appendTo('head');
             }
         });
+        saveCurrentColors();
     }
 }
 
 //+----------- color chart editing stuff -----------+//
 
+function saveCurrentColors() {
+    $('.stitch-selection').each(function(i) {
+        current_colors[i] = $(this).css("background-color");
+        });
+}
+
 function createMCColorBar() {
     var parent = $(".mc_colorselect");
 
-    for (var i = 0; i < colors.length; i++) {
+    for (var i = 0; i < default_colors.length; i++) {
         var color = $('<div />', {
             }).addClass('color-selection').appendTo(parent);
         color.attr('id', 'color-' + i);
-        color.css("background-color", colors[i]);
+        color.css("background-color", default_colors[i]);
         color.click(function() {
                 setMainColor($( this ).attr('id'));
             });
@@ -176,6 +195,13 @@ function setMainColor() {
         .css( "background-color", new_mc );
 
     curr_mc = new_mc;
+}
+
+function cancelEditColors() {
+    $('.stitch-selection').each(function(i) {
+        $(this).css("background-color", current_colors[i]);
+        });
+    toggleStitchBarEdit();
 }
 
 
@@ -199,7 +225,7 @@ function selectNewStitch(stitch_el) {
 
     var stitchnum = parseInt(stitch_id.substring(stitch_id.indexOf("-")+1));
     if (isColor) {
-        if (stitchnum >= colors.length) {
+        if (stitchnum >= default_colors.length) {
             return;
         }
     } else {
