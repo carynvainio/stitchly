@@ -131,8 +131,6 @@ function createStitchToolbar(bIsColor) {
             }).addClass('key').appendTo(keyparent);
         stitchkey.text(i+1);
     }
-
-    //saveCurrentColors();
 }
 
 function toggleStitchBarEdit() {
@@ -161,15 +159,16 @@ function toggleStitchBarEdit() {
                 $('#colorPickerMod').appendTo('head');
             }
         });
-        saveCurrentColors();
     }
 }
 
 //+----------- color chart editing stuff -----------+//
 
 function saveCurrentColors() {
+    console.log("saving current colors...");
     $('.stitch-selection').each(function(i) {
         current_colors[i] = $(this).css("background-color");
+        console.log(current_colors[i]);
         });
 }
 
@@ -198,7 +197,9 @@ function setMainColor() {
 }
 
 function cancelEditColors() {
+    console.log("CANCELING color edit...");
     $('.stitch-selection').each(function(i) {
+        console.log(current_colors[i]);
         $(this).css("background-color", current_colors[i]);
         });
     toggleStitchBarEdit();

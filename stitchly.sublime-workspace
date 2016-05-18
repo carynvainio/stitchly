@@ -227,7 +227,7 @@
 			"file": "public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 10159,
+				"buffer_size": 10271,
 				"line_ending": "Unix"
 			}
 		},
@@ -559,15 +559,15 @@
 					"file": "public/js/stitchly.js",
 					"settings":
 					{
-						"buffer_size": 10159,
+						"buffer_size": 10271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6236,
-								6236
+								6353,
+								6353
 							]
 						],
 						"settings":
@@ -577,7 +577,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1419.0,
+						"translation.y": 2259.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
