@@ -148,12 +148,24 @@ body {
 	white-space: nowrap;
 }
 
+.container-stitches .color-editing-options {
+	margin-left: auto; margin-right: auto;
+}
+
 .container-stitches .edit-options {
 	text-align: center;
 	vertical-align: middle;
 	line-height: 3.0em;
 	width: 100px;
-	margin-left: auto; margin-right: auto;
+	display: inline;
+}
+
+.container-stitches .cancel-options {
+	visibility: hidden;
+	display: inline;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 3.0em;
 }
 
 .stitchbar {

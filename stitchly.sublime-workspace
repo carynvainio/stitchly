@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"save",
+				"saveCurrentColors"
+			],
+			[
+				"toggle",
+				"toggleStitchBarEdit"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
 				"bIs",
 				"bIsEditingToolbar"
 			],
@@ -167,7 +179,7 @@
 			"file": "sass/stitchly-sass.scss",
 			"settings":
 			{
-				"buffer_size": 5152,
+				"buffer_size": 5365,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,7 +187,7 @@
 			"file": "sass/CPmod.scss",
 			"settings":
 			{
-				"buffer_size": 585,
+				"buffer_size": 2364,
 				"line_ending": "Unix"
 			}
 		},
@@ -191,7 +203,7 @@
 			"file": "public/chart-color.php",
 			"settings":
 			{
-				"buffer_size": 1423,
+				"buffer_size": 1611,
 				"line_ending": "Unix"
 			}
 		},
@@ -215,7 +227,7 @@
 			"file": "public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 9429,
+				"buffer_size": 10271,
 				"line_ending": "Unix"
 			}
 		},
@@ -300,7 +312,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -312,6 +324,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"selectNewStitch",
+			"stitch-selected",
+			"saveCurrentColors",
+			"colors",
 			"colorPicker",
 			"colorpicker",
 			"colorPickerMod",
@@ -351,7 +367,7 @@
 			"mc_description"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -369,7 +385,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -377,15 +393,15 @@
 					"file": "sass/stitchly-sass.scss",
 					"settings":
 					{
-						"buffer_size": 5152,
+						"buffer_size": 5365,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5151,
-								5151
+								3329,
+								3329
 							]
 						],
 						"settings":
@@ -393,7 +409,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2758.0,
+						"translation.y": 1949.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -403,23 +419,24 @@
 					"file": "sass/CPmod.scss",
 					"settings":
 					{
-						"buffer_size": 585,
+						"buffer_size": 2364,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								520,
-								520
+								2364,
+								2364
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1118.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -457,15 +474,15 @@
 					"file": "public/chart-color.php",
 					"settings":
 					{
-						"buffer_size": 1423,
+						"buffer_size": 1611,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26,
-								26
+								1000,
+								1000
 							]
 						],
 						"settings":
@@ -542,15 +559,15 @@
 					"file": "public/js/stitchly.js",
 					"settings":
 					{
-						"buffer_size": 9429,
+						"buffer_size": 10271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4680,
-								4680
+								6353,
+								6353
 							]
 						],
 						"settings":
@@ -560,7 +577,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1565.0,
+						"translation.y": 2259.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
