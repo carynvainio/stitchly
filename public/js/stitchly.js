@@ -19,8 +19,70 @@ var keyboard_numbers = [49,50,51,52,53,54,55,56,57,48];  // 0-9
 var default_color = '#ffffff';
 var default_stitch = "";
 
-
 createChart(chart_cols, chart_rows);
+
+
+//+--------------- creators -----------------+//
+
+// create the stitchbar
+(function() {
+    var stitchBar = {
+        stitches: ["#ffffff", "#ff0000", "#FFAE00", "#FFFB00", "#00ff00", "#0000ff", "#172A91", "#AF38FF"],
+        selected_stitch: stitches[0],
+        keys: []
+    };
+
+    //this.appendTo("container-stitches");
+
+    function selectStitch(elm) {
+        //$(this).children().attr('class', 'stitch-selection');
+        //$(elm).attr( 'class', 'stitch-selection stitch-selected');
+    }
+
+    function editColors() {
+
+    }
+
+}());
+
+
+function createStitchToolbar(bIsColor) {
+    var parent = $('#symbols');
+    var keyparent = $('#keys');
+
+    isColor = bIsColor;
+    var arr_to_use = [];
+
+    if (bIsColor) {
+        arr_to_use = default_colors;
+        createMCColorBar();
+    } else {
+        arr_to_use = stitches;
+    }
+
+    for (var i = 0; i < arr_to_use.length; i++) {
+        var stitch = $('<div />', {
+            }).addClass('stitch-selection').appendTo(parent);
+        stitch.attr('id', 'stitch-' + i);
+        if (bIsColor) {  
+            stitch.css("background-color", default_colors[i]);
+        } else {
+            stitch.css("background-image", "url(img/stitches/" + stitches[i] + ")");   
+        }
+        stitch.click(function() {
+                selectStitchFromToolbar(this);
+            });
+        
+        
+        var stitchkey = $('<div />', {
+            }).addClass('key').appendTo(keyparent);
+        stitchkey.text(i+1);
+    }
+}
+
+
+
+
 
 // listen for keyboard input
 // right = 39     left = 37     up = 38     down = 40       enter = 13
@@ -99,39 +161,7 @@ function createChart(cols, rows) {
     setSelectedChartCell(cols-1,rows-1);
 }
 
-function createStitchToolbar(bIsColor) {
-    var parent = $('#symbols');
-    var keyparent = $('#keys');
 
-    isColor = bIsColor;
-    var arr_to_use = [];
-
-    if (bIsColor) {
-        arr_to_use = default_colors;
-        createMCColorBar();
-    } else {
-        arr_to_use = stitches;
-    }
-
-    for (var i = 0; i < arr_to_use.length; i++) {
-        var stitch = $('<div />', {
-            }).addClass('stitch-selection').appendTo(parent);
-        stitch.attr('id', 'stitch-' + i);
-        if (bIsColor) {  
-            stitch.css("background-color", default_colors[i]);
-        } else {
-            stitch.css("background-image", "url(img/stitches/" + stitches[i] + ")");   
-        }
-        stitch.click(function() {
-                selectStitchFromToolbar(this);
-            });
-        
-        
-        var stitchkey = $('<div />', {
-            }).addClass('key').appendTo(keyparent);
-        stitchkey.text(i+1);
-    }
-}
 
 function toggleStitchBarEdit() {
     $('.stitch-selection').unbind("click");
