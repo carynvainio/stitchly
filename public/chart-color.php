@@ -20,10 +20,7 @@ include_once('header.php');
           <div class="color-editing-options">
             <div class="edit-options"><a class="edit-colors">Edit Colors</a></div><div class="cancel-options"> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="edit-cancel">Cancel</a></div>
           </div>
-            <div class="stitchbar">
-              <div class="stitchbar-row" id="symbols"></div>
-              <div class="stitchbar-row" id="keys"></div>
-            </div>
+            <div class="stitchbar"><!-- STITCHBAR --></div>
         </div>
 
         <!-- CHART -->

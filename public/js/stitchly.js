@@ -4,7 +4,16 @@
 var chart_rows = 20;
 var chart_cols = 30; 
 var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2tog.png", "img-stitch_ssk.png", "img-stitch_s1-k2tog-psso.png"];
-var default_colors = ["#ffffff", "#ff0000", "#FFAE00", "#FFFB00", "#00ff00", "#0000ff", "#172A91", "#AF38FF"];
+var arr_default_colors = [
+    "#ffffff",
+    "#ff0000",
+    "#FFAE00",
+    "#FFFB00",
+    "#00ff00",
+    "#0000ff",
+    "#172A91",
+    "#AF38FF"
+    ];
 var current_colors = [];
 
 var isColor = false;
@@ -25,25 +34,50 @@ createChart(chart_cols, chart_rows);
 //+--------------- creators -----------------+//
 
 // create the stitchbar
-(function() {
-    var stitchBar = {
-        stitches: ["#ffffff", "#ff0000", "#FFAE00", "#FFFB00", "#00ff00", "#0000ff", "#172A91", "#AF38FF"],
-        selected_stitch: stitches[0],
-        keys: []
+var stitchBar = (function(stitch_arr, iscolor, parent) {
+    var _stitches = stitch_arr;
+    var _selected_stitch = _stitches[0];
+    var _parent = parent;
+    var _iscolor = iscolor;
+
+    var _stitchbar = {
+        stitches: _stitches,
+        selected_stitch: _selected_stitch,
+        edit_mode: false
     };
 
-    //this.appendTo("container-stitches");
+    var i = 0;
+    var _elm;
+    var _row1 = $('<div />', {
+            }).addClass('stitchbar-row').appendTo(_parent);
+    var _row2 = $('<div />', {
+            }).addClass('stitchbar-row').appendTo(_parent);
+    _row1.attr('id', 'symbols');
+    _row2.attr('id', 'keys');
+    for (i = 0; i < _stitches.length; i++) {
+        _elm = $('<div />', {
+            }).addClass('stitch-selection').appendTo(_row1);
+        if (_iscolor) {
+            _elm.css("background-color", _stitches[i]);
+        }
+        _elm = $('<div />', {
+            }).addClass('key').appendTo(_row2);
+        _elm.text(i+1);
+    }
 
-    function selectStitch(elm) {
+    function select(elm) {
         //$(this).children().attr('class', 'stitch-selection');
         //$(elm).attr( 'class', 'stitch-selection stitch-selected');
     }
 
-    function editColors() {
-
+    function edit() {
+        _stitchbar.edit_mode = true;
     }
 
-}());
+    return _stitchbar;
+}(arr_default_colors, true, ".stitchbar"));
+
+console.log(stitchBar.selected_stitch);
 
 
 function createStitchToolbar(bIsColor) {

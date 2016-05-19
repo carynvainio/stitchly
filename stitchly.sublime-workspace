@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sel",
+				"selected_stitch"
+			],
+			[
 				"save",
 				"saveCurrentColors"
 			],
@@ -203,7 +207,15 @@
 			"file": "public/chart-color.php",
 			"settings":
 			{
-				"buffer_size": 1611,
+				"buffer_size": 1497,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/footer-color.php",
+			"settings":
+			{
+				"buffer_size": 944,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,7 +223,7 @@
 			"file": "public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 10819,
+				"buffer_size": 11658,
 				"line_ending": "Unix"
 			}
 		}
@@ -350,7 +362,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -439,15 +451,15 @@
 					"file": "public/chart-color.php",
 					"settings":
 					{
-						"buffer_size": 1611,
+						"buffer_size": 1497,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1093,
-								1093
+								1122,
+								1122
 							]
 						],
 						"settings":
@@ -465,18 +477,46 @@
 				},
 				{
 					"buffer": 4,
-					"file": "public/js/stitchly.js",
+					"file": "public/footer-color.php",
 					"settings":
 					{
-						"buffer_size": 10819,
+						"buffer_size": 944,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1176,
-								1176
+								885,
+								885
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/js/stitchly.js",
+					"settings":
+					{
+						"buffer_size": 11658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1926,
+								1926
 							]
 						],
 						"settings":
@@ -486,7 +526,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 340.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

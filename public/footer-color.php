@@ -16,7 +16,7 @@
     <!-- Stitchly script -->
     <script src="js/stitchly.js"></script>
     <script type="text/javascript">
-      createStitchToolbar(true);
+      //createStitchToolbar(true);
     </script>
 
   </body>
