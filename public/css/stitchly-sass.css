@@ -155,7 +155,7 @@ body {
 .stitchbar .stitchbar-row {
   display: table-row; }
 
-.stitchbar .stitchbar-row > .stitch-selection {
+.stitchbar .stitchbar-row > .stitch {
   border: 1px solid #222;
   width: 48px;
   height: 48px;
@@ -167,7 +167,7 @@ body {
   background-repeat: no-repeat;
   position: relative; }
 
-.stitchbar .stitch-selection img {
+.stitchbar .stitch img {
   top: 0;
   left: 0;
   display: block;
@@ -175,7 +175,7 @@ body {
   margin-right: auto;
   border: 1px solid red; }
 
-.stitchbar .stitchbar-row .stitch-selected {
+.stitchbar .stitchbar-row .selected {
   border: 5px solid #222;
   background-color: #D6F3DE; }
 

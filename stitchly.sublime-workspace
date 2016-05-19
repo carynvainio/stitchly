@@ -183,7 +183,7 @@
 			"file": "sass/stitchly-sass.scss",
 			"settings":
 			{
-				"buffer_size": 5365,
+				"buffer_size": 5339,
 				"line_ending": "Unix"
 			}
 		},
@@ -223,7 +223,7 @@
 			"file": "public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 11658,
+				"buffer_size": 12389,
 				"line_ending": "Unix"
 			}
 		}
@@ -252,6 +252,7 @@
 	},
 	"file_history":
 	[
+		"/Users/carynvainio/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/carynvainio/AppDev/stitchly/public/footer-color.php",
 		"/Users/carynvainio/AppDev/stitchly/public/footer.php",
 		"/Users/carynvainio/AppDev/stitchly/public/version-notes.php",
@@ -301,6 +302,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"toggleStitchBarEdit",
+			"createstitchtoolbar",
+			"stitch-selected",
+			"stitch-selection",
 			"selectNewStitch",
 			"stitch-selected",
 			"saveCurrentColors",
@@ -370,15 +375,15 @@
 					"file": "sass/stitchly-sass.scss",
 					"settings":
 					{
-						"buffer_size": 5365,
+						"buffer_size": 5339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3329,
-								3329
+								446,
+								453
 							]
 						],
 						"settings":
@@ -386,7 +391,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2064.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -458,8 +463,8 @@
 						"selection":
 						[
 							[
-								1122,
-								1122
+								1112,
+								1112
 							]
 						],
 						"settings":
@@ -487,8 +492,8 @@
 						"selection":
 						[
 							[
-								885,
-								885
+								537,
+								537
 							]
 						],
 						"settings":
@@ -508,15 +513,15 @@
 					"file": "public/js/stitchly.js",
 					"settings":
 					{
-						"buffer_size": 11658,
+						"buffer_size": 12389,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1926,
-								1926
+								3143,
+								3143
 							]
 						],
 						"settings":
@@ -526,7 +531,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 340.0,
+						"translation.y": 1252.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

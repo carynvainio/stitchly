@@ -34,88 +34,130 @@ createChart(chart_cols, chart_rows);
 //+--------------- creators -----------------+//
 
 // create the stitchbar
-var stitchBar = (function(stitch_arr, iscolor, parent) {
-    var _stitches = stitch_arr;
-    var _selected_stitch = _stitches[0];
-    var _parent = parent;
-    var _iscolor = iscolor;
+(function(window) {
 
+    console.log("prepping stitchbar...");
+
+    // setting some defaults
     var _stitchbar = {
-        stitches: _stitches,
-        selected_stitch: _selected_stitch,
-        edit_mode: false
-    };
+        _iscolor: false,
+        _isediting: false,
 
-    var i = 0;
-    var _elm;
-    var _row1 = $('<div />', {
-            }).addClass('stitchbar-row').appendTo(_parent);
-    var _row2 = $('<div />', {
-            }).addClass('stitchbar-row').appendTo(_parent);
-    _row1.attr('id', 'symbols');
-    _row2.attr('id', 'keys');
-    for (i = 0; i < _stitches.length; i++) {
-        _elm = $('<div />', {
-            }).addClass('stitch-selection').appendTo(_row1);
-        if (_iscolor) {
-            _elm.css("background-color", _stitches[i]);
+        edit: function(toggled) {
+            this._isediting = toggled;
         }
-        _elm = $('<div />', {
-            }).addClass('key').appendTo(_row2);
-        _elm.text(i+1);
     }
 
-    function select(elm) {
-        //$(this).children().attr('class', 'stitch-selection');
-        //$(elm).attr( 'class', 'stitch-selection stitch-selected');
+    stitchBar = function(parent, options) {
+        _stitchbar._iscolor = options.isColor;
+        _stitchbar._stitches = options.stitches;
+
+        buildUI(parent);
+
+        return _stitchbar;
     }
 
-    function edit() {
-        _stitchbar.edit_mode = true;
-    }
+    function buildUI(parent) {
 
-    return _stitchbar;
-}(arr_default_colors, true, ".stitchbar"));
+        var sbst = _stitchbar._stitches;
 
-console.log(stitchBar.selected_stitch);
+        console.log("building the stitchbar...");
 
+        var _row1 = $('<div />', {
+                }).addClass('stitchbar-row').appendTo(parent),
+            _row2 = $('<div />', {
+                }).addClass('stitchbar-row').appendTo(parent);
+        _row1.attr('id', 'symbols');
+        _row2.attr('id', 'keys');
 
-function createStitchToolbar(bIsColor) {
-    var parent = $('#symbols');
-    var keyparent = $('#keys');
+        var elm_s, elm_k;
+        for (var key in sbst) {
+            if (!sbst.hasOwnProperty(key)) continue;
 
-    isColor = bIsColor;
-    var arr_to_use = [];
+            _elm_s = $('<div />', {}).addClass('stitch').appendTo(_row1);
+            _elm_s.attr('id', key);
+            _elm_k = $('<div />', {}).addClass('key').appendTo(_row2);
 
-    if (bIsColor) {
-        arr_to_use = default_colors;
-        createMCColorBar();
-    } else {
-        arr_to_use = stitches;
-    }
+            var obj = sbst[key];
+            _elm_k.text(obj["key"]);
+            if (_stitchbar._iscolor) {
+                _elm_s.css("background-color", obj["color"]);
+            }
 
-    for (var i = 0; i < arr_to_use.length; i++) {
-        var stitch = $('<div />', {
-            }).addClass('stitch-selection').appendTo(parent);
-        stitch.attr('id', 'stitch-' + i);
-        if (bIsColor) {  
-            stitch.css("background-color", default_colors[i]);
-        } else {
-            stitch.css("background-image", "url(img/stitches/" + stitches[i] + ")");   
-        }
-        stitch.click(function() {
-                selectStitchFromToolbar(this);
+            _elm_s.click(function() {
+                window.selected_stitch = $(this).attr('id');
+                $('#symbols').children().attr('class', 'stitch');
+                $(this).attr( 'class', 'stitch selected');
+                console.log(window.selected_stitch);
             });
-        
-        
-        var stitchkey = $('<div />', {
-            }).addClass('key').appendTo(keyparent);
-        stitchkey.text(i+1);
+
+            _elm_s.colorPicker({
+                opacity: false,
+                renderCallback: function($elm, toggled) {
+                    //if ( toggled === true ) {
+                    //    console.log("true");
+                    //}
+                },
+                buildCallback: function($elm) {
+                    $('#colorPickerMod').appendTo('head');
+                }
+            });
+        }
+    }
+
+    window.stitchBar = stitchBar;
+})(window);
+
+$('.edit-colors').click(function() {
+        sbar.edit(true);
+
+        $('.chart').css("opacity", "0.25");
+        $('#keys').css("visibility", "hidden");
+        $('.edit-options a').text("Done");
+
+        //saveCurrentColors();
+        //toggleStitchBarEdit();
+    });
+
+$('.edit-cancel').click(function() {
+        sbar.edit(false);
+
+        $('.chart').css("opacity", "1.0");
+        $('#keys').css("visibility", "visible");
+        $('.edit-options a').text("Edit Colors");
+
+        //cancelEditColors();
+    });
+
+/*
+$(function(){
+    var options = {
+        isColor: true
+    }
+
+    //$('.stitchbar').stitchBar(options);
+};
+*/
+
+var sbarOptions = {
+    isColor: true,
+    stitches: {
+        'stitch1': {
+            "color": "#ff0000",
+            "key": "1"
+        },
+        'stitch2': {
+            "color": "#00ff00",
+            "key": "2"
+        },
+        'stitch3': {
+            "color": "#0000ff",
+            "key": "3"
+        }
     }
 }
 
-
-
+var sbar = window.stitchBar('.stitchbar', sbarOptions);
 
 
 // listen for keyboard input
@@ -162,14 +204,7 @@ $('.mc_box').colorPicker({
             }
     });
 
-$('.edit-colors').click(function() {
-        saveCurrentColors();
-        toggleStitchBarEdit();
-    });
 
-$('.edit-cancel').click(function() {
-        cancelEditColors();
-    });
 
 
 function createChart(cols, rows) {

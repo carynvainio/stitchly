@@ -179,7 +179,7 @@ body {
 	display: table-row;
 }
 
-.stitchbar .stitchbar-row > .stitch-selection {
+.stitchbar .stitchbar-row > .stitch {
 	border: 1px solid $chart-border;
 	width: $stitchbar-cell-size;
 	height: $stitchbar-cell-size;
@@ -189,17 +189,17 @@ body {
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    position: relative; 
 }
 
-.stitchbar .stitch-selection img {
+.stitchbar .stitch img {
 	top: 0; left: 0; 
 	display: block;
 	margin-left: auto; margin-right: auto;
 	border: 1px solid red;
 }
 
-.stitchbar .stitchbar-row .stitch-selected {
+.stitchbar .stitchbar-row .selected {
 	border: 5px solid $stitchbar-selected-stitch-border;
 	background-color: $stitchbar-selected-stitch-bg;
 }
