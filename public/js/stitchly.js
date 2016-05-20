@@ -94,12 +94,15 @@ createChart(chart_cols, chart_rows);
             _elm_s.colorPicker({
                 opacity: false,
                 renderCallback: function($elm, toggled) {
-                    //if ( toggled === true ) {
-                    //    console.log("true");
-                    //}
+                    if (!_stitchbar._isediting) {
+                        $('.cp-color-picker').css("visibility", "hidden");
+                    } else {
+                        $('.cp-color-picker').css("visibility", "visible");
+                    }
                 },
                 buildCallback: function($elm) {
                     $('#colorPickerMod').appendTo('head');
+                    $('.cp-color-picker').css("visibility", "hidden");
                 }
             });
         }
@@ -109,14 +112,20 @@ createChart(chart_cols, chart_rows);
 })(window);
 
 $('.edit-colors').click(function() {
-        sbar.edit(true);
+        (sbar._isediting) ? sbar.edit(false) : sbar.edit(true);
 
-        $('.chart').css("opacity", "0.25");
-        $('#keys').css("visibility", "hidden");
-        $('.edit-options a').text("Done");
+        if (sbar._isediting) {
+            $('.chart').css("opacity", "0.25");
+            $('#keys').css("visibility", "hidden");
+            $('.edit-options a').text("Done");
 
-        //saveCurrentColors();
-        //toggleStitchBarEdit();
+            //saveCurrentColors();
+            //toggleStitchBarEdit();
+        } else {
+            $('.chart').css("opacity", "1.0");
+            $('#keys').css("visibility", "visible");
+            $('.edit-options a').text("Edit Colors");
+        }
     });
 
 $('.edit-cancel').click(function() {
