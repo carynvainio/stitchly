@@ -1,44 +1,15 @@
-// the size of the chart will actually be set with a dialog when the user wants
-// to create a chart; this is just here so I can create one to test with
-// and do some stuff with the values
-var chart_rows = 20;
-var chart_cols = 30; 
-var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2tog.png", "img-stitch_ssk.png", "img-stitch_s1-k2tog-psso.png"];
-var arr_default_colors = [
-    "#ffffff",
-    "#ff0000",
-    "#FFAE00",
-    "#FFFB00",
-    "#00ff00",
-    "#0000ff",
-    "#172A91",
-    "#AF38FF"
-    ];
-var current_colors = [];
+// STITCHLY
+// author: Caryn Vainio
 
-var isColor = false;
+
+//+--------------- global vars --------------------+//
+//var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2tog.png", "img-stitch_ssk.png", "img-stitch_s1-k2tog-psso.png"];
 var isClicking = false;
-var isReadyForUndo = false;
-var isEditingToolbar = false;
-var selected_stitch_num = 0;
-var prev_stitch_num = -1;
-var selected_cell_id;
-var curr_mc = 'rgb(255, 255, 255)';
-var keyboard_numbers = [49,50,51,52,53,54,55,56,57,48];  // 0-9
-var default_color = '#ffffff';
-var default_stitch = "";
-
-createChart(chart_cols, chart_rows);
 
 
-//+--------------- creators -----------------+//
-
-// create the stitchbar
+//+--------------- create the stitchbar -----------------+//
 (function(window) {
 
-    console.log("prepping stitchbar...");
-
-    // setting some defaults
     var _stitchbar = {
         _iscolor: false,
         _isediting: false,
@@ -52,16 +23,14 @@ createChart(chart_cols, chart_rows);
         _stitchbar._iscolor = options.isColor;
         _stitchbar._stitches = options.stitches;
 
-        buildUI(parent);
+        buildStitchUI(parent);
 
         return _stitchbar;
     }
 
-    function buildUI(parent) {
+    function buildStitchUI(parent) {
 
         var sbst = _stitchbar._stitches;
-
-        console.log("building the stitchbar...");
 
         var _row1 = $('<div />', {
                 }).addClass('stitchbar-row').appendTo(parent),
@@ -85,10 +54,13 @@ createChart(chart_cols, chart_rows);
             }
 
             _elm_s.click(function() {
-                window.selected_stitch = $(this).attr('id');
+                if (_stitchbar._iscolor) {
+                    window.selected_stitch = $(this).css('background-color');
+                } else {
+                    window.selected_stitch = $(this).css('background-image');
+                }
                 $('#symbols').children().attr('class', 'stitch');
                 $(this).attr( 'class', 'stitch selected');
-                console.log(window.selected_stitch);
             });
 
             _elm_s.colorPicker({
@@ -106,10 +78,51 @@ createChart(chart_cols, chart_rows);
                 }
             });
         }
+
+        $('#stitch1').click();
     }
 
     window.stitchBar = stitchBar;
 })(window);
+
+var sbarOptions = {
+    isColor: true,
+    stitches: {
+        'stitch1': {
+            "color": "#ffffff",
+            "key": "1"
+        },
+        'stitch2': {
+            "color": "#ff0000",
+            "key": "2"
+        },
+        'stitch3': {
+            "color": "#FFAE00",
+            "key": "3"
+        },
+        'stitch4': {
+            "color": "#FFFB00",
+            "key": "4"
+        },
+        'stitch5': {
+            "color": "#00ff00",
+            "key": "5"
+        },
+        'stitch6': {
+            "color": "#0000ff",
+            "key": "6"
+        },
+        'stitch7': {
+            "color": "#172A91",
+            "key": "7"
+        },
+        'stitch8': {
+            "color": "#AF38FF",
+            "key": "8"
+        },
+    }
+}
+var sbar = window.stitchBar('.stitchbar', sbarOptions);
 
 $('.edit-colors').click(function() {
         (sbar._isediting) ? sbar.edit(false) : sbar.edit(true);
@@ -138,39 +151,110 @@ $('.edit-cancel').click(function() {
         //cancelEditColors();
     });
 
-/*
-$(function(){
-    var options = {
-        isColor: true
-    }
+//+--------------- create the chart -----------------+//
+(function(window) {
 
-    //$('.stitchbar').stitchBar(options);
-};
-*/
+    var _chart = {
+        selectCell: function(){
+            console.log(this);
+            //$(this).css("background-color", window.selected_stitch);
 
-var sbarOptions = {
-    isColor: true,
-    stitches: {
-        'stitch1': {
-            "color": "#ff0000",
-            "key": "1"
+            //$('.chart-row').children().attr('class', 'chart-cell');
+            //$(this).attr('class', 'chart-cell chart-cell-selected');
         },
-        'stitch2': {
-            "color": "#00ff00",
-            "key": "2"
-        },
-        'stitch3': {
-            "color": "#0000ff",
-            "key": "3"
+
+        keyboardSelect: function(event){
+            switch(event.which) {
+                case 39:    // right
+                    console.log("right");
+                    getNextCellID($('.chart-cell-selected').attr('id'), "right");
+                    break;
+                case 37:    // left
+                    console.log("left");
+                    break;
+                case 38:    // up
+                    console.log("up");
+                    break;
+                case 40:    // down
+                    console.log("down");
+                    break;
+                case 13:    // enter
+                    console.log("enter");
+                    break;
+                default:
+                    console.log(event.which);
+            }
         }
     }
+
+    Chart = function(parent, options) {
+        _chart._cols = options.columns;
+        _chart._rows = options.rows;
+
+        buildChartUI(parent);
+
+        return _chart;
+    }
+
+    function getNextCellID(c_id, dir) {
+        console.log(c_id, dir);
+    }
+
+    function buildChartUI(parent) {
+
+        var _elm, row, i, j;
+        for (i = _chart._rows-1; i >= 0; i--) {
+            row = $('<div />', {
+                }).addClass('chart-row').appendTo(parent);
+            for(j = 0; j < _chart._cols; j++){
+                _elm = $('<div />', {
+                }).addClass('chart-cell').appendTo(row);
+                _elm.attr('id', 'r' + i + '-c' + j);
+                _elm.css("background-color", sbarOptions["stitches"]["stitch1"]["color"]); // TODO: replace this with default MC at some point
+
+                _elm.click(function() {
+                    if (sbarOptions["isColor"] === true) {      // TODO: this might not be the best way to see if we're in a color chart
+                        $(this).css("background-color", window.selected_stitch);
+
+                        $('.chart-row').children().attr('class', 'chart-cell');
+                        $(this).attr('class', 'chart-cell chart-cell-selected');
+                    }
+                });
+            }
+        }
+    }
+
+    window.chart = Chart;
+})(window);
+
+var chartOptions = {
+    columns: 30,
+    rows: 20
 }
+var chart = window.chart('.chart', chartOptions);
 
-var sbar = window.stitchBar('.stitchbar', sbarOptions);
+// listen for mousedrag when mouse is down and set the cell value as we drag over
+$(document).mouseup(function() {
+    isClicking = false;
+    });
 
+$(document).mousedown(function() {
+    isClicking = true;
+    });
+
+$('.chart-cell').mousemove(function(event){
+        if (isClicking) {   
+            this.click();   
+        }
+    });
+    
+$(document).keydown(function(event){ 
+    chart.keyboardSelect(event);
+    });
 
 // listen for keyboard input
 // right = 39     left = 37     up = 38     down = 40       enter = 13
+/*
 $(document).keydown(function(event){ 
         if (event.which == 39) {
             keyboardSelectChartCell("right");
@@ -186,19 +270,7 @@ $(document).keydown(function(event){
             selectStitchFromToolbar($("#stitch-" + $.inArray(event.which, keyboard_numbers)));
         }
     });
-
-// listen for mousedrag when mouse is down and set the cell value as we drag over
-$(document).mouseup(function() {
-    isClicking = false;
-});
-$(document).mousedown(function() {
-    isClicking = true;
-});
-$('.chart-cell').mousemove(function(event){
-        if (isClicking) {
-            markSelectedStitch($(this).attr('id'));
-        }
-    });
+*/
 
 
 $('.mc_box').colorPicker({
@@ -215,29 +287,6 @@ $('.mc_box').colorPicker({
 
 
 
-
-function createChart(cols, rows) {
-    var parent = $('.chart');
-
-    for (var i = rows-1; i >= 0; i--) {
-        var row = $('<div />', {
-            }).addClass('chart-row').appendTo(parent);
-        for(var j = 0; j < cols; j++){
-            var cell = $('<div />', {
-            }).addClass('chart-cell').appendTo(row);
-            cell.attr('id', 'r' + i + '-c' + j);
-            cell.css("background-color", default_color);
-            cell.click(function() {
-                markSelectedStitch( $(this).attr('id') );
-            });
-        }
-    }
-
-    var c_width = chart_cols * ( parseInt(cell.css("width")) + 1 );
-    $('.chart-container').css("min-width", c_width);
-
-    setSelectedChartCell(cols-1,rows-1);
-}
 
 
 
@@ -351,52 +400,6 @@ function selectNewStitch(stitch_el) {
 
     // highlight the selected stitch in the toolbar
     $(stitch_el).attr( 'class', 'stitch-selection stitch-selected');
-}
-
-
-function markSelectedStitch(cell_id) {
-    if (isEditingToolbar) {
-        return;
-    }
-
-    var sel_stitch_cell = $( '#' + cell_id );
-    var color;
-    var stitch;
-
-    // if we clicked the same cell and we didn't change the stitch, we're clearing the cell
-    if (cell_id == selected_cell_id && prev_stitch_num == selected_stitch_num && !isClicking && isReadyForUndo) {
-        color = default_color;
-        stitch = default_stitch;
-        isReadyForUndo = false;
-    } else {
-        //color = colors[selected_stitch_num];
-        color = $('.stitch-selected').css('background-color');
-        stitch = "url(img/stitches/" + stitches[selected_stitch_num] + ")";
-        isReadyForUndo = true;
-    }
-
-    // save the stitch info -- if we click again, we're going to undo
-    if (isColor) {
-        prev_color = sel_stitch_cell.css('background-color');
-    } else {
-        prev_stitch = sel_stitch_cell.css("background-image");
-    }
-
-    var arr = getChartCellPosById(cell_id);
-    setSelectedChartCell(arr[0], arr[1]);
-
-    if (isColor) {
-        sel_stitch_cell.css("background-color", color); 
-    } else {
-        if ( selected_stitch_num > 0 ) {
-            sel_stitch_cell.css("background-image", stitch); 
-        } else {
-            sel_stitch_cell.css("background-image", "");
-        }
-    }
-
-    // we save this so that we can see if we're trying to undo when we click in the same cell
-    prev_stitch_num = selected_stitch_num;
 }
 
 
