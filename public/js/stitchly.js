@@ -131,9 +131,6 @@ $('.edit-colors').click(function() {
             $('.chart').css("opacity", "0.25");
             $('#keys').css("visibility", "hidden");
             $('.edit-options a').text("Done");
-
-            //saveCurrentColors();
-            //toggleStitchBarEdit();
         } else {
             $('.chart').css("opacity", "1.0");
             $('#keys').css("visibility", "visible");
@@ -147,8 +144,6 @@ $('.edit-cancel').click(function() {
         $('.chart').css("opacity", "1.0");
         $('#keys').css("visibility", "visible");
         $('.edit-options a').text("Edit Colors");
-
-        //cancelEditColors();
     });
 
 //+--------------- create the chart -----------------+//
@@ -203,18 +198,6 @@ $('.edit-cancel').click(function() {
         buildChartUI(parent);
 
         return _chart;
-    }
-
-    function getCellPosById(c_id) {
-        var arr = [];
-        var col = -1;
-        var row = -1;
-
-        var col = parseInt(c_id.substring(c_id.indexOf("c")+1));
-        var row = parseInt(c_id.substring(c_id.indexOf("r")+1,c_id.indexOf("-")));
-        arr = [col, row];
-
-        return arr;
     }
 
     function buildChartUI(parent) {
@@ -280,7 +263,6 @@ $(document).keydown(function(event){
     chart.keyboardSelect(event);
     });
 
-
 $('.mc_box').colorPicker({
         opacity: false,
         renderCallback: function($elm, toggled) {
@@ -300,50 +282,6 @@ $('.mc_box').colorPicker({
             $('#colorPickerMod').appendTo('head');
         }
     });
-
-
-//+----------- color chart editing stuff -----------+//
-
-function saveCurrentColors() {
-    console.log("saving current colors...");
-    $('.stitch-selection').each(function(i) {
-        current_colors[i] = $(this).css("background-color");
-        console.log(current_colors[i]);
-        });
-}
-
-function createMCColorBar() {
-    var parent = $(".mc_colorselect");
-
-    for (var i = 0; i < default_colors.length; i++) {
-        var color = $('<div />', {
-            }).addClass('color-selection').appendTo(parent);
-        color.attr('id', 'color-' + i);
-        color.css("background-color", default_colors[i]);
-        color.click(function() {
-                setMainColor($( this ).attr('id'));
-            });
-    }
-}
-
-function setMainColor() {
-    var new_mc = $('.mc_box').css('background-color');
-    $('.chart-cell').filter(function(){
-        return $(this).css('background-color') == curr_mc;
-        })
-        .css( "background-color", new_mc );
-
-    curr_mc = new_mc;
-}
-
-function cancelEditColors() {
-    console.log("CANCELING color edit...");
-    $('.stitch-selection').each(function(i) {
-        console.log(current_colors[i]);
-        $(this).css("background-color", current_colors[i]);
-        });
-    toggleStitchBarEdit();
-}
 
 
 //+---------- helper functions ---------+//
