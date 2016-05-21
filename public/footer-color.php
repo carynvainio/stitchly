@@ -9,6 +9,8 @@
 
     <script type="text/javascript" src="js/jqColorPicker.min.js"></script>
 
+    <script>window.isColor = true;</script>
+
     <!-- Stitchly script -->
     <script src="js/stitchly.js"></script>
 

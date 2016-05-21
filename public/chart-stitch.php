@@ -19,8 +19,6 @@ include('header.php');
         <div class="container-stitches">
             <!-- <div class="edit-options"><a>Edit Colors</a></div> -->
             <div class="stitchbar">
-              <div class="stitchbar-row" id="symbols"></div>
-              <div class="stitchbar-row" id="keys"></div>
             </div>
         </div>
 
@@ -35,6 +33,9 @@ include('header.php');
     </div><!-- /.container -->
 
 
+    <script>window.isColor = false;</script>
+
+
 <?php
-include('footer-stitch.php');
+include('footer.php');
 ?>

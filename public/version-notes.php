@@ -6,6 +6,7 @@
 	</ul>
 	<b>Known Issues:</b>
 	<ul>
+		<li>Regular stitch charts are broken, but color charts work</li>
 		<li>Some issues relating to the colorPicker flickering on/off as you toggle between Edit Colors and Done</li>
 	</ul>
 	<br />

@@ -7,11 +7,12 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
+    <script type="text/javascript" src="js/jqColorPicker.min.js"></script>
+
+    <script>window.isColor = false;</script>
+
     <!-- Stitchly script -->
     <script src="js/stitchly.js"></script>
-    <script type="text/javascript">
-    createStitchToolbar(false);
-    </script>
 
   </body>
 </html>

@@ -38,7 +38,9 @@ include_once('header.php');
 
     </div><!-- /.container -->
 
+    <script>window.isColor = true;</script>
+
 
     <?php
-include_once('footer-color.php');
+include_once('footer.php');
 ?>

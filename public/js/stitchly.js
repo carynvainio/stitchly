@@ -3,7 +3,6 @@
 
 
 //+--------------- global vars --------------------+//
-//var stitches = ["", "img-stitch_yo.png", "img-stitch_purl.png", "img-stitch_k2tog.png", "img-stitch_ssk.png", "img-stitch_s1-k2tog-psso.png"];
 var isClicking = false;
 
 
@@ -16,6 +15,24 @@ var isClicking = false;
 
         edit: function(toggled) {
             this._isediting = toggled;
+        },
+
+        select: function(key) {
+            $('#stitch' + key).click();
+        },
+
+        keyboardSelect: function(event){
+
+            var keyboard_numbers = [49,50,51,52,53,54,55,56,57,48];  // 0-9
+            if (keyboard_numbers.indexOf(event.keyCode) > -1) {
+                // this means we've hit a number 0-9
+                for (var key in this._stitches) {
+                    var obj = this._stitches[key];
+                    if ( (keyboard_numbers.indexOf(event.keyCode) + 1) === parseInt(obj["key"]) ) {
+                        this.select(keyboard_numbers.indexOf(event.keyCode) + 1);
+                    }
+                }
+            }
         }
     }
 
@@ -49,12 +66,14 @@ var isClicking = false;
 
             var obj = sbst[key];
             _elm_k.text(obj["key"]);
-            if (_stitchbar._iscolor) {
+            if (window.isColor) {
                 _elm_s.css("background-color", obj["color"]);
+            } else {
+                _elm_s.css("background-image", obj["img"]);
             }
 
             _elm_s.click(function() {
-                if (_stitchbar._iscolor) {
+                if (window.isColor) {
                     window.selected_stitch = $(this).css('background-color');
                 } else {
                     window.selected_stitch = $(this).css('background-image');
@@ -63,20 +82,22 @@ var isClicking = false;
                 $(this).attr( 'class', 'stitch selected');
             });
 
-            _elm_s.colorPicker({
-                opacity: false,
-                renderCallback: function($elm, toggled) {
-                    if (!_stitchbar._isediting) {
+            if (window.isColor) {
+                _elm_s.colorPicker({
+                    opacity: false,
+                    renderCallback: function($elm, toggled) {
+                        if (!_stitchbar._isediting) {
+                            $('.cp-color-picker').css("visibility", "hidden");
+                        } else {
+                            $('.cp-color-picker').css("visibility", "visible");
+                        }
+                    },
+                    buildCallback: function($elm) {
+                        $('#colorPickerMod').appendTo('head');
                         $('.cp-color-picker').css("visibility", "hidden");
-                    } else {
-                        $('.cp-color-picker').css("visibility", "visible");
                     }
-                },
-                buildCallback: function($elm) {
-                    $('#colorPickerMod').appendTo('head');
-                    $('.cp-color-picker').css("visibility", "hidden");
-                }
-            });
+                });
+            }
         }
 
         $('#stitch1').click();
@@ -85,44 +106,53 @@ var isClicking = false;
     window.stitchBar = stitchBar;
 })(window);
 
-var sbarOptions = {
-    isColor: true,
+
+var default_sbarOptions = {
+    isColor: window.isColor,
     stitches: {
         'stitch1': {
+            "img": "",
             "color": "#ffffff",
             "key": "1"
         },
         'stitch2': {
+            "img": "url(img/stitches/img-stitch_yo.png)",
             "color": "#ff0000",
             "key": "2"
         },
         'stitch3': {
+            "img": "url(img/stitches/img-stitch_purl.png)",
             "color": "#FFAE00",
             "key": "3"
         },
         'stitch4': {
+            "img": "url(img/stitches/img-stitch_k2tog.png)",
             "color": "#FFFB00",
             "key": "4"
         },
         'stitch5': {
+            "img": "url(img/stitches/img-stitch_ssk.png)",
             "color": "#00ff00",
             "key": "5"
         },
         'stitch6': {
+            "img": "url(img/stitches/img-stitch_s1-k2tog-psso.png)",
             "color": "#0000ff",
             "key": "6"
         },
         'stitch7': {
+            "img": "",
             "color": "#172A91",
             "key": "7"
         },
         'stitch8': {
+            "img": "",
             "color": "#AF38FF",
             "key": "8"
         },
     }
 }
-var sbar = window.stitchBar('.stitchbar', sbarOptions);
+var sbar = window.stitchBar('.stitchbar', default_sbarOptions);
 
 $('.edit-colors').click(function() {
         (sbar._isediting) ? sbar.edit(false) : sbar.edit(true);
@@ -153,6 +183,7 @@ $('.edit-cancel').click(function() {
         select: function(elm){
             $('.chart-row').children().attr('class', 'chart-cell');
             elm.attr('class', 'chart-cell chart-cell-selected');
+            _chart._lastcell = elm.attr('id');
         },
 
         mark: function(elm) {
@@ -194,6 +225,9 @@ $('.edit-cancel').click(function() {
         _chart._cols = options.columns;
         _chart._rows = options.rows;
         _chart._mc = "rgb(255, 255, 255)";
+        _chart._default_stitch = "";
+        _chart._lastcell = "";
+        _chart._undoing = false;
 
         buildChartUI(parent);
 
@@ -210,20 +244,43 @@ $('.edit-cancel').click(function() {
                 _elm = $('<div />', {
                 }).addClass('chart-cell').appendTo(row);
                 _elm.attr('id', 'r' + i + '-c' + j);
-                _elm.css("background-color", _chart._mc);
+
+                if (window.isColor) {
+                    _elm.css("background-color", _chart._mc);
+                } else {
+                    _elm.css("background-image", "");  
+                }
 
                 _elm.click(function() {
-                    if (sbarOptions["isColor"] === true) {      // TODO: this might not be the best way to see if we're in a color chart
-                        $(this).css("background-color", window.selected_stitch);
+                    // if we're clicking in the same cell AND we're not dragging AND we haven't changed the stitch, we're doing a quick reset
+                    if ($(this).attr('id') == _chart._lastcell && !isClicking ) {
+                        if ( (window.isColor && $(this).css("background-color") == window.selected_stitch) 
+                            || (!window.isColor && $(this).css("background-image") == window.selected_stitch) ) {     
+                            _chart._undoing = true;
+                        }
+                    } 
 
-                        $('.chart-row').children().attr('class', 'chart-cell');
-                        $(this).attr('class', 'chart-cell chart-cell-selected');
+                    if (!_chart._undoing) {
+                        if (window.isColor) {     
+                            $(this).css("background-color", window.selected_stitch);
+                        } else {
+                            $(this).css("background-image", window.selected_stitch);  
+                        }
+                    } else {
+                        if (window.isColor) {     
+                            $(this).css("background-color", _chart._mc);
+                        } else {
+                            $(this).css("background-image", "");  
+                        }
                     }
+
+                    _chart._undoing = false;
+                    _chart.select($(this));
                 });
             }
         }
 
-        $('#r0-c0').attr('class', 'chart-cell chart-cell-selected');
+        _chart.select($('#r0-c0'));
     }
 
     window.chart = Chart;
@@ -261,6 +318,7 @@ $('.chart-cell').mousemove(function(event){
     
 $(document).keydown(function(event){ 
     chart.keyboardSelect(event);
+    sbar.keyboardSelect(event);
     });
 
 $('.mc_box').colorPicker({
