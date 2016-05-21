@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"chart",
+				"chart-cell-selected"
+			],
+			[
+				"select",
+				"selected_stitch"
+			],
+			[
 				"sel",
 				"selected_stitch"
 			],
@@ -102,10 +110,6 @@
 			[
 				"selected_stit",
 				"selected_stitch_id"
-			],
-			[
-				"select",
-				"selectStitchFromToolbar"
 			],
 			[
 				"curr",
@@ -215,7 +219,7 @@
 			"file": "public/footer-color.php",
 			"settings":
 			{
-				"buffer_size": 944,
+				"buffer_size": 705,
 				"line_ending": "Unix"
 			}
 		},
@@ -223,7 +227,7 @@
 			"file": "public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 12389,
+				"buffer_size": 10395,
 				"line_ending": "Unix"
 			}
 		}
@@ -302,6 +306,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"createMCColorBar",
+			"saveCurrentColors",
+			"selectNewStitch",
+			"selectStitchFromToolbar",
+			"getChartCellPosById",
+			"setSelectedChartCell",
+			"click()",
+			"markSelectedStitch",
+			"keyboard_numbers",
+			"isReadyForUndo",
+			"current_colors",
+			"getChartCellPosById",
+			"markSelectedStitch",
 			"toggleStitchBarEdit",
 			"createstitchtoolbar",
 			"stitch-selected",
@@ -485,15 +502,15 @@
 					"file": "public/footer-color.php",
 					"settings":
 					{
-						"buffer_size": 944,
+						"buffer_size": 705,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								537,
-								537
+								613,
+								613
 							]
 						],
 						"settings":
@@ -513,15 +530,15 @@
 					"file": "public/js/stitchly.js",
 					"settings":
 					{
-						"buffer_size": 12389,
+						"buffer_size": 10395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3143,
-								3143
+								4672,
+								4672
 							]
 						],
 						"settings":
@@ -531,7 +548,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 839.0,
+						"translation.y": 2160.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

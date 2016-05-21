@@ -155,49 +155,70 @@ $('.edit-cancel').click(function() {
 (function(window) {
 
     var _chart = {
-        selectCell: function(){
-            console.log(this);
-            //$(this).css("background-color", window.selected_stitch);
+        select: function(elm){
+            $('.chart-row').children().attr('class', 'chart-cell');
+            elm.attr('class', 'chart-cell chart-cell-selected');
+        },
 
-            //$('.chart-row').children().attr('class', 'chart-cell');
-            //$(this).attr('class', 'chart-cell chart-cell-selected');
+        mark: function(elm) {
+            elm.click();
         },
 
         keyboardSelect: function(event){
+
+            //if([32, 37, 38, 39, 40, 13].indexOf(event.keyCode) > -1) { continue; }
+
+            var new_c_id;
+            var c_id = $('.chart-cell-selected').attr('id');
+            var col = parseInt(c_id.substring(c_id.indexOf("c")+1));
+            var row = parseInt(c_id.substring(c_id.indexOf("r")+1,c_id.indexOf("-")));
+
             switch(event.which) {
                 case 39:    // right
-                    console.log("right");
-                    getNextCellID($('.chart-cell-selected').attr('id'), "right");
+                    if ( col+1 < this._cols ) { col++ };
                     break;
                 case 37:    // left
-                    console.log("left");
+                    if ( col-1 >= 0 ) { col-- };
                     break;
                 case 38:    // up
-                    console.log("up");
+                    if ( row+1 < this._rows ) { row++ };
                     break;
                 case 40:    // down
-                    console.log("down");
+                    if ( row-1 >= 0 ) { row-- };
                     break;
                 case 13:    // enter
                     console.log("enter");
+                    this.mark($('.chart-cell-selected'));
                     break;
                 default:
                     console.log(event.which);
             }
+
+            new_c_id = ("r" + row + "-c" + col);
+            this.select($("#" + new_c_id));
         }
     }
 
     Chart = function(parent, options) {
         _chart._cols = options.columns;
         _chart._rows = options.rows;
+        _chart._mc = "rgb(255, 255, 255)";
 
         buildChartUI(parent);
 
         return _chart;
     }
 
-    function getNextCellID(c_id, dir) {
-        console.log(c_id, dir);
+    function getCellPosById(c_id) {
+        var arr = [];
+        var col = -1;
+        var row = -1;
+
+        var col = parseInt(c_id.substring(c_id.indexOf("c")+1));
+        var row = parseInt(c_id.substring(c_id.indexOf("r")+1,c_id.indexOf("-")));
+        arr = [col, row];
+
+        return arr;
     }
 
     function buildChartUI(parent) {
@@ -210,7 +231,7 @@ $('.edit-cancel').click(function() {
                 _elm = $('<div />', {
                 }).addClass('chart-cell').appendTo(row);
                 _elm.attr('id', 'r' + i + '-c' + j);
-                _elm.css("background-color", sbarOptions["stitches"]["stitch1"]["color"]); // TODO: replace this with default MC at some point
+                _elm.css("background-color", _chart._mc);
 
                 _elm.click(function() {
                     if (sbarOptions["isColor"] === true) {      // TODO: this might not be the best way to see if we're in a color chart
@@ -233,6 +254,15 @@ var chartOptions = {
 }
 var chart = window.chart('.chart', chartOptions);
 
+//+--------------- event listeners -----------------+//
+// prevent scrolling when moving around the chart with the keyboard
+window.addEventListener("keydown", function(event) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(event.keyCode) > -1) {
+        event.preventDefault();
+    }
+}, false);
+
 // listen for mousedrag when mouse is down and set the cell value as we drag over
 $(document).mouseup(function() {
     isClicking = false;
@@ -252,72 +282,27 @@ $(document).keydown(function(event){
     chart.keyboardSelect(event);
     });
 
-// listen for keyboard input
-// right = 39     left = 37     up = 38     down = 40       enter = 13
-/*
-$(document).keydown(function(event){ 
-        if (event.which == 39) {
-            keyboardSelectChartCell("right");
-        } else if (event.which == 37) {
-            keyboardSelectChartCell("left");
-        } else if (event.which == 38) {
-            keyboardSelectChartCell("up");
-        } else if (event.which == 40) {
-            keyboardSelectChartCell("down");
-        } else if (event.which == 13) {
-            markSelectedStitch(selected_cell_id);
-        } else if ($.inArray(event.which, keyboard_numbers) != -1) {
-            selectStitchFromToolbar($("#stitch-" + $.inArray(event.which, keyboard_numbers)));
-        }
-    });
-*/
-
 
 $('.mc_box').colorPicker({
         opacity: false,
         renderCallback: function($elm, toggled) {
             if (toggled === false) {
-                setMainColor();
+                var new_mc = $('.mc_box').css('background-color');
+                $('.chart-cell').filter(function(){
+                    return $(this).css('background-color') == chart._mc;
+                    })
+                    .css( "background-color", new_mc );
+
+                chart._mc = new_mc;
+            } else {
+                $('.cp-color-picker').css("visibility", "visible");
             }
         },
         buildCallback: function($elm) {
-                $('#colorPickerMod').appendTo('head');
-            }
+            $('#colorPickerMod').appendTo('head');
+        }
     });
 
-
-
-
-
-
-function toggleStitchBarEdit() {
-    $('.stitch-selection').unbind("click");
-    if (isEditingToolbar) {
-        isEditingToolbar = false;
-        $('#keys').css("visibility", "visible");
-        $('.edit-options a').text("Edit Colors");
-        $('.cancel-options').css("visibility", "hidden");
-        $('.chart').css("opacity", "1.0");
-        $('.stitch-selection').click(function() {
-                selectStitchFromToolbar(this);
-            });
-    } else {
-        isEditingToolbar = true;
-        $('#keys').css("visibility", "hidden");
-        $('.edit-options a').text("Done");
-        $('.cancel-options').css("visibility", "visible");
-        $('.chart').css("opacity", "0.25");
-        $('.stitch-selection').colorPicker({
-            opacity: false,
-            renderCallback: function($elm, toggled) {
-                selectNewStitch($elm);
-            },
-            buildCallback: function($elm) {
-                $('#colorPickerMod').appendTo('head');
-            }
-        });
-    }
-}
 
 //+----------- color chart editing stuff -----------+//
 
@@ -363,92 +348,7 @@ function cancelEditColors() {
 }
 
 
-//+------------- stitch selection and marking ------------+//
-
-function selectStitchFromToolbar(stitch_el) {
-    if ( !isEditingToolbar ) {
-        selectNewStitch(stitch_el);
-    } else {
-        if (isColor) {
-            editColor(stitch_el);
-        }
-    }
-}
-
-function selectNewStitch(stitch_el) {
-    var stitch_id = $(stitch_el).attr('id');
-    if (stitch_id == null) {
-        return;
-    }
-
-    var stitchnum = parseInt(stitch_id.substring(stitch_id.indexOf("-")+1));
-    if (isColor) {
-        if (stitchnum >= default_colors.length) {
-            return;
-        }
-    } else {
-        if (stitchnum >= stitches.length) {
-            return;
-        }
-    }
-        
-    // set the new selected stitch
-    selected_stitch_num = stitchnum;
-
-    // reset all the other stitches to not-selected
-    $('#symbols').children().attr('class', 'stitch-selection');
-
-    // highlight the selected stitch in the toolbar
-    $(stitch_el).attr( 'class', 'stitch-selection stitch-selected');
-}
-
-
-function keyboardSelectChartCell(dir) {
-    var curr_cell_id = selected_cell_id;
-
-    var arr = getChartCellPosById(curr_cell_id);
-    var col = arr[0];
-    var row = arr[1];
-
-    if (dir == "right") {
-        if ( (col+1) < chart_cols ) {
-            setSelectedChartCell(col+1, row);
-        }
-    } else if (dir == "left") {
-        if ( (col-1) >= 0 ) {
-            setSelectedChartCell(col-1, row);
-        }
-    } else if (dir == "up") {
-        if ( (row+1) < chart_rows ) {
-            setSelectedChartCell(col, row+1);
-        }
-    } else if (dir == "down") {
-        if ( (row-1) >= 0 ) {
-            setSelectedChartCell(col, row-1);
-        }
-    }
-}
-
-function setSelectedChartCell(col, row) {
-    $('.chart-row').children().attr('class', 'chart-cell');
-    selected_cell_id = "r" + row + "-c" + col;
-    $('#r' + row + "-c" + col).attr('class', 'chart-cell chart-cell-selected');
-}
-
-
 //+---------- helper functions ---------+//
-
-function getChartCellPosById(c_id) {
-    var arr = [];
-    var col = -1;
-    var row = -1;
-
-    var col = parseInt(c_id.substring(c_id.indexOf("c")+1));
-    var row = parseInt(c_id.substring(c_id.indexOf("r")+1,c_id.indexOf("-")));
-    arr = [col, row];
-
-    return arr;
-}
 
 function RGBToHex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);

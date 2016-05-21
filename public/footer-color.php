@@ -8,16 +8,9 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
     <script type="text/javascript" src="js/jqColorPicker.min.js"></script>
-    <script type="text/javascript">
-      $('.color').colorPicker(); // that's it
-      // $().colorPicker.destroy(); // for singlePageApps
-    </script>
 
     <!-- Stitchly script -->
     <script src="js/stitchly.js"></script>
-    <script type="text/javascript">
-      //createStitchToolbar(true);
-    </script>
 
   </body>
 </html>
