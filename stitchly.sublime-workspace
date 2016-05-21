@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"keyboard",
+				"keyboard_numbers"
+			],
+			[
 				"chart",
 				"chart-cell-selected"
 			],
@@ -203,7 +207,7 @@
 			"file": "public/chart-stitch.php",
 			"settings":
 			{
-				"buffer_size": 1285,
+				"buffer_size": 1206,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,7 +215,7 @@
 			"file": "public/chart-color.php",
 			"settings":
 			{
-				"buffer_size": 1497,
+				"buffer_size": 1536,
 				"line_ending": "Unix"
 			}
 		},
@@ -219,7 +223,7 @@
 			"file": "public/footer-color.php",
 			"settings":
 			{
-				"buffer_size": 705,
+				"buffer_size": 750,
 				"line_ending": "Unix"
 			}
 		},
@@ -227,7 +231,23 @@
 			"file": "public/js/stitchly.js",
 			"settings":
 			{
-				"buffer_size": 8634,
+				"buffer_size": 10892,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/footer.php",
+			"settings":
+			{
+				"buffer_size": 705,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/footer-stitch.php",
+			"settings":
+			{
+				"buffer_size": 751,
 				"line_ending": "Unix"
 			}
 		}
@@ -256,10 +276,10 @@
 	},
 	"file_history":
 	[
+		"/Users/carynvainio/AppDev/stitchly/public/version-notes.php",
 		"/Users/carynvainio/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/carynvainio/AppDev/stitchly/public/footer-color.php",
 		"/Users/carynvainio/AppDev/stitchly/public/footer.php",
-		"/Users/carynvainio/AppDev/stitchly/public/version-notes.php",
 		"/Users/carynvainio/AppDev/stitchly/public/index.php",
 		"/Users/carynvainio/AppDev/stitchly/public/header.php",
 		"/Users/carynvainio/AppDev/stitchly/public/js/colors.js",
@@ -306,6 +326,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"isClicking",
+			"sbarOptions",
 			"getCellPosById",
 			"createMCColorBar",
 			"saveCurrentColors",
@@ -446,15 +468,15 @@
 					"file": "public/chart-stitch.php",
 					"settings":
 					{
-						"buffer_size": 1285,
+						"buffer_size": 1206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								314,
-								314
+								921,
+								921
 							]
 						],
 						"settings":
@@ -474,15 +496,15 @@
 					"file": "public/chart-color.php",
 					"settings":
 					{
-						"buffer_size": 1497,
+						"buffer_size": 1536,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1112,
-								1112
+								1478,
+								1482
 							]
 						],
 						"settings":
@@ -503,15 +525,15 @@
 					"file": "public/footer-color.php",
 					"settings":
 					{
-						"buffer_size": 705,
+						"buffer_size": 750,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								613,
-								613
+								658,
+								619
 							]
 						],
 						"settings":
@@ -531,15 +553,15 @@
 					"file": "public/js/stitchly.js",
 					"settings":
 					{
-						"buffer_size": 8634,
+						"buffer_size": 10892,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4162,
-								4162
+								7821,
+								7821
 							]
 						],
 						"settings":
@@ -549,7 +571,61 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1492.0,
+						"translation.y": 3582.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/footer.php",
+					"settings":
+					{
+						"buffer_size": 705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								613,
+								613
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/footer-stitch.php",
+					"settings":
+					{
+						"buffer_size": 751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								733,
+								733
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
