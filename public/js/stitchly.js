@@ -166,8 +166,6 @@ $('.edit-cancel').click(function() {
 
         keyboardSelect: function(event){
 
-            //if([32, 37, 38, 39, 40, 13].indexOf(event.keyCode) > -1) { continue; }
-
             var new_c_id;
             var c_id = $('.chart-cell-selected').attr('id');
             var col = parseInt(c_id.substring(c_id.indexOf("c")+1));
@@ -187,11 +185,9 @@ $('.edit-cancel').click(function() {
                     if ( row-1 >= 0 ) { row-- };
                     break;
                 case 13:    // enter
-                    console.log("enter");
                     this.mark($('.chart-cell-selected'));
                     break;
                 default:
-                    console.log(event.which);
             }
 
             new_c_id = ("r" + row + "-c" + col);
@@ -243,6 +239,8 @@ $('.edit-cancel').click(function() {
                 });
             }
         }
+
+        $('#r0-c0').attr('class', 'chart-cell chart-cell-selected');
     }
 
     window.chart = Chart;
