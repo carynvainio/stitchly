@@ -4,21 +4,60 @@
 /* CHART */
 /* STITCH TOOLBAR */
 /* MAIN COLOR */
-body {
+html, body {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #4f4f4f;
+  padding-top: 0px;
+  height: 100%; }
 
-.navbar-fixed-top {
+body > .container {
+  min-height: 100%;
+  margin: 0 auto -60px; }
+
+body > .container:after {
+  content: "";
+  display: block; }
+
+.box-shadow {
+  -webkit-box-shadow: 0px 3px 14px 0px #c7c7c7;
+  -moz-box-shadow: 0px 3px 14px 0px #c7c7c7;
+  box-shadow: 0px 3px 14px 0px #c7c7c7; }
+
+.navbar {
   background-color: #79CF90;
-  border: none; }
+  border: none;
+  height: 55px;
+  top: 0;
+  margin-bottom: 0px; }
 
-.navbar-inverse .navbar-brand {
+.navbar .navbar-brand {
   color: #fff;
   font-family: "Lobster", cursive;
   font-size: 2.0em; }
 
-.navbar-inverse .navbar-nav > li > a {
+.navbar .navbar-nav > li > a {
   color: #fff; }
+
+.navbar .navbar-nav > li > a:hover {
+  background-color: #BA3E79; }
+
+.button-new-chart {
+  border-radius: 50%;
+  background-color: #BA3E79;
+  width: 55px;
+  height: 55px;
+  float: right;
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  top: -24px;
+  -webkit-box-shadow: 0px 10px 17px -5px #c7c7c7;
+  -moz-box-shadow: 0px 10px 17px -5px #c7c7c7;
+  box-shadow: 0px 10px 17px -5px #c7c7c7;
+  background-image: url("../img/icons/icon-add.svg");
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 .container_version-notes {
   text-align: left;
@@ -27,12 +66,91 @@ body {
   margin-top: 50px;
   width: 60%; }
 
+.subheader {
+  width: 100%;
+  background-color: #D6F3DE;
+  height: 75px;
+  margin-bottom: 30px;
+  display: inline-block; }
+
+.subheader h1 {
+  color: #4F4F4F;
+  font-size: 2.0em;
+  margin: 0 0 0 0;
+  padding: 20px 0;
+  font-weight: 300; }
+
 .help {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   width: 60%; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #79CF90;
+  color: #fff; }
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 20px 0; }
+
+.footer-chart {
+  background-color: #eee; }
+
+body > .container:after {
+  height: 60px;
+  /* .push must be the same height as .footer */ }
+
+.mychart {
+  height: 56px;
+  background-color: #FFFFF9;
+  -webkit-box-shadow: 0px 3px 14px 0px #c7c7c7;
+  -moz-box-shadow: 0px 3px 14px 0px #c7c7c7;
+  box-shadow: 0px 3px 14px 0px #c7c7c7;
+  line-height: 4.0em;
+  margin-bottom: 20px;
+  display: block; }
+
+.mychart p {
+  float: left;
+  text-align: left;
+  font-size: 1.414em;
+  height: 100%;
+  width: 30%; }
+
+.mychart a {
+  color: #4f4f4f; }
+
+.mychart a:hover {
+  color: #FF9CCB; }
+
+.mychart .muted {
+  color: #ccc;
+  font-size: 1em; }
+
+.mychart .last-viewed {
+  width: 20%; }
+
+.mychart .image {
+  border-right: 1px solid #ccc;
+  width: 90px;
+  height: 100%;
+  float: left;
+  margin-right: 14px; }
+
+.mychart .options {
+  float: right;
+  margin-right: 14px; }
+
+.mychart .options img {
+  height: 56px;
+  width: 56px; }
 
 /* MATERIAL FONT STYLES */
 /* Rules for sizing the icon. */

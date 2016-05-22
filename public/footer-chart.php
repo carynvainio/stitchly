@@ -1,3 +1,10 @@
+<!-- <footer class="footer-chart">
+    <div class="container">
+        <p></p>
+    </div>
+</footer>
+-->
+
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -8,8 +15,6 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
     <script type="text/javascript" src="js/jqColorPicker.min.js"></script>
-
-    <script>window.isColor = true;</script>
 
     <!-- Stitchly script -->
     <script src="js/stitchly.js"></script>

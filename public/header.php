@@ -17,7 +17,7 @@
         <!-- Stitchly stylesheets -->
     <link href="css/stitchly-sass.css" rel="stylesheet">
     <link id="colorPickerMod" rel="stylesheet" type="text/css" href="css/CPmod.css">
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -25,6 +25,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/1cbacccd3d.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -39,7 +42,7 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -51,11 +54,14 @@
           <a class="navbar-brand" href="index.php">Stitchly</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="chart-stitch.php">Test Stitch Chart</a></li>
-            <li><a href="chart-color.php">Test Color Chart</a></li>
-            <li><a href="#about">Help</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="my-charts.php">My Charts</a></li>
+            <li><a href="#help">Help</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-bell fa-lg" aria-hidden="true"></i></a></li>
+            <!-- <li><a href="#"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a></li> -->
+            <li><img src="img/icons/icon-profile-blank.svg"></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
