@@ -1,4 +1,16 @@
 <div class="container_version-notes">
+	<h4>0.0.3 Version Notes</h4>
+	<ul>
+	    <li>Added form signup/entry page</li>
+	    <li>Created "My Charts" page, with links to two prototype charts</li>
+	    <li>Added toolbar footer to chart pages (inactive links for now)</li>
+	    <li>Added placeholder profile link in header</li>
+	</ul>
+	<b>Known Issues:</b>
+	<ul>
+		<li>Some issues relating to the colorPicker flickering on/off as you toggle between Edit Colors and Done</li>
+	</ul>
+	<br />
 	<h4>0.0.2 Version Notes</h4>
 	<ul>
 	    <li>Refactored the code to avoid doing some dumb things</li>
