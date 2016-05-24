@@ -56,7 +56,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-left">
             <li><a href="my-charts.php">My Charts</a></li>
-            <li><a href="#help">Help</a></li>
+            <li><a href="about.php">What's New</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><i class="fa fa-bell fa-lg" aria-hidden="true"></i></a></li>
