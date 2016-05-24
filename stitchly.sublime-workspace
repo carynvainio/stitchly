@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"bac",
+				"background"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"body",
+				"body-copy"
+			],
+			[
 				"keyboard",
 				"keyboard_numbers"
 			],
@@ -77,10 +89,6 @@
 			],
 			[
 				"ine",
-				"inline"
-			],
-			[
-				"inline",
 				"inline"
 			],
 			[
@@ -187,78 +195,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "sass/stitchly-sass.scss",
-			"settings":
-			{
-				"buffer_size": 5339,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sass/CPmod.scss",
-			"settings":
-			{
-				"buffer_size": 2364,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/chart-stitch.php",
-			"settings":
-			{
-				"buffer_size": 1206,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/chart-color.php",
-			"settings":
-			{
-				"buffer_size": 1536,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/footer-color.php",
-			"settings":
-			{
-				"buffer_size": 750,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/js/stitchly.js",
-			"settings":
-			{
-				"buffer_size": 10892,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/footer.php",
-			"settings":
-			{
-				"buffer_size": 705,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/footer-stitch.php",
-			"settings":
-			{
-				"buffer_size": 751,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/version-notes.php",
-			"settings":
-			{
-				"buffer_size": 787,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -284,9 +220,22 @@
 	},
 	"file_history":
 	[
+		"/Users/carynvainio/luminus/stitchly/public/footer.php",
+		"/Users/carynvainio/luminus/stitchly/public/about.php",
+		"/Users/carynvainio/luminus/stitchly/public/css/bootstrap.css",
+		"/Users/carynvainio/luminus/stitchly/public/chart-color.php",
+		"/Users/carynvainio/luminus/stitchly/public/chart-stitch.php",
+		"/Users/carynvainio/luminus/stitchly/public/my-charts.php",
+		"/Users/carynvainio/luminus/stitchly/sass/stitchly-sass.scss",
+		"/Users/carynvainio/luminus/stitchly/public/footer-chart.php",
+		"/Users/carynvainio/luminus/stitchly/public/header.php",
+		"/Users/carynvainio/AppDev/stitchly/public/footer-color.php",
+		"/Users/carynvainio/AppDev/stitchly/public/css/starter-template.css",
+		"/Users/carynvainio/AppDev/stitchly/public/footer-stitch.php",
+		"/Users/carynvainio/AppDev/stitchly/public/js/stitchly.js",
+		"/Users/carynvainio/AppDev/stitchly/sass/CPmod.scss",
 		"/Users/carynvainio/AppDev/stitchly/public/version-notes.php",
 		"/Users/carynvainio/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/carynvainio/AppDev/stitchly/public/footer-color.php",
 		"/Users/carynvainio/AppDev/stitchly/public/footer.php",
 		"/Users/carynvainio/AppDev/stitchly/public/index.php",
 		"/Users/carynvainio/AppDev/stitchly/public/header.php",
@@ -334,6 +283,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"footer",
+			"navbar-nav",
+			"nav",
+			"text-muted",
+			"footer",
 			"isClicking",
 			"sbarOptions",
 			"getCellPosById",
@@ -415,258 +369,8 @@
 	"groups":
 	[
 		{
-			"selected": 8,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "sass/stitchly-sass.scss",
-					"settings":
-					{
-						"buffer_size": 5339,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								446,
-								453
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "sass/CPmod.scss",
-					"settings":
-					{
-						"buffer_size": 2364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2364,
-								2364
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1118.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/chart-stitch.php",
-					"settings":
-					{
-						"buffer_size": 1206,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								921,
-								921
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/chart-color.php",
-					"settings":
-					{
-						"buffer_size": 1536,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1478,
-								1482
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "public/footer-color.php",
-					"settings":
-					{
-						"buffer_size": 750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								658,
-								619
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/js/stitchly.js",
-					"settings":
-					{
-						"buffer_size": 10892,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7821,
-								7821
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3582.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/footer.php",
-					"settings":
-					{
-						"buffer_size": 705,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								613,
-								613
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "public/footer-stitch.php",
-					"settings":
-					{
-						"buffer_size": 751,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								733,
-								733
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "public/version-notes.php",
-					"settings":
-					{
-						"buffer_size": 787,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								252,
-								252
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
