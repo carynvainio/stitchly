@@ -10,15 +10,7 @@ include_once('header.php');
 
     <div class="container">
 
-      <div class="starter-template">
-        <p class="lead">A chart to play with to see if the interactions feel good.</p>
-        <p>Feedback? Send it to <a href="mailto:caryn.vainio@gmail.com">Caryn Vainio!</a></p>
-        <div class="help">
-          <ul>
-            <li><b>Select stitches:</b> click on the stitch in the stitch bar, or use the corresponding number key.</li>
-            <li><b>Mark stitches:</b> Click to mark a single stitch, or click and drag to mark multiple stitches. Clicking on a stitch you just marked will reset the stitch. You can also mark a stitch by hitting the Enter key.</li>
-          </ul> 
-      </div>
+        <p>This is a test color chart you can play with to see if the interactions of marking stitches make sense to you. Feedback? Send it to <a href="mailto:caryn.vainio@gmail.com">Caryn Vainio!</a></p>
 
         <!-- STITCH TOOLBAR -->
         <div class="container-stitches">
