@@ -12,6 +12,31 @@ html, body {
   padding-top: 0px;
   height: 100%; }
 
+.brand {
+  font-size: 4.0em;
+  font-family: "Lobster", cursive;
+  color: #fff;
+  margin-bottom: 60px; }
+
+.brand-page {
+  color: #fff; }
+
+.cover {
+  background-color: #79CF90; }
+
+#mc_embed_signup form {
+  background: #79CF90;
+  margin-top: 30px;
+  text-align: center;
+  color: #fff;
+  margin-left: 0px;
+  margin-right: 0px; }
+
+#mc_embed_signup input.email, #mc_embed_signup input.button {
+  display: inline;
+  margin-left: 0px;
+  margin-right: 0px; }
+
 .container {
   min-height: 100%; }
 
