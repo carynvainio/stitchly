@@ -61,12 +61,19 @@ html, body {
     background-color: $header-bg;
 }
 
+#mc_embed_signup {
+    margin-left: 0px; margin-right: 0px;
+    text-align: center;
+}
+
 #mc_embed_signup form {
     background:#79CF90; 
     margin-top: 30px; 
     text-align: center; 
     color: #fff; 
     margin-left: 0px; margin-right: 0px;
+    width: 65%;
+    display: inline-block;
 }
 
 #mc_embed_signup input.email {
