@@ -34,7 +34,7 @@ include_once('header.php');
           <div class="mc_box"></div>
         </div>
 
-      </div>
+    </div>
 
     </div><!-- /.container -->
 

@@ -4,6 +4,7 @@
 /* CHART */
 /* STITCH TOOLBAR */
 /* MAIN COLOR */
+/* +---------- main stuff -----------+ */
 html, body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
@@ -11,53 +12,13 @@ html, body {
   padding-top: 0px;
   height: 100%; }
 
-body > .container {
-  min-height: 100%;
-  margin: 0 auto -60px; }
-
-body > .container:after {
-  content: "";
-  display: block; }
+.container {
+  min-height: 100%; }
 
 .box-shadow {
   -webkit-box-shadow: 0px 3px 14px 0px #c7c7c7;
   -moz-box-shadow: 0px 3px 14px 0px #c7c7c7;
   box-shadow: 0px 3px 14px 0px #c7c7c7; }
-
-.navbar {
-  background-color: #79CF90;
-  border: none;
-  height: 55px;
-  top: 0;
-  margin-bottom: 0px; }
-
-.navbar .navbar-brand {
-  color: #fff;
-  font-family: "Lobster", cursive;
-  font-size: 2.0em; }
-
-.navbar .navbar-nav > li > a {
-  color: #fff; }
-
-.navbar .navbar-nav > li > a:hover {
-  background-color: #BA3E79; }
-
-.button-new-chart {
-  border-radius: 50%;
-  background-color: #BA3E79;
-  width: 55px;
-  height: 55px;
-  float: right;
-  display: inline-block;
-  position: relative;
-  right: 10px;
-  top: -24px;
-  -webkit-box-shadow: 0px 10px 17px -5px #c7c7c7;
-  -moz-box-shadow: 0px 10px 17px -5px #c7c7c7;
-  box-shadow: 0px 10px 17px -5px #c7c7c7;
-  background-image: url("../img/icons/icon-add.svg");
-  background-position: center center;
-  background-repeat: no-repeat; }
 
 .container_version-notes {
   text-align: left;
@@ -87,13 +48,67 @@ body > .container:after {
   margin-top: 50px;
   width: 60%; }
 
+/* +---------- nav -----------+ */
+.navbar {
+  background-color: #79CF90;
+  border: none;
+  height: 55px;
+  top: 0;
+  margin-bottom: 0px; }
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-family: "Lobster", cursive;
+  font-size: 2.0em; }
+
+.navbar .navbar-nav > li > a {
+  color: #fff; }
+
+.navbar .navbar-nav > li > a:hover {
+  background-color: #BA3E79; }
+
+/* +---------- buttons -----------+ */
+.button-round {
+  background-color: #BA3E79;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  -webkit-box-shadow: 0px 10px 17px -5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 17px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 17px -5px rgba(0, 0, 0, 0.2);
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center; }
+
+.button-round.big {
+  width: 55px;
+  height: 55px; }
+
+.button-round.small {
+  width: 42px;
+  height: 42px;
+  font-size: 1.6em;
+  line-height: 1.9em; }
+
+.button-round:hover {
+  background-color: #FF9CCB; }
+
+.button-icon-new-chart {
+  float: right;
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  top: -24px;
+  background-image: url("../img/icons/icon-add.svg"); }
+
+/* +---------- footers -----------+ */
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #79CF90;
-  color: #fff; }
+  display: inline; }
 
 .footer > .container {
   padding-right: 15px;
@@ -101,12 +116,51 @@ footer {
   margin: 20px 0; }
 
 .footer-chart {
-  background-color: #eee; }
+  background-color: #79CF90; }
 
-body > .container:after {
-  height: 60px;
-  /* .push must be the same height as .footer */ }
+.footer-chart .container-buttons {
+  text-align: center;
+  top: -26px;
+  position: relative; }
 
+.footer-chart .button-round {
+  float: left;
+  margin-right: 5px;
+  margin-left: 5px; }
+
+.footer-chart .icon-mode-stitch {
+  background-image: url("../img/icons/icon-mode-stitch.svg"); }
+
+.footer-chart .icon-mode-chart {
+  background-image: url("../img/icons/icon-mode-chart.svg"); }
+
+.footer-chart .icon-mode-pattern {
+  background-image: url("../img/icons/icon-mode-pattern.svg"); }
+
+.footer-chart .container-help {
+  padding-top: 5px;
+  float: left;
+  width: 25%; }
+
+.footer-chart .container-mode {
+  float: left;
+  width: 50%;
+  text-align: center; }
+
+.footer-chart .container-export {
+  padding-top: 5px;
+  float: left;
+  width: 25%; }
+
+.footer-chart .button-row {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block; }
+
+.footer-chart .right {
+  float: right; }
+
+/* +-------------------- my-charts styles ---------------+ */
 .mychart {
   height: 56px;
   background-color: #FFFFF9;
@@ -152,7 +206,7 @@ body > .container:after {
   height: 56px;
   width: 56px; }
 
-/* MATERIAL FONT STYLES */
+/* +-------------------- Materials Font styles ---------------+ */
 /* Rules for sizing the icon. */
 .material-icons.md-18 {
   font-size: 18px; }
@@ -201,7 +255,7 @@ body > .container:after {
   -o-user-select: none;
   user-select: none; }
 
-/* CHART STYLES */
+/* +-------------------- chart styles ---------------+ */
 .container-chart {
   margin-left: auto;
   margin-right: auto;
@@ -236,7 +290,7 @@ body > .container:after {
   border-style: solid;
   background-color: #D6F3DE; }
 
-/* STITCH TOOLBAR STYLES */
+/* +-------------------- stitch toolbar styles ---------------+ */
 .container-stitches {
   margin-right: auto;
   margin-left: auto;
@@ -306,7 +360,7 @@ body > .container:after {
   text-align: center;
   border: none; }
 
-/* MAINCOLOR STYLES */
+/* +-------------------- Main Color box styles ---------------+ */
 .maincolor {
   width: 50%;
   margin-left: auto;

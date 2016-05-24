@@ -1,9 +1,22 @@
-<!-- <footer class="footer-chart">
+
+<footer class="footer-chart">
     <div class="container">
-        <p></p>
+        <div class="container-buttons">
+            <div class="container-help"><div class="button-round small"><i class="fa fa-question" aria-hidden="true"></i></div></div>
+            <div class="container-mode">
+                <div class="button-row">
+                    <div class="button-round big icon-mode-stitch"></div>
+                    <div class="button-round big icon-mode-chart"></div>
+                    <div class="button-round big icon-mode-pattern"></div>
+                </div>
+            </div>
+            <div class="container-export">
+                <div class="button-round small right"><i class="fa fa-share-alt" aria-hidden="true"></i></div>
+                <div class="button-round small right"><i class="fa fa-print" aria-hidden="true"></i></div>
+            </div>
+        </div>
     </div>
 </footer>
--->
 
 <!-- Bootstrap core JavaScript
     ================================================== -->

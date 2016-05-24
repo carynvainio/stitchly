@@ -5,7 +5,7 @@ include('header.php');
     <div class="subheader">
         <div class="container">
             <h1>My Charts</h1>
-            <div class="button-new-chart"></div>
+            <div class="button-round big button-icon-new-chart"></div>
         </div>
     </div>
 
