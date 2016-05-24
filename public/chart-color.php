@@ -2,10 +2,15 @@
 include_once('header.php');
 ?>
 
+<div class="subheader">
+        <div class="container">
+            <h1>Test Color Chart</h1>
+        </div>
+    </div>
+
     <div class="container">
 
       <div class="starter-template">
-        <h1>Test Color Chart</h1>
         <p class="lead">A chart to play with to see if the interactions feel good.</p>
         <p>Feedback? Send it to <a href="mailto:caryn.vainio@gmail.com">Caryn Vainio!</a></p>
         <div class="help">
