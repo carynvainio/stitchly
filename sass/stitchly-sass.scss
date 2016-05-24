@@ -69,9 +69,16 @@ html, body {
     margin-left: 0px; margin-right: 0px;
 }
 
-#mc_embed_signup input.email, #mc_embed_signup input.button {
+#mc_embed_signup input.email {
     display: inline;
     margin-left: 0px; margin-right: 0px;
+    color: #222;
+}
+
+#mc_embed_signup input.button {
+    display: inline;
+    margin-left: 0px; margin-right: 0px;
+    color: #fff;
 }
 
 .container {

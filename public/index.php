@@ -56,14 +56,13 @@
         <p class="brand-page">- Caryn Vainio</p>
 
             <!-- Begin MailChimp Signup Form -->
-            
             <div id="mc_embed_signup">
-            <form action="//elementalbellydance.us7.list-manage.com/subscribe/post?u=4ddda6bd5e90a116d1647df34&amp;id=f21d488127" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <form action="//stitchly.us13.list-manage.com/subscribe/post?u=076f0eed9e40bc17ba5e3bda2&amp;id=5b797a2414" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
                 <label for="mce-EMAIL">Subscribe to our mailing list</label>
                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4ddda6bd5e90a116d1647df34_f21d488127" tabindex="-1" value=""></div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_076f0eed9e40bc17ba5e3bda2_5b797a2414" tabindex="-1" value=""></div>
                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                 </div>
             </form>
