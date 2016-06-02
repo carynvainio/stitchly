@@ -155,17 +155,17 @@ var default_sbarOptions = {
 }
 var sbar = window.stitchBar('#stitchbar', default_sbarOptions);
 
-$('.edit-colors').click(function() {
+$('.edit-stitches').click(function() {
         (sbar._isediting) ? sbar.edit(false) : sbar.edit(true);
 
         if (sbar._isediting) {
             $('.chart').css("opacity", "0.25");
             $('#keys').css("visibility", "hidden");
-            $('.edit-options a').text("Done");
+            $('.edit-stitches').html('<a class="edit-done"><i class="fa fa-check fa-lg" aria-hidden="true"></i></a><a class="edit-cancel"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a>');
         } else {
             $('.chart').css("opacity", "1.0");
             $('#keys').css("visibility", "visible");
-            $('.edit-options a').text("Edit Colors");
+            $('.edit-stitches').html('<i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>');
         }
     });
 
@@ -174,7 +174,7 @@ $('.edit-cancel').click(function() {
 
         $('.chart').css("opacity", "1.0");
         $('#keys').css("visibility", "visible");
-        $('.edit-options a').text("Edit Colors");
+        $('.edit-stitches').html('<i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>');
     });
 
 //+--------------- create the chart -----------------+//
@@ -253,30 +253,33 @@ $('.edit-cancel').click(function() {
                 }
 
                 _elm.click(function() {
-                    // if we're clicking in the same cell AND we're not dragging AND we haven't changed the stitch, we're doing a quick reset
-                    if ($(this).attr('id') == _chart._lastcell && !isClicking ) {
-                        if ( (window.isColor && $(this).css("background-color") == window.selected_stitch) 
-                            || (!window.isColor && $(this).css("background-image") == window.selected_stitch) ) {     
-                            _chart._undoing = true;
-                        }
-                    } 
+                    // only allow chart editing when we're not in Stitchbar Edit mode
+                    if (!sbar._isediting) {
+                        // if we're clicking in the same cell AND we're not dragging AND we haven't changed the stitch, we're doing a quick reset
+                        if ($(this).attr('id') == _chart._lastcell && !isClicking ) {
+                            if ( (window.isColor && $(this).css("background-color") == window.selected_stitch) 
+                                || (!window.isColor && $(this).css("background-image") == window.selected_stitch) ) {     
+                                _chart._undoing = true;
+                            }
+                        } 
 
-                    if (!_chart._undoing) {
-                        if (window.isColor) {     
-                            $(this).css("background-color", window.selected_stitch);
+                        if (!_chart._undoing) {
+                            if (window.isColor) {     
+                                $(this).css("background-color", window.selected_stitch);
+                            } else {
+                                $(this).css("background-image", window.selected_stitch);  
+                            }
                         } else {
-                            $(this).css("background-image", window.selected_stitch);  
+                            if (window.isColor) {     
+                                $(this).css("background-color", _chart._mc);
+                            } else {
+                                $(this).css("background-image", "");  
+                            }
                         }
-                    } else {
-                        if (window.isColor) {     
-                            $(this).css("background-color", _chart._mc);
-                        } else {
-                            $(this).css("background-image", "");  
-                        }
+
+                        _chart._undoing = false;
+                        _chart.select($(this));
                     }
-
-                    _chart._undoing = false;
-                    _chart.select($(this));
                 });
             }
         }

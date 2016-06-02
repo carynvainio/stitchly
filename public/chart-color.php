@@ -23,7 +23,7 @@ include_once('header.php');
           </tr>
           <tr>
             <td class="stitch-editing-options">
-              <a class="edit-colors"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+              <a class="edit-stitches"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
               <!-- <a class="edit-done"><i class="fa fa-check fa-lg" aria-hidden="true"></i></a>
               <a class="edit-cancel"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a> -->
             </td>
@@ -40,11 +40,6 @@ include_once('header.php');
         <div class="container-chart">
           <div class="chart">
           </div>
-        </div>
-
-        <div class="maincolor">
-          <div class="mc_label">Main Color</div>
-          <div class="mc_box"></div>
         </div>
 
     </div>
