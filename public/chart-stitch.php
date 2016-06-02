@@ -30,7 +30,7 @@ include('header.php');
           </tr>
           <tr>
             <td class="stitch-editing-options">
-              <a class="edit-colors"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+              <!-- <a class="edit-stitches"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a> -->
               <!-- <a class="edit-done"><i class="fa fa-check fa-lg" aria-hidden="true"></i></a>
               <a class="edit-cancel"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a> -->
             </td>
