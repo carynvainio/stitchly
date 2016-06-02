@@ -1,4 +1,9 @@
 <div class="container_version-notes">
+	<h4>0.0.4 Version Notes</h4>
+	<ul>
+	    <li>Redesigned the Stitchbar tool to include all editing</li>
+	    <li>Fix: can no longer accidentally edit chart cells while you're editing the Stitchbar</li>
+	</ul>
 	<h4>0.0.3 Version Notes</h4>
 	<ul>
 	    <li>Added form signup/entry page</li>
