@@ -70,7 +70,6 @@ html, body {
   width: 100%;
   background-color: #D6F3DE;
   height: 75px;
-  margin-bottom: 30px;
   display: inline-block; }
 
 .subheader h1 {
@@ -330,53 +329,87 @@ footer {
   background-color: #D6F3DE; }
 
 /* +-------------------- stitch toolbar styles ---------------+ */
-.container-stitches {
+table.container-stitches {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 25px;
-  margin-top: 50px;
-  overflow: auto;
-  white-space: nowrap; }
+  table-layout: fixed; }
 
-.container-stitches .color-editing-options {
-  margin-left: auto;
-  margin-right: auto; }
+table.container-stitches a {
+  color: #4f4f4f; }
 
-.container-stitches .edit-options {
+table.container-stitches a:hover {
+  color: #BA3E79; }
+
+table.container-stitches, th, td {
+  border-collapse: collapse;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+table.container-stitches th, td {
+  background-color: #eee;
+  margin: 2px;
+  border: solid 2px white; }
+
+table.container-stitches th {
+  padding: 2px;
+  text-align: center; }
+
+.container-stitches td:nth-child(1) {
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
-  vertical-align: middle;
-  line-height: 3.0em;
-  width: 100px;
-  display: inline; }
+  width: 15%; }
 
-.container-stitches .cancel-options {
-  visibility: hidden;
-  display: inline;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 3.0em; }
+.container-stitches td:nth-child(4) {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center; }
 
-.stitchbar {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-  white-space: nowrap; }
+.container-stitches td:nth-child(2) {
+  min-width: 55%;
+  max-width: 384px; }
+
+.container-stitches td:nth-child(3) {
+  max-width: 48px;
+  width: 48px; }
+
+.container-stitches .stitch-editing-options {
+  line-height: 1em;
+  vertical-align: middle;
+  text-align: center; }
+
+.container-stitches .macro-editing-options {
+  text-align: center; }
+
+.edit-done {
+  margin-right: 10px; }
+
+.edit-flip {
+  margin-right: 10px; }
 
 .stitchbar .stitchbar-row {
   display: table-row; }
 
 .stitchbar .stitchbar-row > .stitch {
-  border: 1px solid #222;
+  max-width: 48px;
   width: 48px;
+  min-width: 20px;
   height: 48px;
-  float: left;
-  display: inline;
+  display: table-cell;
   font-weight: 700;
-  text-align: center;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  text-align: right;
+  vertical-align: bottom;
+  line-height: 0.8em;
+  padding: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid black; }
 
 .stitchbar .stitch img {
   top: 0;
@@ -387,7 +420,7 @@ footer {
   border: 1px solid red; }
 
 .stitchbar .stitchbar-row .selected {
-  border: 5px solid #222;
+  border: 3px solid #222;
   background-color: #D6F3DE; }
 
 .stitchbar .stitchbar-row .key {
@@ -399,6 +432,14 @@ footer {
   text-align: center;
   border: none; }
 
+.container-stitches .mc_box {
+  min-width: 48px; }
+
+#mc_box {
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff; }
+
 /* +-------------------- Main Color box styles ---------------+ */
 .maincolor {
   width: 50%;
@@ -409,21 +450,6 @@ footer {
 .maincolor .mc_label {
   float: left;
   line-height: 2em; }
-
-.maincolor .mc_box {
-  border: 1px solid #222;
-  width: 30px;
-  height: 30px;
-  float: left;
-  display: inline;
-  font-weight: 700;
-  text-align: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: #ffffff; }
 
 .maincolor .mc_colorselect {
   display: inline;

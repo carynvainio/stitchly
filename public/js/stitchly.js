@@ -50,26 +50,27 @@ var isClicking = false;
         var sbst = _stitchbar._stitches;
 
         var _row1 = $('<div />', {
-                }).addClass('stitchbar-row').appendTo(parent),
-            _row2 = $('<div />', {
                 }).addClass('stitchbar-row').appendTo(parent);
+            //_row2 = $('<div />', {
+                //}).addClass('stitchbar-row').appendTo(parent);
         _row1.attr('id', 'symbols');
-        _row2.attr('id', 'keys');
+        //_row2.attr('id', 'keys');
 
-        var elm_s, elm_k;
+        var elm_s;
         for (var key in sbst) {
             if (!sbst.hasOwnProperty(key)) continue;
 
             _elm_s = $('<div />', {}).addClass('stitch').appendTo(_row1);
             _elm_s.attr('id', key);
-            _elm_k = $('<div />', {}).addClass('key').appendTo(_row2);
+            //_elm_k = $('<div />', {}).addClass('key').appendTo(_row2);
 
             var obj = sbst[key];
-            _elm_k.text(obj["key"]);
+            _elm_s.text(obj["key"]);
             if (window.isColor) {
                 _elm_s.css("background-color", obj["color"]);
             } else {
                 _elm_s.css("background-image", obj["img"]);
+                _elm_s.css("background-color", "#ffffff");
             }
 
             _elm_s.click(function() {
@@ -152,7 +153,7 @@ var default_sbarOptions = {
         },
     }
 }
-var sbar = window.stitchBar('.stitchbar', default_sbarOptions);
+var sbar = window.stitchBar('#stitchbar', default_sbarOptions);
 
 $('.edit-colors').click(function() {
         (sbar._isediting) ? sbar.edit(false) : sbar.edit(true);
@@ -321,11 +322,11 @@ $(document).keydown(function(event){
     sbar.keyboardSelect(event);
     });
 
-$('.mc_box').colorPicker({
+$('#mc_box').colorPicker({
         opacity: false,
         renderCallback: function($elm, toggled) {
             if (toggled === false) {
-                var new_mc = $('.mc_box').css('background-color');
+                var new_mc = $('#mc_box').css('background-color');
                 $('.chart-cell').filter(function(){
                     return $(this).css('background-color') == chart._mc;
                     })
