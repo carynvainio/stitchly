@@ -70,7 +70,9 @@ html, body {
   width: 100%;
   background-color: #D6F3DE;
   height: 75px;
-  display: inline-block; }
+  display: inline-block;
+  position: fixed;
+  top: 52px; }
 
 .subheader h1 {
   color: #4F4F4F;
@@ -199,6 +201,9 @@ footer {
   float: right; }
 
 /* +-------------------- my-charts styles ---------------+ */
+.list-mycharts {
+  margin-top: 140px; }
+
 .mychart {
   height: 56px;
   background-color: #FFFFF9;
@@ -298,25 +303,28 @@ footer {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
+  margin-top: 240px;
   float: left;
-  width: 100%; }
+  width: 100%;
+  white-space: nowrap;
+  display: inline-block; }
 
 .chart {
   border: 1px solid #222;
   border-collapse: collapse;
   display: table;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  overflow-x: scroll; }
 
 .chart .chart-row {
-  display: table-row; }
+  height: 30px; }
 
 .chart .chart-row .chart-cell {
   border: 1px solid #222;
   width: 30px;
   height: 30px;
-  float: left;
-  display: inline;
+  display: inline-block;
   font-weight: 700;
   text-align: center;
   background-position: center;
@@ -330,10 +338,11 @@ footer {
 
 /* +-------------------- stitch toolbar styles ---------------+ */
 table.container-stitches {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 25px;
-  table-layout: fixed; }
+  table-layout: fixed;
+  position: fixed;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%); }
 
 table.container-stitches a {
   color: #4f4f4f; }

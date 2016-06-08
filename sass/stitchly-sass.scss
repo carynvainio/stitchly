@@ -112,6 +112,8 @@ html, body {
     background-color: $subheader-bg;
     height: 75px;
     display: inline-block;
+    position: fixed;
+    top: 52px;
 }
 
 .subheader h1 {
@@ -264,6 +266,10 @@ footer {
 
 /* +-------------------- my-charts styles ---------------+ */
 
+.list-mycharts {
+    margin-top: 140px;
+}
+
 .mychart {
     height: 56px;
     background-color: $mychart-bg;
@@ -359,9 +365,11 @@ footer {
 
 .container-chart {
 	margin-left: auto; margin-right: auto;
-    margin-bottom: 50px;
+    margin-bottom: 50px; margin-top: 240px;
     float: left;
     width: 100%;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .chart {
@@ -369,18 +377,18 @@ footer {
 	border-collapse: collapse;
     display: table;
     margin-left: auto; margin-right: auto;
+    overflow-x: scroll;
 }
 
 .chart .chart-row { 
-	display: table-row;
+    height: $chart-cell-size;
 }
 
 .chart .chart-row .chart-cell {
 	border: 1px solid $chart-border;
 	width: $chart-cell-size;
 	height: $chart-cell-size;
-    float: left;
-    display: inline;
+    display: inline-block;
     font-weight: $font-bold;
     text-align: center;
     background-position: center;
@@ -397,9 +405,11 @@ footer {
 /* +-------------------- stitch toolbar styles ---------------+ */
 
 table.container-stitches {
-    margin-right: auto; margin-left: auto;
-    margin-bottom: 25px;
     table-layout: fixed;
+    position: fixed;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 table.container-stitches a {
