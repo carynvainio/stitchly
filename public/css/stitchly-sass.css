@@ -170,7 +170,10 @@ html, body {
   font-size: 1.6em;
   line-height: 1.9em; }
 
-.button-round:hover {
+.button-round:hover, .button-round:active {
+  background-color: #FF9CCB; }
+
+.button-round.active {
   background-color: #FF9CCB; }
 
 .button-icon-new-chart {

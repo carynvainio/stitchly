@@ -30,13 +30,13 @@ include('header.php');
           </tr>
           <tr>
             <td class="stitch-editing-options">
-              <!-- <a class="edit-stitches"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a> -->
+              <!-- <a class="edit-stitches" data-toggle="tooltip" data-placement="bottom" title="Edit colors" data-delay='{"show":"500", "hide":"100"}'><i class="fa fa-pencil fa-lg" aria-hidden="true"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a> -->
               <!-- <a class="edit-done"><i class="fa fa-check fa-lg" aria-hidden="true"></i></a>
               <a class="edit-cancel"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a> -->
             </td>
             <td class="stitchbar"><div id="stitchbar"><!-- STITCHBAR --></div></td>
             <td class="macro-editing-options">
-              <a class="edit-clear"><i class="fa fa-undo fa-lg" aria-hidden="true"></i></a>
+              <a class="edit-clear disabled"><i class="fa fa-undo fa-lg" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Clear chart" data-delay='{"show":"500", "hide":"100"}'></i></a>
             </td>
           </tr>
         </table>

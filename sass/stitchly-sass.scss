@@ -226,8 +226,12 @@ html, body {
     line-height: 1.9em;
 } 
 
-.button-round:hover {
-    background-color: $button-round-hover
+.button-round:hover, .button-round:active {
+    background-color: $button-round-hover;
+}
+
+.button-round.active {
+    background-color: $button-round-hover;
 }
 
 .button-icon-new-chart {
