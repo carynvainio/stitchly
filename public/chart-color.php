@@ -2,6 +2,10 @@
 include_once('header.php');
 ?>
 
+<?php
+include_once('modals.php');
+?>
+
 <div class="subheader">
         <div class="container">
             <h1>Test Color Chart</h1>
@@ -31,7 +35,7 @@ include_once('header.php');
             <td class="mc_box"><div id="mc_box"></div></td>
             <td class="macro-editing-options">
               <a class="edit-flip" data-toggle="tooltip" data-placement="bottom" title="flip main and background colors" data-delay='{"show":"500", "hide":"100"}'><i class="fa fa-adjust fa-lg" aria-hidden="true"></i></a>
-              <a class="edit-clear" data-toggle="tooltip" data-placement="bottom" title="Clear chart" data-delay='{"show":"500", "hide":"100"}'><i class="fa fa-undo fa-lg" aria-hidden="true"></i></a>
+              <a class="edit-clear" data-toggle="modal" data-target="#modal-clear-chart" data-toggle="tooltip" data-placement="bottom" title="Clear chart" data-delay='{"show":"500", "hide":"100"}'><i class="fa fa-undo fa-lg" aria-hidden="true"></i></a>
             </td>
           </tr>
         </table>

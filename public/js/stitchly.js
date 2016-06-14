@@ -181,6 +181,10 @@ $('.edit-cancel').click(function() {
         $('.edit-stitches').html('<i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>');
     });
 
+$('.edit-clear').click(function() {
+        //chart.clearAll();
+    });
+
 //+--------------- create the chart -----------------+//
 (function(window) {
 
@@ -223,6 +227,14 @@ $('.edit-cancel').click(function() {
 
             new_c_id = ("r" + row + "-c" + col);
             this.select($("#" + new_c_id));
+        },
+
+        clearAll: function() {
+            if (window.isColor) {
+                $('.chart-cell').css("background-color", this._mc);
+            } else {
+                $('.chart-cell').css("background-image", "");  
+            }
         }
     }
 
@@ -348,6 +360,7 @@ $('#mc_box').colorPicker({
             $('#colorPickerMod').appendTo('head');
         }
     });
+
 
 
 //+---------- helper functions ---------+//
