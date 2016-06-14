@@ -7,7 +7,7 @@
         <h4 class="modal-title" id="label-modal-clear-chart">Clear Chart</h4>
       </div>
       <div class="modal-body">
-        Do you really want to clear the chart and reset all stitches to the main color?
+        Do you really want to clear the chart and reset all stitches?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
