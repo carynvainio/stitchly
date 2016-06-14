@@ -1,9 +1,18 @@
 <div class="container_version-notes">
+	<h4>0.0.5 Version Notes</h4>
+	<ul>
+	    <li>Bug fixes to editing colors in the stitch bar</li>
+	    <li>Added hover tooltips to most buttons</li>
+	    <li>Features: "Clear chart"</li>
+	    <li>Chart should no longer attempt to wrap at short browser widths</li>
+	</ul>
+	<br />
 	<h4>0.0.4 Version Notes</h4>
 	<ul>
 	    <li>Redesigned the Stitchbar tool to include all editing</li>
 	    <li>Fix: can no longer accidentally edit chart cells while you're editing the Stitchbar</li>
 	</ul>
+	<br />
 	<h4>0.0.3 Version Notes</h4>
 	<ul>
 	    <li>Added form signup/entry page</li>
