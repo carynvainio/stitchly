@@ -131,6 +131,10 @@ html, body {
     width: 60%;
 }
 
+.modal-header {
+    background-color: $subheader-bg;
+}
+
 /* +---------- nav -----------+ */
 
 .navbar {
@@ -156,6 +160,48 @@ html, body {
 }
 
 /* +---------- buttons -----------+ */
+
+
+.btn-primary {
+  color: #fff;
+  background-color: $button-round;
+  border: none;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #fff;
+  background-color: $button-round;
+  border: none;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: $button-round-hover;
+  border: none;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: $button-round;
+  border: none;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #fff;
+  background-color: $button-round-hover;
+  border: none;
+}
 
 .button-round {
     background-color: $button-round;
@@ -504,6 +550,10 @@ table.container-stitches th {
 
 .edit-flip {
     margin-right: 10px;
+}
+
+.edit-clear.disabled {
+    color: #ccc;
 }
 
 .stitchbar .stitchbar-row {

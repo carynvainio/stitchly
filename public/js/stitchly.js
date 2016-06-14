@@ -182,8 +182,17 @@ $('.edit-cancel').click(function() {
     });
 
 $('.edit-clear').click(function() {
-        //chart.clearAll();
+        if (!chart._clean) {
+            $('#modal-clear-chart').modal({
+                keyboard: false
+            });
+        }
     });
+
+$('.btn-clear-chart').click(function() {
+        chart.clearAll();
+    });
+
 
 //+--------------- create the chart -----------------+//
 (function(window) {
@@ -235,6 +244,8 @@ $('.edit-clear').click(function() {
             } else {
                 $('.chart-cell').css("background-image", "");  
             }
+            this._clean = true;
+            $('.edit-clear').attr( 'class', 'edit-clear disabled');
         }
     }
 
@@ -245,6 +256,7 @@ $('.edit-clear').click(function() {
         _chart._default_stitch = "";
         _chart._lastcell = "";
         _chart._undoing = false;
+        _chart._clean = true;
 
         buildChartUI(parent);
 
@@ -295,6 +307,11 @@ $('.edit-clear').click(function() {
 
                         _chart._undoing = false;
                         _chart.select($(this));
+
+                        if (_chart._clean) {
+                            _chart._clean = false;
+                            $('.edit-clear').attr( 'class', 'edit-clear');
+                        }
                     }
                 });
             }
