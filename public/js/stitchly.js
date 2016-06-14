@@ -92,9 +92,13 @@ $(function () {
                     opacity: false,
                     renderCallback: function($elm, toggled) {
                         if (!_stitchbar._isediting) {
-                            $('.cp-color-picker').css("visibility", "hidden");
+                            $('.cp-color-picker').css("visibility", "hidden");  
                         } else {
                             $('.cp-color-picker').css("visibility", "visible");
+                        }
+
+                        if (toggled === false) {
+                            window.selected_stitch = $elm.css('background-color');
                         }
                     },
                     buildCallback: function($elm) {
