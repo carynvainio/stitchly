@@ -2,6 +2,10 @@
 include('header.php');
 ?>
 
+<?php
+include_once('modals.php');
+?>
+
 <div class="subheader">
         <div class="container">
             <h1>Test Stitch Chart</h1>
