@@ -369,8 +369,10 @@ $('#mc_box').colorPicker({
                     .css( "background-color", new_mc );
 
                 chart._mc = new_mc;
+                sbar.edit(false);
             } else {
                 $('.cp-color-picker').css("visibility", "visible");
+                sbar.edit(true);
             }
         },
         buildCallback: function($elm) {
