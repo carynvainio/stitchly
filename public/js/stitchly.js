@@ -5,6 +5,10 @@
 //+--------------- global vars --------------------+//
 var isClicking = false;
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
+
 
 //+--------------- create the stitchbar -----------------+//
 (function(window) {

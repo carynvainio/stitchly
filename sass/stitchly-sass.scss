@@ -192,6 +192,35 @@ html, body {
     background-image: url("../img/icons/icon-add.svg");
 }
 
+.tooltip > .tooltip-inner {
+    background-color: #fff;
+    color: #B0B0B0;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(160,160,160,1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(160,160,160,1);
+    box-shadow: 0px 3px 10px 0px rgba(160,160,160,1);
+}
+
+.tooltip.top > .tooltip-arrow {
+    border-top-color: #fff;
+}
+
+.tooltip.bottom > .tooltip-arrow {
+    border-bottom-color: #fff;
+}
+
+.tooltip.left > .tooltip-arrow {
+    border-left-color: #fff;
+}
+
+.tooltip.right > .tooltip-arrow {
+    border-right-color: #fff;
+}
+
+.tooltip.in {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
 
 /* +---------- footers -----------+ */
 
