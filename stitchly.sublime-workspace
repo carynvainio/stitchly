@@ -232,26 +232,18 @@
 			}
 		},
 		{
-			"file": "public/css/bootstrap.css",
-			"settings":
-			{
-				"buffer_size": 146082,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/chart-color.php",
-			"settings":
-			{
-				"buffer_size": 2103,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "public/chart-stitch.php",
 			"settings":
 			{
 				"buffer_size": 2267,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/about.php",
+			"settings":
+			{
+				"buffer_size": 1066,
 				"line_ending": "Unix"
 			}
 		}
@@ -280,6 +272,7 @@
 	},
 	"file_history":
 	[
+		"/Users/carynvainio/appdev/stitchly/public/css/bootstrap.css",
 		"/Users/carynvainio/appdev/stitchly/public/chart-color.php",
 		"/Users/carynvainio/appdev/stitchly/public/version-notes.php",
 		"/Users/carynvainio/appdev/stitchly/public/footer-chart.php",
@@ -444,7 +437,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -527,69 +520,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3040.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/css/bootstrap.css",
-					"settings":
-					{
-						"buffer_size": 146082,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								58696,
-								58696
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 46585.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "public/chart-color.php",
-					"settings":
-					{
-						"buffer_size": 2103,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								74,
-								38
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 3,
 					"file": "public/chart-stitch.php",
 					"settings":
 					{
@@ -609,6 +546,35 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/about.php",
+					"settings":
+					{
+						"buffer_size": 1066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								119,
+								119
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
