@@ -6,8 +6,13 @@
 var isClicking = false;
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
+  chart.retrieve();
 });
+
+window.setInterval(function(){
+  chart.save();
+}, 5000);
 
 
 //+--------------- create the stitchbar -----------------+//
@@ -208,6 +213,31 @@ $('.btn-clear-chart').click(function() {
             _chart._lastcell = elm.attr('id');
         },
 
+        save: function(){
+            $('.chart-cell').each(function() {
+                if (!window.isColor) {
+                    localStorage.setItem(($(this).attr('id') + "-image"),$(this).css('background-image'));
+                } else {
+                    localStorage.setItem(($(this).attr('id') + "-color"),$(this).css('background-color'));
+                }
+            });
+        },
+
+        retrieve: function(){
+            var c_id;
+            this._clean = false;
+            for(var key in localStorage) {
+                if (window.isColor && key.indexOf("-color") >= 0) {
+                    c_id = key.substring(0, key.indexOf("-color"));
+                    $('#' + c_id).css('background-color', localStorage[key]);
+                } else if (!window.isColor && key.indexOf("-image") >= 0) {
+                    c_id = key.substring(0, key.indexOf("-image"));
+                    $('#' + c_id).css('background-image', localStorage[key]);
+                }
+            }
+            //console.log("chart._clean = " + this._clean);
+        },
+
         mark: function(elm) {
             elm.click();
         },
@@ -285,6 +315,7 @@ $('.btn-clear-chart').click(function() {
                 }
 
                 _elm.click(function() {
+                    //console.log("clicked " + $(this).attr('id'));
                     // only allow chart editing when we're not in Stitchbar Edit mode
                     if (!sbar._isediting) {
                         // if we're clicking in the same cell AND we're not dragging AND we haven't changed the stitch, we're doing a quick reset
@@ -332,6 +363,11 @@ var chartOptions = {
     rows: 20
 }
 var chart = window.chart('.chart', chartOptions);
+
+//localStorage.clear();
+
+setInterval(function(){ 
+    chart.save(); }, 5000);
 
 //+--------------- event listeners -----------------+//
 // prevent scrolling when moving around the chart with the keyboard
