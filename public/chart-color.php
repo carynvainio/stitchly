@@ -35,14 +35,14 @@ include_once('modals.php');
             <td class="mc_box"><div id="mc_box"></div></td>
             <td class="macro-editing-options">
               <a class="edit-flip" data-toggle="tooltip" data-placement="bottom" title="flip main and background colors" data-delay='{"show":"500", "hide":"100"}'><i class="fa fa-adjust fa-lg" aria-hidden="true"></i></a>
-              <a class="edit-clear disabled"><i class="fa fa-undo fa-lg" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Clear chart" data-delay='{"show":"500", "hide":"100"}'></i></a>
+              <a class="edit-clear"><i class="fa fa-undo fa-lg" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Clear chart" data-delay='{"show":"500", "hide":"100"}'></i></a>
             </td>
           </tr>
         </table>
 
         <!-- CHART -->
         <div class="container-chart">
-          <div class="chart">
+          <div class="chart" id="chart-test">
           </div>
         </div>
 
