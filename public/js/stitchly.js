@@ -283,12 +283,15 @@ $('.btn-clear-chart').click(function() {
         },
 
         insertRow: function(elm) {
-            var row = parseInt(elm.attr('id').substring(elm.attr('id').indexOf("r")+1,elm.attr('id').indexOf("-")));
-            console.log("row: " + row);
+            var c_id = elm.attr('id');
+            var row = parseInt(c_id.substring(c_id.indexOf("r")+1,c_id.indexOf("-")));
+            //console.log("row: " + row);
         },
 
         insertColumn: function(elm) {
-
+            var c_id = elm.attr('id');
+            var col = parseInt(c_id.substring(c_id.indexOf("c")+1));
+            //console.log("col: " + col);
         }
     }
 
