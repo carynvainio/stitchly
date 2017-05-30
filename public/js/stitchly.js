@@ -280,6 +280,15 @@ $('.btn-clear-chart').click(function() {
             }
             this._clean = true;
             $('.edit-clear').attr( 'class', 'edit-clear disabled');
+        },
+
+        insertRow: function(elm) {
+            var row = parseInt(elm.attr('id').substring(elm.attr('id').indexOf("r")+1,elm.attr('id').indexOf("-")));
+            console.log("row: " + row);
+        },
+
+        insertColumn: function(elm) {
+
         }
     }
 
