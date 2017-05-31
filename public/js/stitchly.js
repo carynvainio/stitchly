@@ -5,6 +5,12 @@
 //+--------------- global vars --------------------+//
 var isClicking = false;
 
+var editModes = {
+    Stitches: 0,
+    Chart: 1,
+    StitchPattern: 2
+};
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
   chart.retrieve();
@@ -242,6 +248,10 @@ $('.btn-clear-chart').click(function() {
             elm.click();
         },
 
+        setEditMode: function(mode) {
+            _chart._editMode = mode;
+        },
+
         keyboardSelect: function(event){
 
             var new_c_id;
@@ -303,6 +313,7 @@ $('.btn-clear-chart').click(function() {
         _chart._lastcell = "";
         _chart._undoing = false;
         _chart._clean = true;
+        _chart._editMode = editModes.Stitches;
 
         buildChartUI(parent);
 
@@ -328,8 +339,8 @@ $('.btn-clear-chart').click(function() {
 
                 _elm.click(function() {
                     //console.log("clicked " + $(this).attr('id'));
-                    // only allow chart editing when we're not in Stitchbar Edit mode
-                    if (!sbar._isediting) {
+                    // only allow chart editing when we're not in Stitchbar Edit mode or when we're not changing rows/columns
+                    if (!sbar._isediting && _chart._editMode == editModes.Stitches) {
                         // if we're clicking in the same cell AND we're not dragging AND we haven't changed the stitch, we're doing a quick reset
                         if ($(this).attr('id') == _chart._lastcell && !isClicking ) {
                             if ( (window.isColor && $(this).css("background-color") == window.selected_stitch) 
@@ -441,6 +452,8 @@ $('#nav-chart-editing').click(function() {
 
     $('#container-stitchbar').css("display", "none");
     $('#chart-editing-help').css("display", "inline");
+
+    chart.setEditMode(editModes.Chart);
 });
 
 $('#nav-stitch-editing').click(function() {
@@ -450,6 +463,8 @@ $('#nav-stitch-editing').click(function() {
 
     $('#chart-editing-help').css("display", "none");
     $('#container-stitchbar').css("display", "inline");
+
+    chart.setEditMode(editModes.Stitches);
 });
 
 
