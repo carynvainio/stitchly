@@ -323,8 +323,6 @@ $('.btn-clear-chart').click(function() {
             var col = "c" + this.getColumn(id);
             $('div[id*=' + row + ']').css("background-color", $('div[id*=' + row + ']').data('bgc'));
             $('div[id*=' + col + ']').css("background-color", $('div[id*=' + col + ']').data('bgc'));
-
-            console.log($('div[id*=' + row + ']').data('bgc'));
         },
 
         selectRow: function(row) {
