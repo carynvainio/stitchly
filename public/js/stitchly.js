@@ -299,9 +299,32 @@ $('.btn-clear-chart').click(function() {
         highlightRowColumn: function(id) {
             var row = "r" + this.getRow(id);
             var col = "c" + this.getColumn(id);
+            var elems_rows = $('div[id*=' + row + ']').toArray();
+            var elems_cols = $('div[id*=' + col + ']').toArray();
 
-            $('div[id*=' + row + ']').css("background-color", "red");
-            $('div[id*=' + col + ']').css("background-color", "red");
+            this._editingRowCells = jQuery.makeArray(elems_rows);
+            this._editingColCells = jQuery.makeArray(elems_cols);
+
+            for (var i=0; i < this._editingRowCells.length; i++) {
+                $(this._editingRowCells[i]).data('bgc', $(this._editingRowCells).css('background-color'));
+                //console.log($(this._editingRowCells[i]).css('background-color'));
+            }
+
+            for (var i=0; i < this._editingColCells.length; i++) {
+                $(this._editingColCells[i]).data('bgc', $(this._editingColCells).css('background-color'));
+            }
+
+            $('div[id*=' + row + ']').css("background-color", "#D6F3DE");
+            $('div[id*=' + col + ']').css("background-color", "#D6F3DE");
+        },
+
+        resetRowColHighlights: function(id) {
+            var row = "r" + this.getRow(id);
+            var col = "c" + this.getColumn(id);
+            $('div[id*=' + row + ']').css("background-color", $('div[id*=' + row + ']').data('bgc'));
+            $('div[id*=' + col + ']').css("background-color", $('div[id*=' + col + ']').data('bgc'));
+
+            console.log($('div[id*=' + row + ']').data('bgc'));
         },
 
         selectRow: function(row) {
@@ -330,6 +353,8 @@ $('.btn-clear-chart').click(function() {
         _chart._undoing = false;
         _chart._clean = true;
         _chart._editMode = editModes.Stitches;
+        _chart._editingRowCells = [];
+        _chart._editingColCells = [];
 
         buildChartUI(parent);
 
@@ -389,12 +414,17 @@ $('.btn-clear-chart').click(function() {
                     }
                 });
 
-                _elm.hover(function () {
-                    //console.log("hovering");
-                    if (_chart._editMode == editModes.Chart) {
-                        chart.highlightRowColumn($(this).attr('id'));
-                    }
-                });
+                _elm.hover(
+                    function() {
+                        if (_chart._editMode == editModes.Chart) {
+                            chart.highlightRowColumn($(this).attr('id'));
+                        }
+                    },
+                    function() {
+                        if (_chart._editMode == editModes.Chart) {
+                            chart.resetRowColHighlights($(this).attr('id'));
+                        }
+                    });
             }
         }
 
