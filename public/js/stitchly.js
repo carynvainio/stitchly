@@ -5,12 +5,6 @@
 //+--------------- global vars --------------------+//
 var isClicking = false;
 
-var editModes = {
-    Stitches: 0,
-    Chart: 1,
-    StitchPattern: 2
-};
-
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
   chart.retrieve();
@@ -256,8 +250,8 @@ $('.btn-clear-chart').click(function() {
 
             var new_c_id;
             var c_id = $('.chart-cell-selected').attr('id');
-            var col = parseInt(c_id.substring(c_id.indexOf("c")+1));
-            var row = parseInt(c_id.substring(c_id.indexOf("r")+1,c_id.indexOf("-")));
+            var col = this.getColumn(c_id);
+            var row = this.getRow(c_id);
 
             switch(event.which) {
                 case 39:    // right
@@ -292,16 +286,38 @@ $('.btn-clear-chart').click(function() {
             $('.edit-clear').attr( 'class', 'edit-clear disabled');
         },
 
+        getRow: function(id) {
+            var row = parseInt(id.substring(id.indexOf("r")+1,id.indexOf("-")));
+            return row;
+        },
+
+        getColumn: function(id) {
+            var col = parseInt(id.substring(id.indexOf("c")+1));
+            return col;
+        },
+
+        highlightRowColumn: function(id) {
+            var row = "r" + this.getRow(id);
+            var col = "c" + this.getColumn(id);
+
+            $('div[id*=' + row + ']').css("background-color", "red");
+            $('div[id*=' + col + ']').css("background-color", "red");
+        },
+
+        selectRow: function(row) {
+
+        },
+
+        selectColumn: function(col) {
+
+        },
+
         insertRow: function(elm) {
-            var c_id = elm.attr('id');
-            var row = parseInt(c_id.substring(c_id.indexOf("r")+1,c_id.indexOf("-")));
-            //console.log("row: " + row);
+
         },
 
         insertColumn: function(elm) {
-            var c_id = elm.attr('id');
-            var col = parseInt(c_id.substring(c_id.indexOf("c")+1));
-            //console.log("col: " + col);
+
         }
     }
 
@@ -381,6 +397,12 @@ $('.btn-clear-chart').click(function() {
     window.chart = Chart;
 })(window);
 
+var editModes = {
+    Stitches: 0,
+    Chart: 1,
+    StitchPattern: 2
+};
+
 var chartOptions = {
     columns: 30,
     rows: 20
@@ -404,22 +426,27 @@ window.addEventListener("keydown", function(event) {
 // listen for mousedrag when mouse is down and set the cell value as we drag over
 $(document).mouseup(function() {
     isClicking = false;
-    });
+});
 
 $(document).mousedown(function() {
     isClicking = true;
-    });
+});
 
 $('.chart-cell').mousemove(function(event){
-        if (isClicking) {   
-            this.click();   
-        }
-    });
+    if (isClicking) {   
+        this.click();   
+    }
+});
+
+$('.chart-cell').hover(function() {
+    console.log($(this).attr('id'));
+    chart.highlightRowColumn($(this).attr('id'));
+});
     
 $(document).keydown(function(event){ 
     chart.keyboardSelect(event);
     sbar.keyboardSelect(event);
-    });
+});
 
 $('#mc_box').colorPicker({
         opacity: false,
@@ -450,9 +477,11 @@ $('#nav-chart-editing').click(function() {
     $('#nav-stitch-editing').removeClass("active");
     $('#nav-chart-editing').addClass("active");
 
+    // hide stitchbar, show chart edit help
     $('#container-stitchbar').css("display", "none");
     $('#chart-editing-help').css("display", "inline");
 
+    // set chart editing mode
     chart.setEditMode(editModes.Chart);
 });
 
@@ -461,9 +490,11 @@ $('#nav-stitch-editing').click(function() {
     $('#nav-stitch-editing').addClass("active");
     $('#nav-chart-editing').removeClass("active");
 
+    // show stitchbar, hide chart edit help
     $('#chart-editing-help').css("display", "none");
     $('#container-stitchbar').css("display", "inline");
 
+    // set chart editing mode
     chart.setEditMode(editModes.Stitches);
 });
 
