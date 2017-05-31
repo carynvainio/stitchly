@@ -388,6 +388,13 @@ $('.btn-clear-chart').click(function() {
                         }
                     }
                 });
+
+                _elm.hover(function () {
+                    //console.log("hovering");
+                    if (_chart._editMode == editModes.Chart) {
+                        chart.highlightRowColumn($(this).attr('id'));
+                    }
+                });
             }
         }
 
@@ -436,11 +443,6 @@ $('.chart-cell').mousemove(function(event){
     if (isClicking) {   
         this.click();   
     }
-});
-
-$('.chart-cell').hover(function() {
-    console.log($(this).attr('id'));
-    chart.highlightRowColumn($(this).attr('id'));
 });
     
 $(document).keydown(function(event){ 
