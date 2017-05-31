@@ -26,8 +26,17 @@ include_once('modals.php');
       </div>
     -->
 
+        <!-- CHART EDITING HELP TEXT -->
+        <table class="container-editing-help" id="chart-editing-help">
+          <tr>
+            <td class="chart-editing-help-text">
+            Click to toggle between rows and columns. 
+            </td>
+          </tr>
+        </table>
+
         <!-- STITCH TOOLBAR -->
-        <table class="container-stitches">
+        <table class="container-stitches" id="container-stitchbar">
           <tr>
             <th class="col1" colspan="2">Stitches</th>
             <th class="col3"></th>

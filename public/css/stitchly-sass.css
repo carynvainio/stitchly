@@ -247,20 +247,23 @@ footer {
   float: left;
   width: 25%; }
 
-.footer-chart .container-mode {
-  float: left;
-  width: 50%;
-  text-align: center; }
-
 .footer-chart .container-export {
   padding-top: 5px;
   float: left;
   width: 25%; }
 
-.footer-chart .button-row {
+.footer-chart .container-mode {
+  float: left;
+  width: 50%;
+  text-align: center; }
+
+.container-mode ul.button-row {
   margin-left: auto;
   margin-right: auto;
   display: inline-block; }
+
+.container-mode ul.button-row li {
+  list-style-type: none; }
 
 .footer-chart .right {
   float: right; }
@@ -400,6 +403,19 @@ footer {
   border-width: 2px;
   border-style: solid;
   background-color: #D6F3DE; }
+
+/* +-------------------- editing charts ----------------------+ */
+table.container-editing-help {
+  table-layout: fixed;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none; }
+
+table.container-editing-help td {
+  border: 1px solid #light-gray;
+  color: #body-copy; }
 
 /* +-------------------- stitch toolbar styles ---------------+ */
 table.container-stitches {

@@ -433,6 +433,25 @@ $('#mc_box').colorPicker({
     });
 
 
+//+---------- footer functionality ----------+//
+$('#nav-chart-editing').click(function() {
+    // change active footer button
+    $('#nav-stitch-editing').removeClass("active");
+    $('#nav-chart-editing').addClass("active");
+
+    $('#container-stitchbar').css("display", "none");
+    $('#chart-editing-help').css("display", "inline");
+});
+
+$('#nav-stitch-editing').click(function() {
+    // change active footer button
+    $('#nav-stitch-editing').addClass("active");
+    $('#nav-chart-editing').removeClass("active");
+
+    $('#chart-editing-help').css("display", "none");
+    $('#container-stitchbar').css("display", "inline");
+});
+
 
 //+---------- helper functions ---------+//
 
