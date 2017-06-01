@@ -244,6 +244,11 @@ $('.btn-clear-chart').click(function() {
 
         setEditMode: function(mode) {
             _chart._editMode = mode;
+            if (_chart._editMode == editModes.Chart) {
+                $('.chart').css("opacity", "0.6");
+            } else if (_chart._editMode == editModes.Stitches) {
+                $('.chart').css("opacity", "1.0");
+            }
         },
 
         keyboardSelect: function(event){
@@ -307,7 +312,6 @@ $('.btn-clear-chart').click(function() {
 
             for (var i=0; i < this._editingRowCells.length; i++) {
                 $(this._editingRowCells[i]).data('bgc', $(this._editingRowCells).css('background-color'));
-                //console.log($(this._editingRowCells[i]).css('background-color'));
             }
 
             for (var i=0; i < this._editingColCells.length; i++) {
@@ -526,6 +530,7 @@ $('#nav-stitch-editing').click(function() {
 
     // set chart editing mode
     chart.setEditMode(editModes.Stitches);
+
 });
 
 
