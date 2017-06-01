@@ -244,7 +244,10 @@ $('.btn-clear-chart').click(function() {
 
         setEditMode: function(mode) {
             _chart._editMode = mode;
+
             if (_chart._editMode == editModes.Chart) {
+                this._editRowSelected = false;
+                this._editColSelected = false;
                 $('.chart').css("opacity", "0.6");
             } else if (_chart._editMode == editModes.Stitches) {
                 $('.chart').css("opacity", "1.0");
@@ -301,14 +304,27 @@ $('.btn-clear-chart').click(function() {
             return col;
         },
 
+        setRowArray: function(id) {
+            this._editingRowCells.length = 0;
+            var row = "r" + this.getRow(id);
+            var elems_rows = $('div[id*=' + row + ']').toArray();
+            this._editingRowCells = jQuery.makeArray(elems_rows);
+        },
+
+        setColumnArray: function(id) {
+            this._editingColCells.length = 0;
+            var col = "c" + this.getColumn(id);
+            var elems_cols = $('div[id*=' + col + ']').toArray();
+            this._editingColCells = jQuery.makeArray(elems_cols);
+        },
+
         highlightRowColumn: function(id) {
+
             var row = "r" + this.getRow(id);
             var col = "c" + this.getColumn(id);
-            var elems_rows = $('div[id*=' + row + ']').toArray();
-            var elems_cols = $('div[id*=' + col + ']').toArray();
 
-            this._editingRowCells = jQuery.makeArray(elems_rows);
-            this._editingColCells = jQuery.makeArray(elems_cols);
+            this.setRowArray(id);
+            this.setColumnArray(id);
 
             for (var i=0; i < this._editingRowCells.length; i++) {
                 $(this._editingRowCells[i]).data('bgc', $(this._editingRowCells).css('background-color'));
@@ -329,12 +345,24 @@ $('.btn-clear-chart').click(function() {
             $('div[id*=' + col + ']').css("background-color", $('div[id*=' + col + ']').data('bgc'));
         },
 
-        selectRow: function(row) {
-
+        selectRow: function(id) {
+            var col = "c" + this.getColumn(id);
+            $('div[id*=' + col + ']').css("background-color", "#D6F3DE");
+            
+            var row = "r" + this.getRow(id);
+            $('div[id*=' + row + ']').css("background-color", "#00ff00");
+            this._editRowSelected = true;
+            this._editColSelected = false;
         },
 
-        selectColumn: function(col) {
+        selectColumn: function(id) {
+            var row = "r" + this.getRow(id);
+            $('div[id*=' + row + ']').css("background-color", "#D6F3DE");
 
+            var col = "c" + this.getColumn(id);
+            $('div[id*=' + col + ']').css("background-color", "#00ff00");
+            this._editRowSelected = false;
+            this._editColSelected = true;
         },
 
         insertRow: function(elm) {
@@ -357,6 +385,8 @@ $('.btn-clear-chart').click(function() {
         _chart._editMode = editModes.Stitches;
         _chart._editingRowCells = [];
         _chart._editingColCells = [];
+        _chart._editRowSelected = false;
+        _chart._editColSelected = false;
 
         buildChartUI(parent);
 
@@ -382,49 +412,62 @@ $('.btn-clear-chart').click(function() {
 
                 _elm.click(function() {
                     //console.log("clicked " + $(this).attr('id'));
-                    // only allow chart editing when we're not in Stitchbar Edit mode or when we're not changing rows/columns
-                    if (!sbar._isediting && _chart._editMode == editModes.Stitches) {
-                        // if we're clicking in the same cell AND we're not dragging AND we haven't changed the stitch, we're doing a quick reset
-                        if ($(this).attr('id') == _chart._lastcell && !isClicking ) {
-                            if ( (window.isColor && $(this).css("background-color") == window.selected_stitch) 
-                                || (!window.isColor && $(this).css("background-image") == window.selected_stitch) ) {     
-                                _chart._undoing = true;
-                            }
-                        } 
+                    // only allow stitch editing when we're not in Stitchbar Edit mode or when we're not changing rows/columns
+                    if (_chart._editMode == editModes.Stitches) {
+                        if (!sbar._isediting) {
+                            // if we're clicking in the same cell AND we're not dragging AND we haven't changed the stitch, we're doing a quick reset
+                            if ($(this).attr('id') == _chart._lastcell && !isClicking ) {
+                                if ( (window.isColor && $(this).css("background-color") == window.selected_stitch) 
+                                    || (!window.isColor && $(this).css("background-image") == window.selected_stitch) ) {     
+                                    _chart._undoing = true;
+                                }
+                            } 
 
-                        if (!_chart._undoing) {
-                            if (window.isColor) {     
-                                $(this).css("background-color", window.selected_stitch);
+                            if (!_chart._undoing) {
+                                if (window.isColor) {     
+                                    $(this).css("background-color", window.selected_stitch);
+                                } else {
+                                    $(this).css("background-image", window.selected_stitch);  
+                                }
                             } else {
-                                $(this).css("background-image", window.selected_stitch);  
+                                if (window.isColor) {     
+                                    $(this).css("background-color", _chart._mc);
+                                } else {
+                                    $(this).css("background-image", "");  
+                                }
                             }
-                        } else {
-                            if (window.isColor) {     
-                                $(this).css("background-color", _chart._mc);
-                            } else {
-                                $(this).css("background-image", "");  
+
+                            _chart._undoing = false;
+                            _chart.select($(this));
+
+                            if (_chart._clean) {
+                                _chart._clean = false;
+                                $('.edit-clear').attr( 'class', 'edit-clear');
                             }
                         }
-
-                        _chart._undoing = false;
-                        _chart.select($(this));
-
-                        if (_chart._clean) {
-                            _chart._clean = false;
-                            $('.edit-clear').attr( 'class', 'edit-clear');
+                    } else if (_chart._editMode == editModes.Chart) {
+                        if (!_chart._editRowSelected && !_chart._editColSelected) {
+                            _chart.selectRow($(this).attr('id'));
+                        } else if (_chart._editRowSelected && !_chart._editColSelected) {
+                            _chart.selectColumn($(this).attr('id'));
+                        } else if (!_chart._editRowSelected && _chart._editColSelected) {
+                            _chart.resetRowColHighlights($(this).attr('id'));
+                            _chart.highlightRowColumn($(this).attr('id'));
+                            _chart._editRowSelected = false;
+                            _chart._editColSelected = false;
                         }
                     }
                 });
 
                 _elm.hover(
                     function() {
-                        if (_chart._editMode == editModes.Chart) {
-                            chart.highlightRowColumn($(this).attr('id'));
+                        if (_chart._editMode == editModes.Chart && (!_chart._editRowSelected && !_chart._editColSelected)) {
+                            _chart.highlightRowColumn($(this).attr('id'));
                         }
                     },
                     function() {
-                        if (_chart._editMode == editModes.Chart) {
-                            chart.resetRowColHighlights($(this).attr('id'));
+                        if (_chart._editMode == editModes.Chart && (!_chart._editRowSelected && !_chart._editColSelected)) {
+                            _chart.resetRowColHighlights($(this).attr('id'));
                         }
                     });
             }
@@ -530,7 +573,6 @@ $('#nav-stitch-editing').click(function() {
 
     // set chart editing mode
     chart.setEditMode(editModes.Stitches);
-
 });
 
 
